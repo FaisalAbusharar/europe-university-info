@@ -1,2 +1,2 @@
-# europe-uni-info
-A website developed in react to display information about european universities for national or international students.
+# Europe UNIVERSITY Information
+A website developed in react to display information about European Universities for national or international students.
