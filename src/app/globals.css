@@ -36,3 +36,30 @@ body {
   margin-top: 250px;
   font-weight: 900;
 }
+
+
+#Subtitle {
+  position: relative;
+  font-size: 40px;
+  color: rgb(31, 35, 43);
+  text-align: center;
+  font-weight: 800;
+}
+
+#Button {
+  position: relative;
+  font-size: 40px;
+  margin-top: 50px;
+  border: 2px solid black;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;;
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+}
+
+.bg-custom-gradient {
+  background: linear-gradient(to top, #0134fe, #2575fc); /* Gradient background */
+}
+
