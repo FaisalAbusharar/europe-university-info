@@ -8,7 +8,7 @@ export default function Home() {
       <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900">
         <div className="text-center mb-auto mt-8">
           <h1 id="Title" className='text-custom-gradient'>EUROPEAN UNIVERSITIES</h1>
-          <h2 id="Subtitle">Find Your Suitable European University</h2>
+          <h2 id="Subtitle">Find Your Dream European University</h2>
         </div>
         <div className="flex-grow flex flex-col" id="button-container">
           <div className="flex space-x-4 mb-8">
@@ -22,6 +22,10 @@ export default function Home() {
       <div className="footer-container">
         <p id="footer">This website provides information you need to be able to study in Europe, from costs to admissions and scholarships!
           <br />Studying in Europe is always a good idea! But you have to know if you are able to do it!</p>
+          <div className="credit-container">
+          <p id="left-credit">Developed by Faisal Abusharar</p>
+          <p id="right-credit">Developed With ReactJS</p>
+          </div>
       </div>
     </main>
   );

@@ -61,20 +61,38 @@ main {
 }
 
 .footer-container {
-  background: linear-gradient(to right, #0134fe, #2575fc);
+  background: linear-gradient(to right, #3801fe, #6625fc);
   padding: 20px;
   text-align: center;
   flex-shrink: 0;
+
 }
 
 #footer {
   font-size: 20px;
   color: rgb(255, 255, 255);
   font-weight: 800;
+  flex-grow: 1;
+}
+
+#left-credit {
+  text-align: left;
+  color: gray;
+  flex-grow: 1;
+}
+
+#right-credit {
+  text-align: right;
+  color: gray;
+  flex-grow: 1;
 }
 
 .bg-custom-gradient {
   background: linear-gradient(to right, #0134fe, #2575fc);
+}
+
+.credit-container {
+  display: flex;
 }
 
 #button-container {
