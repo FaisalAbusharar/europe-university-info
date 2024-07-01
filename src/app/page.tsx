@@ -18,6 +18,8 @@ export default function Home() {
         <button id="Button" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded mb-8">Scholarships</button>
         </div>
         </div>
+        <p id="footer">This website provides information you need to be able to study in euorpe, from costs to admissions and scholarships!
+          <br></br>Studying in Europe is always a good idea! But you have to know if you are able to do it!</p>
       </div>
     </main>
   );
