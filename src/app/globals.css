@@ -57,7 +57,7 @@ body {
   font-size: 16px;
   cursor: pointer;;
   color: rgb(255, 255, 255);
-  transition: transform 0.2s;
+  transition-duration:0.5s;
   font-weight: 800;
 }
 
@@ -72,6 +72,7 @@ body {
   cursor: pointer;;
   color: rgb(255, 255, 255);
   font-weight: 800;
+  background: linear-gradient(to left, #0134fe, #2575fc);
 }
 
 #footer {
