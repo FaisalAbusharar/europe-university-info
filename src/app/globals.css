@@ -60,6 +60,24 @@ main {
   background: linear-gradient(to left, #0134fe, #2575fc);
 }
 
+#GermanButton {
+  font-size: 16px;
+  border-radius: 50px;
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  padding: 14px 28px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  background: linear-gradient(to left, #fe0101, #ffe600);
+  font-weight: 800;
+}
+
+#GermanButton:hover {
+  border: 2px solid black;
+  color: black;
+  background: linear-gradient(to left, #e9fe01, #fe0101);
+}
+
 .footer-container {
   background: linear-gradient(to right, #3801fe, #6625fc);
   padding: 20px;
@@ -99,4 +117,16 @@ main {
 
 #button-container {
   margin-top: 50px;
+}
+
+#sidebar-head {
+  color: #01b2fe;
+  font-weight: 900;
+  font-size: xx-large;
+}
+
+#sidebarText {
+  margin: 15px;
+  margin-right: 5px;
+  font-weight: 900;
 }
