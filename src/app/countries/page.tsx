@@ -8,15 +8,13 @@ const Countries = () => {
       <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900">
         <h1 id="Title">COUNTRIES</h1>
         <h2 id="Subtitle">Find your European Country</h2>
-
-        <div id="country-container" className="flex space-x-4 mb-8">
-        <button id="GermanButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Germany</button>
-        <button id="FinlandButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Finland</button>
-        <button id="SwedenButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Sweden</button>
-        <button id="UKButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">United Kingdom</button>
-        <button id="NorwayButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Norway</button>
-
-        </div>
+          <div id="country-container" className="flex space-x-4 mb-8">
+            <button className="country-button" data-gradient="germany">Germany</button>
+            <button className="country-button" data-gradient="finland">Finland</button>
+            <button className="country-button" data-gradient="sweden">Sweden</button>
+            <button className="country-button" data-gradient="uk">United Kingdom</button>
+            <button className="country-button" data-gradient="norway">Norway</button>
+          </div>
       </div>
     </main>
   );
