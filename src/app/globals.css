@@ -197,3 +197,19 @@ main {
   color: black;
   background: var(--gradient-norway-hover);
 } 
+
+#right-credit-button {
+  font-size: 12px;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  font-weight: 800;
+}
+
+#right-credit-button:hover {
+  border: 2px solid black;
+  color: black;
+  background: linear-gradient(to left, #0134fe, #2575fc);
+}
