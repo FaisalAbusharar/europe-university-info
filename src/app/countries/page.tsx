@@ -24,7 +24,7 @@ const Countries = () => {
         <div className="credit-container">
           <p id="left-credit">Developed by Faisal Abusharar</p>
           <Link href="/">
-              <button id="right-credit-button" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Return Home</button>
+              <button id="footer-return-button" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Return Home</button>
             </Link>
         </div>
       </div>
