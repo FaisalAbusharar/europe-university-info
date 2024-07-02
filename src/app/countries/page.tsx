@@ -11,10 +11,10 @@ const Countries = () => {
 
         <div id="country-container" className="flex space-x-4 mb-8">
         <button id="GermanButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Germany</button>
-        <button id="Button" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Finland</button>
-        <button id="Button" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Sweden</button>
-        <button id="Button" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">United Kingdom</button>
-        <button id="Button" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Norway</button>
+        <button id="FinlandButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Finland</button>
+        <button id="SwedenButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Sweden</button>
+        <button id="UKButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">United Kingdom</button>
+        <button id="NorwayButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Norway</button>
 
         </div>
       </div>
