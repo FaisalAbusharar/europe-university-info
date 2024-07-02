@@ -6,6 +6,23 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+
+  /* Country Page */
+  --gradient-germany: linear-gradient(to left, #fe0101, #ffe600);
+  --gradient-germany-hover: linear-gradient(to left, #e9fe01, #fe0101);
+  
+  --gradient-finland: linear-gradient(to left, #ffffff, #0055ff);
+  --gradient-finland-hover: linear-gradient(to right, #ffffff, #0055ff);
+  
+  --gradient-sweden: linear-gradient(to left, #f6ff00, #0055ff);
+  --gradient-sweden-hover: linear-gradient(to right, #f6ff00, #0055ff);
+  
+  --gradient-uk: linear-gradient(to left, #ff0000, #0055ff);
+  --gradient-uk-hover: linear-gradient(to right, #ff0000, #0055ff);
+  
+  --gradient-norway: linear-gradient(to left, #ff0000, #ffffff);
+  --gradient-norway-hover: linear-gradient(to right, #ff0000, #ffffff);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -120,24 +137,6 @@ main {
 
 /* --------------- COUNTRY CSS --------------- */
 
-
-:root {
-  --gradient-germany: linear-gradient(to left, #fe0101, #ffe600);
-  --gradient-germany-hover: linear-gradient(to left, #e9fe01, #fe0101);
-  
-  --gradient-finland: linear-gradient(to left, #ffffff, #0055ff);
-  --gradient-finland-hover: linear-gradient(to right, #ffffff, #0055ff);
-  
-  --gradient-sweden: linear-gradient(to left, #f6ff00, #0055ff);
-  --gradient-sweden-hover: linear-gradient(to right, #f6ff00, #0055ff);
-  
-  --gradient-uk: linear-gradient(to left, #ff0000, #0055ff);
-  --gradient-uk-hover: linear-gradient(to right, #ff0000, #0055ff);
-  
-  --gradient-norway: linear-gradient(to left, #ff0000, #ffffff);
-  --gradient-norway-hover: linear-gradient(to right, #ff0000, #ffffff);
-}
-
 .country-button {
   font-size: 16px;
   border-radius: 50px;
@@ -197,4 +196,4 @@ main {
   border: 2px solid black;
   color: black;
   background: var(--gradient-norway-hover);
-}
+} 
