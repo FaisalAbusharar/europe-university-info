@@ -77,13 +77,15 @@ main {
 
 #left-credit {
   text-align: left;
-  color: gray;
+  font-weight: 500;
+  color: yellow;
   flex-grow: 1;
 }
 
 #right-credit {
   text-align: right;
-  color: gray;
+  font-weight: 500;
+  color: yellow;
   flex-grow: 1;
 }
 
