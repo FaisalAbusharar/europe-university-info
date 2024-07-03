@@ -1,5 +1,6 @@
 import { Oswald } from 'next/font/google';
 import Link from 'next/link';
+import './country.css'
 
 
 const oswald = Oswald({ subsets: ['latin'], weight: ['400', '700'] });
@@ -12,7 +13,9 @@ const Countries = () => {
         <h2 id="Subtitle">Find your European Country</h2>
           <div id="country-container" className="flex space-x-4 mb-8">
             <button className="country-button" data-gradient="germany">Germany</button>
+            <Link href="/countries/finland">
             <button className="country-button" data-gradient="finland">Finland</button>
+            </Link>
             <button className="country-button" data-gradient="sweden">Sweden</button>
             <button className="country-button" data-gradient="uk">United Kingdom</button>
             <button className="country-button" data-gradient="norway">Norway</button>

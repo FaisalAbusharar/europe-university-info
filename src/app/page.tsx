@@ -9,7 +9,7 @@ const Home = () => {
       <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900">
         <div className="text-center mb-auto mt-8">
           <h1 id="Title" className='text-custom-gradient'>EUROPEAN UNIVERSITIES</h1>
-          <h2 id="Subtitle">Find Your Dream European University</h2>
+          <h2 id="Subtitle">Find Your <p id="gradient-sub">Dream European University</p></h2>
         </div>
         <div className="flex-grow flex flex-col" id="button-container">
           <div className="flex space-x-4 mb-8">

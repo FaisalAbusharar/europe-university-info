@@ -6,23 +6,6 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-
-
-  /* Country Page */
-  --gradient-germany: linear-gradient(to left, #fe0101, #ffe600);
-  --gradient-germany-hover: linear-gradient(to left, #e9fe01, #fe0101);
-  
-  --gradient-finland: linear-gradient(to left, #ffffff, #0055ff);
-  --gradient-finland-hover: linear-gradient(to right, #ffffff, #0055ff);
-  
-  --gradient-sweden: linear-gradient(to left, #f6ff00, #0055ff);
-  --gradient-sweden-hover: linear-gradient(to right, #f6ff00, #0055ff);
-  
-  --gradient-uk: linear-gradient(to left, #ff0000, #0055ff);
-  --gradient-uk-hover: linear-gradient(to right, #ff0000, #0055ff);
-  
-  --gradient-norway: linear-gradient(to left, #ff0000, #ffffff);
-  --gradient-norway-hover: linear-gradient(to right, #ff0000, #ffffff);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,6 +15,8 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+/* Main */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -45,11 +30,22 @@ main {
   min-height: 100vh;
 }
 
+
+.bg-custom-gradient {
+  background: linear-gradient(to right, #0134fe, #2575fc);
+}
+
+/* Titles */
+
 #Title {
   font-size: 75px;
   color: rgb(0, 85, 255);
   text-align: center;
   margin-top: 0px;
+  background: linear-gradient(to right,#0134fe, #01b2fe);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 900;
 }
 
@@ -59,6 +55,17 @@ main {
   text-align: center;
   font-weight: 800;
 }
+
+
+#gradient-sub{
+  display: inline;
+  background: linear-gradient(to right,#6625fc, rgb(255, 3, 184), rgb(60, 0, 255));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+/* Button */
 
 #Button {
   font-size: 16px;
@@ -77,15 +84,17 @@ main {
   background: linear-gradient(to left, #0134fe, #2575fc);
 }
 
+#button-container {
+  margin-top: 50px;
+}
+
+/* Footer */
+
 .footer-container {
   background: linear-gradient(to right, #3801fe, #6625fc);
   padding: 20px;
   text-align: center;
   flex-shrink: 0;
-}
-
-#country-container{
-  margin-top: 20px;
 }
 
 #footer {
@@ -109,17 +118,11 @@ main {
   flex-grow: 1;
 }
 
-.bg-custom-gradient {
-  background: linear-gradient(to right, #0134fe, #2575fc);
-}
-
 .credit-container {
   display: flex;
 }
 
-#button-container {
-  margin-top: 50px;
-}
+/* Sidebar */
 
 #sidebar-head {
   color: #01b2fe;
@@ -134,82 +137,3 @@ main {
 }
 
 
-
-/* --------------- COUNTRY CSS --------------- */
-
-.country-button {
-  font-size: 16px;
-  border-radius: 50px;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  padding: 14px 28px;
-  cursor: pointer;
-  transition-duration: 0.5s;
-  font-weight: 800;
-}
-
-.country-button[data-gradient="germany"] {
-  background: var(--gradient-germany);
-}
-
-.country-button[data-gradient="germany"]:hover {
-  border: 2px solid black;
-  color: black;
-  background: var(--gradient-germany-hover);
-}
-
-.country-button[data-gradient="finland"] {
-  background: var(--gradient-finland);
-}
-
-.country-button[data-gradient="finland"]:hover {
-  border: 2px solid black;
-  color: black;
-  background: var(--gradient-finland-hover);
-}
-
-.country-button[data-gradient="sweden"] {
-  background: var(--gradient-sweden);
-}
-
-.country-button[data-gradient="sweden"]:hover {
-  border: 2px solid black;
-  color: black;
-  background: var(--gradient-sweden-hover);
-}
-
-.country-button[data-gradient="uk"] {
-  background: var(--gradient-uk);
-}
-
-.country-button[data-gradient="uk"]:hover {
-  border: 2px solid black;
-  color: black;
-  background: var(--gradient-uk-hover);
-}
-
-.country-button[data-gradient="norway"] {
-  background: var(--gradient-norway);
-}
-
-.country-button[data-gradient="norway"]:hover {
-  border: 2px solid black;
-  color: black;
-  background: var(--gradient-norway-hover);
-} 
-
-#footer-return-button {
-  font-size: 12px;
-  border-radius: 50px;
-  border: 2px solid #ffffff;
-  color: #ffffff;
-  cursor: pointer;
-  transition-duration: 0.5s;
-  font-weight: 800;
-}
-
-#footer-return-button:hover {
-  border: 2px solid black;
-  color: black;
-  background: linear-gradient(to left, #0134fe, #2575fc);
-}

@@ -1,0 +1,12 @@
+
+#Title {
+    font-size: 75px;
+    color: rgb(0, 85, 255);
+    text-align: center;
+    margin-top: 0px;
+    background: linear-gradient(to top,#018cfe, #eff2f3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+  }
