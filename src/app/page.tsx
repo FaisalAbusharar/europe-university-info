@@ -1,7 +1,7 @@
-import {Poppins } from 'next/font/google';
+import {Poppins, Raleway } from 'next/font/google';
 import Link from 'next/link';
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
+const poppins = Raleway({ subsets: ['latin'], weight: ['400', '700'] });
 
 const Home = () => {
   return (
@@ -27,7 +27,7 @@ const Home = () => {
           <br />Studying in Europe is always a good idea! But you have to know if you are able to do it!</p>
         <div className="credit-container">
           <p id="left-credit">Developed by Faisal Abusharar</p>
-          <p id="right-credit">❤️Github Open Source</p>
+          <p id="right-credit">❤️Github <a id="Hyperlink" href="https://github.com/FaisalAbusharar/europe-uni-info">Open Source</a></p>
         </div>
       </div>
     </main>
