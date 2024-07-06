@@ -12,9 +12,17 @@
   }
 
 #Subtitle-Left {
-  font-size: 40px;
+  font-size: 45px;
   color: white;
+  margin-top: 20px;
   margin-left: 15px;
   text-align: left;
   font-weight: 800;
-  }
+}
+
+
+#InfoBody {
+  margin-left: 15px;
+  font-size: 20px;
+}
+
