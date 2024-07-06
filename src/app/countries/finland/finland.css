@@ -1,10 +1,16 @@
 
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(0, 0, 0);
+  margin: 0;
+}
+
 #Title-Fin {
     font-size: 75px;
     color: rgb(0, 85, 255);
     text-align: center;
     margin-top: 0px;
-    background: linear-gradient(to top,#018cfe, #eff2f3);
+    background: linear-gradient(to bottom,#018cfe, #eff2f3);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

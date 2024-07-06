@@ -92,13 +92,13 @@ main {
 
 .footer-container {
   background: linear-gradient(to right, #3801fe, #6625fc);
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   flex-shrink: 0;
 }
 
 #footer {
-  font-size: 16px;
+  font-size: 14px;
   color: rgb(255, 255, 255);
   font-weight: 800;
   flex-grow: 1;
@@ -108,7 +108,7 @@ main {
   text-align: left;
   font-weight: 500;
   color: yellow;
-  font-size: 10px;
+  font-size: 12px;
   flex-grow: 1;
 }
 
@@ -141,7 +141,7 @@ main {
 
 /* Extra */
 
-#Hyperlink {
+#hyperlink {
   color: rgb(0, 170, 255);
   text-decoration: underline  ;
 }

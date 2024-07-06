@@ -14,7 +14,19 @@ const Finland = () => {
                 <p id="InfoBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque a lorem ac rutrum. Sed venenatis ornare elit nec tincidunt. Proin vel pellentesque odio, ut iaculis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris et mi lacinia ligula gravida semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum dolor nisi, at dictum mi consectetur sit amet. Etiam vitae ornare est. Maecenas mattis euismod ipsum in condimentum. Suspendisse pellentesque enim ut tellus ultrices, at molestie nulla pharetra. Pellentesque sagittis tellus nec accumsan tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eu augue quis sem mollis pretium. Nunc sagittis commodo efficitur. Maecenas lacus massa, suscipit ut elit id, dictum ornare massa. Vivamus non diam eleifend, imperdiet ante finibus, posuere massa.</p>
                 <h2 id="Subtitle-Left">FINNISH <p id="gradient-sub">UNIVERSITIES</p>    </h2>
                 <p id="InfoBody">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pellentesque a lorem ac rutrum. Sed venenatis ornare elit nec tincidunt. Proin vel pellentesque odio, ut iaculis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris et mi lacinia ligula gravida semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut interdum dolor nisi, at dictum mi consectetur sit amet. Etiam vitae ornare est. Pellentesque sagittis tellus nec accumsan tempor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum eu augue quis sem mollis pretium. Nunc sagittis commodo efficitur. Maecenas lacus massa, suscipit ut elit id.</p>
+                
             </div>
+
+            <div className="footer-container">
+                <p id="footer">I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.
+                <br />Studying in Europe is always a good idea! But you have to know if you are able to do it!</p>
+            <div className="credit-container">
+                <p id="left-credit">Developed by Faisal Abusharar</p>
+            <Link href="/countries">
+              <button id="footer-return-button" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Go back</button>
+            </Link>
+        </div>
+      </div>
         </main>
     )
 }
