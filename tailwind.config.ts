@@ -15,7 +15,8 @@ const config: Config = {
       },
       colors: {
         "side-bar-color": "#141c24"
-      }
+      },
+      
     },
   },
   plugins: [],

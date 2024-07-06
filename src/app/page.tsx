@@ -1,12 +1,12 @@
-import { Oswald } from 'next/font/google';
+import {Poppins } from 'next/font/google';
 import Link from 'next/link';
 
-const oswald = Oswald({ subsets: ['latin'], weight: ['400', '700'] });
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 
 const Home = () => {
   return (
-    <main className={`{oswald.className} flex flex-col min-h-screen`}>
-      <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900">
+    <main className={`${poppins.className} flex flex-col min-h-screen`}>
+      <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900 ">
         <div className="text-center mb-auto mt-8">
           <h1 id="Title" className='text-custom-gradient'>EUROPEAN UNIVERSITIES</h1>
           <h2 id="Subtitle">Find Your <p id="gradient-sub">Dream European University</p></h2>
@@ -27,7 +27,7 @@ const Home = () => {
           <br />Studying in Europe is always a good idea! But you have to know if you are able to do it!</p>
         <div className="credit-container">
           <p id="left-credit">Developed by Faisal Abusharar</p>
-          <p id="right-credit">Developed With ReactJS</p>
+          <p id="right-credit">❤️Github Open Source</p>
         </div>
       </div>
     </main>
