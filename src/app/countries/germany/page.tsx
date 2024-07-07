@@ -20,7 +20,7 @@ const Finland = () => {
         <Country countryName={CountryInformation.countryName} countryNameOptional={CountryInformation.countryNameOptional}
         admissionInformation={CountryInformation.admissionInformation} internationalAdmissionInformation={CountryInformation.internationalAdmissionInformation}
          universityInformation={CountryInformation.universityInformation} internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
-        footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
+        footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2} AICE={""}
         ></Country>
     </div>
     )

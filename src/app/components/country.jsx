@@ -2,12 +2,19 @@
 
 import {Poppins } from 'next/font/google';
 import Link from 'next/link';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] })
 
-const Country = ({countryName, countryNameOptional, admissionInformation,internationalAdmissionInformation, universityInformation,internationalUniversityInformation, footerInformation, titleColor1, titleColor2})=> {
-    const titleStyle = {
+const Country = ({countryName, countryNameOptional,
+    admissionInformation,
+    internationalAdmissionInformation,
+    universityInformation,
+    internationalUniversityInformation,
+    footerInformation,
+    titleColor1, titleColor2,
+    AICE= ""   })=> {
+    const titleStyle = {    
         background: `linear-gradient(to bottom, ${titleColor1}, ${titleColor2})`,
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent'
@@ -19,6 +26,7 @@ const Country = ({countryName, countryNameOptional, admissionInformation,interna
         setInternational(!isInternational);
     }
 
+   
     return (
         
         <main className={`${poppins.className} flex flex-col min-h-screen`}>
@@ -32,6 +40,8 @@ const Country = ({countryName, countryNameOptional, admissionInformation,interna
                 <p id="InfoBody">{isInternational ? internationalAdmissionInformation : admissionInformation}</p>
                 <h2 id="Subtitle-Left">{countryNameOptional} <p id="gradient-sub">UNIVERSITIES</p>    </h2>
                 <p id="InfoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
+                <h2 id="Subtitle-Left">{isInternational ? (<>Studying under <p id="gradient-sub">AICE</p> </>) : ("")}</h2>
+                <p id="InfoBody">{isInternational ? AICE : ""}</p>
             </div>
 
             <div className="footer-container">
