@@ -48,3 +48,26 @@ body {
   color: black;
   background: linear-gradient(to left, #0134fe, #2575fc);
 }
+
+
+#toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 10px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  color: black;
+  background: linear-gradient(to left, #fed401, #eeff00);
+  font-weight: 900;
+}
+
+#toggle-button:hover {
+  border: 2px solid black;
+  background: black;
+  color: #fed401;
+}

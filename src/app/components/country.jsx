@@ -1,24 +1,37 @@
+"use client";
+
 import {Poppins } from 'next/font/google';
 import Link from 'next/link';
+import { useState } from 'react';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] })
 
-const Country = ({countryName, countryNameOptional, admissionInformation, universityInformation, footerInformation, titleColor1, titleColor2})=> {
+const Country = ({countryName, countryNameOptional, admissionInformation,internationalAdmissionInformation, universityInformation,internationalUniversityInformation, footerInformation, titleColor1, titleColor2})=> {
     const titleStyle = {
         background: `linear-gradient(to bottom, ${titleColor1}, ${titleColor2})`,
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent'
     };
+
+    const [isInternational, setInternational] = useState(false);
+
+    const handleToggle = () => {
+        setInternational(!isInternational);
+    }
+
     return (
         
         <main className={`${poppins.className} flex flex-col min-h-screen`}>
             <div className="flex-grow flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900">
                 <h1 id="titleCountry" style={titleStyle}>{countryName}</h1>
+                <button id="toggle-button" onClick={handleToggle}>
+                    {isInternational ? "European" : "International"}
+                </button>
                 <hr id="line"></hr>
                 <h2 id="Subtitle-Left">{countryNameOptional} <p id="gradient-sub">ADMISSION</p></h2>
-                <p id="InfoBody">{admissionInformation}</p>
+                <p id="InfoBody">{isInternational ? internationalAdmissionInformation : admissionInformation}</p>
                 <h2 id="Subtitle-Left">{countryNameOptional} <p id="gradient-sub">UNIVERSITIES</p>    </h2>
-                <p id="InfoBody">{universityInformation}</p>
+                <p id="InfoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
             </div>
 
             <div className="footer-container">
