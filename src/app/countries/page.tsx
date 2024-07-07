@@ -12,7 +12,9 @@ const Countries = () => {
         <h1 id="Title">COUNTRIES</h1>
         <h2 id="Subtitle">Find your <p id="gradient-sub">European Country</p></h2>
           <div id="country-container" className="flex space-x-4 mb-8">
+            <Link href="/countries/germany">
             <button className="country-button" data-gradient="germany">Germany</button>
+            </Link>
             <Link href="/countries/finland">
             <button className="country-button" data-gradient="finland">Finland</button>
             </Link>

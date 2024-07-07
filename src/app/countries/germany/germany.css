@@ -1,0 +1,51 @@
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: rgb(0, 0, 0);
+    margin: 0;
+  }
+  
+  #Title-Fin {
+      font-size: 75px;
+      color: rgb(0, 85, 255);
+      text-align: center;
+      margin-top: 0px;
+      background: linear-gradient(to left, #fe0101, #ffe600);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 900;
+    }
+  
+  #Subtitle-Left {
+    font-size: 45px;
+    color: white;
+    margin-top: 20px;
+    margin-left: 15px;
+    text-align: left;
+    font-weight: 800;
+  }
+  
+  
+  #InfoBody {
+    margin-left: 15px;
+    font-size: 20px;
+  }
+  
+  #footer-return-button {
+    font-size: 14px;
+    border-radius: 50px;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 0;
+    margin: -0.1px;
+    transition-duration: 0.5s;
+    font-weight: 800;
+  }
+  
+  #footer-return-button:hover {
+    border: 2px solid black;
+    color: black;
+    background: linear-gradient(to left, #0134fe, #2575fc);
+  }
