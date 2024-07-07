@@ -5,12 +5,11 @@ body {
     margin: 0;
   }
   
-  #Title-Fin {
+  #titleCountry {
       font-size: 75px;
       color: rgb(0, 85, 255);
       text-align: center;
       margin-top: 0px;
-      background: linear-gradient(to left, #fe0101, #ffe600);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
