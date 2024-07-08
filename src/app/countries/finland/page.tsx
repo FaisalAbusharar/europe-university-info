@@ -17,7 +17,11 @@ const IAI = (
     </>
 )
 
-
+const IUI = (
+    <>
+        There are many reputable Finnish universities available for international students, with the most notable being <a href="https://www.tuni.fi/en" target="_blank" id="hyperlink" rel="noopener noreferrer">Tampere University</a>, <a href="https://www.aalto.fi/en" target="_blank" id="hyperlink" rel="noopener noreferrer">Aalto University</a>, <a href="https://www.lut.fi/web/en/" target="_blank" id="hyperlink" rel="noopener noreferrer">LUT University</a>, <a href="https://www.helsinki.fi/en" id="hyperlink" target="_blank" rel="noopener noreferrer">the University of Helsinki</a>, and <a href="https://www.uef.fi/en" id="hyperlink" target="_blank" rel="noopener noreferrer">the University of Eastern Finland</a>. To pick your university, it’s recommended to use the <a href="https://www.studyinfinland.fi/universities" id="hyperlink" target="_blank" rel="noopener noreferrer">Official Finnish University Website</a>, check out the universities and their locations! Knowing the location is very important; you will need to understand the living costs, environment, climate, and available student services. Consider all of these factors before choosing your university.
+    </>
+)
 
 
 const Finland = () => {
@@ -27,7 +31,7 @@ const Finland = () => {
         admissionInformation: "Admission Info Here.",
         internationalAdmissionInformation: IAI,
         universityInformation: "University Info Here.",
-        internationalUniversityInformation: "International University Info Here.",
+        internationalUniversityInformation: IUI,
         footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         titleColor1: "#018cfe",
         titleColor2: "#eff2f3",
