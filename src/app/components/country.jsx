@@ -13,12 +13,17 @@ const Country = ({countryName, countryNameOptional,
     internationalUniversityInformation,
     footerInformation,
     titleColor1, titleColor2,
-    AICE= ""   })=> {
+    OptionalInformationTitle=<></>,
+    OptionalInformation= <></>,   })=> {
     const titleStyle = {    
         background: `linear-gradient(to bottom, ${titleColor1}, ${titleColor2})`,
         WebkitBackgroundClip: 'text',
         WebkitTextFillColor: 'transparent'
     };
+
+    const marginStyle = {
+        marginbottom: '10px'
+    }
 
     const [isInternational, setInternational] = useState(false);
 
@@ -29,8 +34,8 @@ const Country = ({countryName, countryNameOptional,
    
     return (
         
-        <main className={`${poppins.className} flex flex-col min-h-screen`}>
-            <div className="flex-grow flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900">
+        <main className={`${poppins.className} flex flex-col min-h-screen bg-gradient-to-r from-black to-gray-900`}>
+            <div  className="flex-grow flex-col items-center justify-center">
                 <h1 id="titleCountry" style={titleStyle}>{countryName}</h1>
                 <button id="toggle-button" onClick={handleToggle}>
                     {isInternational ? "European" : "International"}
@@ -40,10 +45,10 @@ const Country = ({countryName, countryNameOptional,
                 <p id="InfoBody">{isInternational ? internationalAdmissionInformation : admissionInformation}</p>
                 <h2 id="Subtitle-Left">{countryNameOptional} <p id="gradient-sub">UNIVERSITIES</p>    </h2>
                 <p id="InfoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
-                <h2 id="Subtitle-Left">{isInternational ? (<>Studying under <p id="gradient-sub">AICE</p> </>) : ("")}</h2>
-                <p id="InfoBody">{isInternational ? AICE : ""}</p>
+                <h2 id="Subtitle-Left">{isInternational ? (<>{OptionalInformationTitle}</>) : ("")}</h2>
+                <p id="InfoBody">{isInternational ? OptionalInformation : ""}</p>
             </div>
-
+            <div id="buffer"></div>
             <div className="footer-container">
                 <p id="footer">{footerInformation}
                 <br />Studying in Europe is always a good idea! But you have to know if you are able to do it!</p>
