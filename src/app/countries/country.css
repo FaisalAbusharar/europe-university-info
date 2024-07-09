@@ -20,12 +20,12 @@
     --gradient-norway-hover: linear-gradient(to right, #ff0000, #ffffff);
 }
 
-#country-container{
+#countryContainer{
     margin-top: 20px;
   }
   
 
-.country-button {
+.countryButton {
     font-size: 16px;
     border-radius: 50px;
     border: 2px solid #ffffff;
@@ -36,57 +36,57 @@
     font-weight: 800;
   }
   
-  .country-button[data-gradient="germany"] {
+  .countryButton[data-gradient="germany"] {
     background: var(--gradient-germany);
   }
   
-  .country-button[data-gradient="germany"]:hover {
+  .countryButton[data-gradient="germany"]:hover {
     border: 2px solid black;
     color: black;
     background: var(--gradient-germany-hover);
   }
   
-  .country-button[data-gradient="finland"] {
+  .countryButton[data-gradient="finland"] {
     background: var(--gradient-finland);
   }
   
-  .country-button[data-gradient="finland"]:hover {
+  .countryButton[data-gradient="finland"]:hover {
     border: 2px solid black;
     color: black;
     background: var(--gradient-finland-hover);
   }
   
-  .country-button[data-gradient="sweden"] {
+  .countryButton[data-gradient="sweden"] {
     background: var(--gradient-sweden);
   }
   
-  .country-button[data-gradient="sweden"]:hover {
+  .countryButton[data-gradient="sweden"]:hover {
     border: 2px solid black;
     color: black;
     background: var(--gradient-sweden-hover);
   }
   
-  .country-button[data-gradient="uk"] {
+  .countryButton[data-gradient="uk"] {
     background: var(--gradient-uk);
   }
   
-  .country-button[data-gradient="uk"]:hover {
+  .countryButton[data-gradient="uk"]:hover {
     border: 2px solid black;
     color: black;
     background: var(--gradient-uk-hover);
   }
   
-  .country-button[data-gradient="norway"] {
+  .countryButton[data-gradient="norway"] {
     background: var(--gradient-norway);
   }
   
-  .country-button[data-gradient="norway"]:hover {
+  .countryButton[data-gradient="norway"]:hover {
     border: 2px solid black;
     color: black;
     background: var(--gradient-norway-hover);
   } 
   
-  #footer-return-button {
+  #footerReturnButton {
     font-size: 14px;
     border-radius: 50px;
     border: 2px solid #ffffff;
@@ -98,7 +98,7 @@
     font-weight: 800;
   }
   
-  #footer-return-button:hover {
+  #footerReturnButton:hover {
     border: 2px solid black;
     color: black;
     background: linear-gradient(to left, #0134fe, #2575fc);

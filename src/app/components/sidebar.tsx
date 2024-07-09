@@ -9,7 +9,7 @@ const DarkSidebar = () => {
       <div className="flex flex-col w-64">
         {/* Sidebar Header */}
         <div className="flex items-center justify-center h-16 bg-side-bar-color text-white">
-          <h1 id="sidebar-head">EUI</h1>
+          <h1 id="sidebarHead">EUI</h1>
         </div>
         {/* Sidebar Content */}
         <div className="flex flex-col flex-grow bg-side-bar-color">
