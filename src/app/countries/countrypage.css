@@ -1,20 +1,19 @@
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(0, 0, 0);
-  margin: 0;
+/*General Text*/  
+#InfoBody  {
+    display: block;
+    margin-left: 15px;
+    font-size: 18px;
 }
-
+/* Titles */
 #titleCountry {
     font-size: 75px;
-    color: rgb(0, 85, 255);
     text-align: center;
     margin-top: 0px;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
-  }
+}
 
 #Subtitle-Left {
   font-size: 45px;
@@ -34,12 +33,8 @@ body {
   font-weight: 700;
 }
 
-#InfoBody {
-  margin-left: 15px;
-  font-size: 20px;
-  
-}
 
+/* Footer */
 #footer-return-button {
   font-size: 14px;
   border-radius: 50px;
@@ -58,7 +53,7 @@ body {
   background: linear-gradient(to left, #0134fe, #2575fc);
 }
 
-
+/* ToggleButton */
 #toggle-button {
   position: absolute;
   top: 20px;
@@ -77,6 +72,8 @@ body {
 
 #toggle-button:hover {
   border: 2px solid black;
+  background: linear-gradient(to left, #fed401, #eeff00);
   background: black;
   color: #fed401;
 }
+

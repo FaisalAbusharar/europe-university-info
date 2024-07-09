@@ -1,5 +1,5 @@
 import Country from '../../components/country';
-import './finland.css'
+import '../countrypage.css'
 
 /* Information Area */
 
@@ -23,6 +23,12 @@ const IUI = (
     </>
 )
 
+const VRR = (
+    <>
+   <p id="warning"><strong>It's recommended to check official government websites for this information and do not rely on the information here.</strong></p> Assuming you are intending to stay for over 90 days in Finland for the duration of your studies, you will have to apply for a Residence Permit, and must fulfill some basic requirements to apply. You must have a passport that exceeds the duration of the residence permit you are applying for by at least 3 months. You must provide the official letter of acceptance issued by your hosting Finnish University. You must have a copy of your completed and signed application form. You must provide proof of your financial ability to support yourself (more information in the next section). You must provide proof of having obtained valid health and medical insurance that covers your entire duration of stay in Finland.
+    </>
+)
+
 
 const Finland = () => {
     const CountryInformation = {
@@ -32,7 +38,7 @@ const Finland = () => {
         internationalAdmissionInformation: IAI,
         universityInformation: "University Info Here.",
         internationalUniversityInformation: IUI,
-        visaRequirementsRequirements: "General Visa Requirements Here.",
+        visaRequirementsRequirements: VRR,
         visaRequirementsFinancials: "Details about Financial Requirements Here.",
         visaRequirementsInsurance: "Health and Travel Insurance Information Here.",
         footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
