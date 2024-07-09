@@ -65,6 +65,13 @@ main {
   -webkit-text-fill-color: transparent; 
 }
 
+#gradient-sub-sub{
+  display: inline;
+  background: linear-gradient(to right,#004af8, rgb(3, 217, 255), rgb(0, 21, 255));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
 /* Button */
 
 #Button {

@@ -24,9 +24,6 @@ const Country = ({countryName, countryNameOptional,
         WebkitTextFillColor: 'transparent'
     };
 
-    const marginStyle = {
-        marginbottom: '10px'
-    }
 
     const [isInternational, setInternational] = useState(false);
 
@@ -54,13 +51,13 @@ const Country = ({countryName, countryNameOptional,
                 <p id="InfoBody">{isInternational ? internationalAdmissionInformation : admissionInformation}</p>
                 <h2 id="Subtitle-Left">{countryNameOptional} <p id="gradient-sub">UNIVERSITIES</p>    </h2>
                 <p id="InfoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
-                <h2 id="Subtitle-Left">{isInternational ? (<>FINNISH {<p id="gradient-sub">STUDENT VISA</p>}</>) : ("")}</h2>
-                <ul id="InfoBody">{isInternational ? (visaRequirements.map((item, index) => (<><li key={index}><p id="Subtitle-Left">VISA <span id="gradient-sub"><strong>{item.title}</strong></span></p><small id="InfoBody">{item.description}</small></li></>))) : ("")}</ul>
+                <h2 id="Subtitle-Left">{isInternational ? (<>FINNISH {<p id="gradient-sub-sub">STUDENT VISA</p>}</>) : ("")}</h2>
+                <ul id="InfoBody">{isInternational ? (visaRequirements.map((item, index) => (<><li key={index}><p id="Sub-Subtitle-Left">VISA <span id="gradient-sub-sub"><strong>{item.title}</strong></span></p><small id="InfoBody">{item.description}</small></li></>))) : ("")}</ul>
                 <h2 id="Subtitle-Left">{isInternational ? (<>{OptionalInformationTitle}</>) : ("")}</h2>
                 <p id="InfoBody">{isInternational ? OptionalInformation : ""}</p>
             </div>
             <div id="buffer"></div>
-            <div className="footer-container">
+            <div className="footer-container"> 
                 <p id="footer">{footerInformation}
                 <br />Studying in Europe is always a good idea! But you have to know if you are able to do it!</p>
             <div className="credit-container">
