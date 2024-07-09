@@ -32,6 +32,7 @@ const Finland = () => {
         internationalAdmissionInformation: IAI,
         universityInformation: "University Info Here.",
         internationalUniversityInformation: IUI,
+        interationalVisaInformation: "Visa Information Here",
         footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         titleColor1: "#018cfe",
         titleColor2: "#eff2f3",
@@ -45,7 +46,7 @@ const Finland = () => {
             admissionInformation={CountryInformation.admissionInformation} internationalAdmissionInformation={CountryInformation.internationalAdmissionInformation}
              universityInformation={CountryInformation.universityInformation} internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
             footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
-             OptionalInformation={CountryInformation.OptionalInformation} OptionalInformationTitle={CountryInformation.OptionalInformationTitle}
+             OptionalInformation={CountryInformation.OptionalInformation} OptionalInformationTitle={CountryInformation.OptionalInformationTitle} internationalVisaInformation={CountryInformation.interationalVisaInformation}
             ></Country>
         </div>
     )

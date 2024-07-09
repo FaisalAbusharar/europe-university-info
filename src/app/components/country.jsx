@@ -11,6 +11,7 @@ const Country = ({countryName, countryNameOptional,
     internationalAdmissionInformation,
     universityInformation,
     internationalUniversityInformation,
+    internationalVisaInformation,
     footerInformation,
     titleColor1, titleColor2,
     OptionalInformationTitle=<></>,
@@ -45,6 +46,8 @@ const Country = ({countryName, countryNameOptional,
                 <p id="InfoBody">{isInternational ? internationalAdmissionInformation : admissionInformation}</p>
                 <h2 id="Subtitle-Left">{countryNameOptional} <p id="gradient-sub">UNIVERSITIES</p>    </h2>
                 <p id="InfoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
+                <h2 id="Subtitle-Left">{isInternational ? (<>FINNISH {<p id="gradient-sub">STUDENT VISA</p>}</>) : ("")}</h2>
+                <p id="InfoBody">{isInternational ? internationalVisaInformation : ("")}</p>
                 <h2 id="Subtitle-Left">{isInternational ? (<>{OptionalInformationTitle}</>) : ("")}</h2>
                 <p id="InfoBody">{isInternational ? OptionalInformation : ""}</p>
             </div>
