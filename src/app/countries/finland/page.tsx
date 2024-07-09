@@ -32,7 +32,9 @@ const Finland = () => {
         internationalAdmissionInformation: IAI,
         universityInformation: "University Info Here.",
         internationalUniversityInformation: IUI,
-        interationalVisaInformation: "Visa Information Here",
+        visaRequirementsRequirements: "General Visa Requirements Here.",
+        visaRequirementsFinancials: "Details about Financial Requirements Here.",
+        visaRequirementsInsurance: "Health and Travel Insurance Information Here.",
         footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         titleColor1: "#018cfe",
         titleColor2: "#eff2f3",
@@ -44,9 +46,11 @@ const Finland = () => {
         <div>
             <Country countryName={CountryInformation.countryName} countryNameOptional={CountryInformation.countryNameOptional}
             admissionInformation={CountryInformation.admissionInformation} internationalAdmissionInformation={CountryInformation.internationalAdmissionInformation}
-             universityInformation={CountryInformation.universityInformation} internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
+            universityInformation={CountryInformation.universityInformation} internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
             footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
-             OptionalInformation={CountryInformation.OptionalInformation} OptionalInformationTitle={CountryInformation.OptionalInformationTitle} internationalVisaInformation={CountryInformation.interationalVisaInformation}
+            OptionalInformation={CountryInformation.OptionalInformation} OptionalInformationTitle={CountryInformation.OptionalInformationTitle}
+            visaRequirementsRequirements={CountryInformation.visaRequirementsRequirements} visaRequirementsFinancials={CountryInformation.visaRequirementsFinancials}
+            visaRequirementsInsurance={CountryInformation.visaRequirementsInsurance}
             ></Country>
         </div>
     )

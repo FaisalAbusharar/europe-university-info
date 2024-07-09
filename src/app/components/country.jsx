@@ -11,7 +11,9 @@ const Country = ({countryName, countryNameOptional,
     internationalAdmissionInformation,
     universityInformation,
     internationalUniversityInformation,
-    internationalVisaInformation,
+    visaRequirementsRequirements,
+    visaRequirementsFinancials,
+    visaRequirementsInsurance,
     footerInformation,
     titleColor1, titleColor2,
     OptionalInformationTitle=<></>,
@@ -32,6 +34,12 @@ const Country = ({countryName, countryNameOptional,
         setInternational(!isInternational);
     }
 
+    const visaRequirements = [
+        { title: "General Requirements", description: visaRequirementsRequirements },
+        { title: "Financial Requirements", description: visaRequirementsFinancials },
+        { title: "Insurance Requirement", description: visaRequirementsInsurance }
+      ];
+      
    
     return (
         
@@ -47,7 +55,7 @@ const Country = ({countryName, countryNameOptional,
                 <h2 id="Subtitle-Left">{countryNameOptional} <p id="gradient-sub">UNIVERSITIES</p>    </h2>
                 <p id="InfoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
                 <h2 id="Subtitle-Left">{isInternational ? (<>FINNISH {<p id="gradient-sub">STUDENT VISA</p>}</>) : ("")}</h2>
-                <p id="InfoBody">{isInternational ? internationalVisaInformation : ("")}</p>
+                <ul id="InfoBody">{isInternational ? (visaRequirements.map((item, index) => (<><li key={index}><p id="Subtitle-Left">VISA <span id="gradient-sub"><strong>{item.title}</strong></span></p><small id="InfoBody">{item.description}</small></li></>))) : ("")}</ul>
                 <h2 id="Subtitle-Left">{isInternational ? (<>{OptionalInformationTitle}</>) : ("")}</h2>
                 <p id="InfoBody">{isInternational ? OptionalInformation : ""}</p>
             </div>
