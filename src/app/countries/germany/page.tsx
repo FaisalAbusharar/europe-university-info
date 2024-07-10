@@ -17,7 +17,8 @@ const Germany = () => {
         visaRequirementsInsurance: "Health and Travel Insurance Information Here.",
         footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         titleColor1: "#fe0101",
-        titleColor2: "#ffe600"
+        titleColor2: "#ffe600",
+        whyChooseCountry: [{title: <>WHY <p id="gradientSub">GERMANY?</p></>, description: "Information Here"}]
     }
     return (
         <div>
@@ -26,7 +27,7 @@ const Germany = () => {
             universityInformation={CountryInformation.universityInformation} internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
             footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
             visaRequirementsRequirements={CountryInformation.visaRequirementsRequirements} visaRequirementsFinancials={CountryInformation.visaRequirementsFinancials}
-            visaRequirementsInsurance={CountryInformation.visaRequirementsInsurance}
+            visaRequirementsInsurance={CountryInformation.visaRequirementsInsurance} whyChooseCountry={CountryInformation.whyChooseCountry}
             ></Country>
         </div>
     )

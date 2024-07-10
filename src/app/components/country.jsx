@@ -16,8 +16,8 @@ const Country = ({countryName, countryNameOptional,
     visaRequirementsInsurance,
     footerInformation,
     titleColor1, titleColor2,
-    optionalInformationTitle=<></>,
-    optionalInformation= <></>,   })=> {
+    whyChooseCountry = [{}],
+    optionalInformation= [{}],   })=> {
     const titleStyle = {    
         background: `linear-gradient(to bottom, ${titleColor1}, ${titleColor2})`,
         WebkitBackgroundClip: 'text',
@@ -53,8 +53,10 @@ const Country = ({countryName, countryNameOptional,
                 <p id="infoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
                 <h2 id="subtitleLeft">{isInternational ? (<>FINNISH {<p id="gradientSubSub">STUDENT VISA</p>}</>) : ("")}</h2>
                 <ul id="infoBody">{isInternational ? (visaRequirements.map((item, index) => (<><li key={index}><p id="subSubTitleLeft">VISA <span id="gradientSubSub"><strong>{item.title}</strong></span></p><small id="infoBody">{item.description}</small></li></>))) : ("")}</ul>
-                <h2 id="subtitleLeft">{isInternational ? (<>{optionalInformationTitle}</>) : ("")}</h2>
-                <p id="infoBody">{isInternational ? optionalInformation : ""}</p>
+                <h2 id="subtitleLeft">{whyChooseCountry[0].title}</h2>
+                <h2 id="infoBody">{whyChooseCountry[0].description}</h2>
+                <h2 id="subtitleLeft">{isInternational ? (<>{optionalInformation[0].title}</>) : ("")}</h2>
+                <p id="infoBody">{isInternational ? optionalInformation[0].description : ""}</p>
             </div>
             <div id="buffer"></div>
             <div className="footerContainer"> 
