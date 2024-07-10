@@ -25,7 +25,13 @@ const IUI = (
 
 const VRR = (
     <>
-   <p id="warning"><strong>It's recommended to check official government websites for this information and do not rely on the information here.</strong></p> Assuming you are intending to stay for over 90 days in Finland for the duration of your studies, you will have to apply for a Residence Permit, and must fulfill some basic requirements to apply. You must have a passport that exceeds the duration of the residence permit you are applying for by at least 3 months. You must provide the official letter of acceptance issued by your hosting Finnish University. You must have a copy of your completed and signed application form. You must provide proof of your financial ability to support yourself<br></br> (<a href="#financial-requirements" id="hyperlink-insite">more information in the next section</a>). You must provide proof of having obtained valid health and medical insurance that covers your entire duration of stay in Finland.
+    <p id="warning"><strong>It's recommended to check official government websites for this information and do not rely on the information here.</strong></p> Assuming you are intending to stay for over 90 days in Finland for the duration of your studies, you will have to apply for a Residence Permit, and must fulfill some basic requirements to apply. You must have a passport that exceeds the duration of the residence permit you are applying for by at least 3 months. You must provide the official letter of acceptance issued by your hosting Finnish University. You must have a copy of your completed and signed application form. You must provide proof of your financial ability to support yourself<br></br> (<a href="#financial-requirements" id="hyperlink-insite">more information in the next section</a>). You must provide proof of having obtained valid health and medical insurance that covers your entire duration of stay in Finland.
+    </>
+)
+
+const VFR = (
+    <>
+    <p id="warning"><strong>It's recommended to check official government websites for this information and do not rely on the information here.</strong></p> At present, a student must have a minimum of EUR 560 per month for staying in Finland. This means the student must have a minimum of EUR 6720 per year for their expenses in Finland. You must provide a recent statement of your financial situation from your bank that shows you have at least EUR 6720 in your bank account. Note that students undertaking degree courses in Finland must have funds for one year at a time, and that the bank statements of an applicant’s parents or a shared or joint account will not be accepted for Finland student visa or residence permit.
     </>
 )
 
@@ -39,7 +45,7 @@ const Finland = () => {
         universityInformation: "University Info Here.",
         internationalUniversityInformation: IUI,
         visaRequirementsRequirements: VRR,
-        visaRequirementsFinancials: <div id="financial-requirements">Details about Financial Requirements Here.</div>,
+        visaRequirementsFinancials: <div id="financial-requirements">{VFR}</div>,
         visaRequirementsInsurance: "Health and Travel Insurance Information Here.",
         footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         titleColor1: "#018cfe",
