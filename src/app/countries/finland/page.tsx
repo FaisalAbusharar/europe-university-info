@@ -35,6 +35,12 @@ const VFR = (
     </>
 )
 
+const VHR = (
+    <>
+        <p id="warning"><strong>It's recommended to check official government websites for this information and do not rely on the information here.</strong></p>To obtain a residence permit for studying in Finland, international students must have health insurance covering medical expenses, hospitalization, and treatment with a minimum coverage of EUR 30,000. Private insurance meeting Finnish standards typically costs EUR 500 to EUR 1,500 annually. Documentation proving coverage is required for the application process; initial visa requires private insurance, and public health insurance through <a href="https://www.kela.fi/web/en" id="hyperlink" target="_blank" rel="noopener noreferrer">Kela</a> may be accessible post-registration. Access health insurance through international student insurance providers like <a href="https://www.axa.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">AXA</a>, <a href="https://www.allianzcare.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">Allianz Care</a>, and <a href="https://www.cignaglobal.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cigna Global</a>, university recommendations and student services, online insurance brokers such as <a href="https://www.insuremytrip.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">InsureMyTrip</a> and <a href="https://www.squaremouth.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">Squaremouth</a>, Finnish insurance companies, government resources like the Finnish Immigration Service (<a href="https://migri.fi/en/frontpage" target="_blank" rel="noopener noreferrer" id="hyperlink">Migri</a>), and student union services for additional guidance.
+    </>
+);
+
 
 const Finland = () => {
     const CountryInformation = {
@@ -46,7 +52,7 @@ const Finland = () => {
         internationalUniversityInformation: IUI,
         visaRequirementsRequirements: VRR,
         visaRequirementsFinancials: <div id="financial-requirements">{VFR}</div>,
-        visaRequirementsInsurance: "Health and Travel Insurance Information Here.",
+        visaRequirementsInsurance: VHR,
         footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         titleColor1: "#018cfe",
         titleColor2: "#eff2f3",
