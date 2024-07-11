@@ -44,7 +44,7 @@ const Country = ({countryName, countryNameOptional,
             <div  className="flex-grow flex-col items-center justify-center">
                 <h1 id="titleCountry" style={titleStyle}>{countryName}</h1>
                 <button id="toggleButton" onClick={handleToggle}>
-                    {isInternational ? "European" : "International"}
+                    {isInternational ? "Switch to European" : "Switch to International"}
                 </button>
                 <hr id="line"></hr>
                 <h2 id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
