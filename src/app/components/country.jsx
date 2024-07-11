@@ -52,7 +52,7 @@ const Country = ({countryName, countryNameOptional,
                 <p id="infoBody">{isInternational ? internationalAdmissionInformation : admissionInformation}</p>
                 <h2 id="subtitleLeft">{countryNameOptional} <p id="gradientSub">UNIVERSITIES</p>    </h2>
                 <p id="infoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
-                <h2 id="subtitleLeft">{isInternational ? <>{countryNameOptional} <p id="gradientSub">TUITIONS FEES</p></> : ("")}</h2>
+                <h2 id="subtitleLeft">{isInternational ? <>{countryNameOptional} <p id="gradientGold">TUITIONS FEES</p></> : ("")}</h2>
                 <p id="infoBody">{isInternational ? internationalUniversityFees : ("")}</p>
                 <h2 id="subtitleLeft">{isInternational ? (<>FINNISH {<p id="gradientSubSub">STUDENT VISA</p>}</>) : ("")}</h2>
                 <ul id="infoBody">{isInternational ? (visaRequirements.map((item, index) => (<><li key={index}><p id="subSubTitleLeft">VISA <span id="gradientSubSub"><strong>{item.title}</strong></span></p><small id="infoBody">{item.description}</small></li></>))) : ("")}</ul>
