@@ -57,28 +57,44 @@ main {
 }
 
 
-#gradientSub{
-  display: inline;
-  background: linear-gradient(to right,#6625fc, rgb(255, 3, 184), rgb(60, 0, 255));
+#gradientSub {
+  font-weight: bold; 
+  background: linear-gradient(to right, #6625fc, rgb(255, 3, 184), rgb(60, 0, 255));
+  background-size: 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent; 
+  animation: gradientAnimation 6s linear infinite; 
+  display: inline-block; 
 }
 
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
 #gradientGold{
-  display: inline;
-  background: linear-gradient(to bottom,#FFD700, #ffbf00);
+  font-weight: bold; 
+  background: linear-gradient(to right,#FFD700, #ffbf00, #ffa200);
+  background-size: 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent; 
+  animation: gradientAnimation 6s linear infinite; 
+  display: inline-block; 
 }
 
 #gradientSubSub{
-  display: inline;
+  font-weight: bold; 
   background: linear-gradient(to right,#004af8, rgb(3, 217, 255), rgb(0, 21, 255));
+  background-size: 300% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent; 
+  animation: gradientAnimation 6s linear infinite; 
+  display: inline-block; 
 }
 /* Button */
 

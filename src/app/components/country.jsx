@@ -2,7 +2,8 @@
 
 import {Poppins } from 'next/font/google';
 import Link from 'next/link';
-import React, { useState } from 'react';
+import '../animations.css'
+import React, { useState, useEffect } from 'react';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] })
 
@@ -32,16 +33,22 @@ const Country = ({countryName, countryNameOptional,
         setInternational(!isInternational);
     }
 
+    const [loaded, setLoaded] = useState(false);
+    useEffect(() => {
+        setLoaded(true);
+    }, []);
+
     const visaRequirements = [
         { title: "General Requirements", description: visaRequirementsRequirements },
         { title: "Financial Requirements", description: visaRequirementsFinancials },
         { title: "Insurance Requirement", description: visaRequirementsInsurance }
       ];
       
-   
+      
+
     return (
         
-        <main className={`${poppins.className} flex flex-col min-h-screen bg-gradient-to-r from-black to-gray-900`}>
+        <main className={`${poppins.className} flex flex-col min-h-screen bg-gradient-to-r from-black to-gray-900 ${loaded ? 'slide-in' : ''}`}>
             <div  className="flex-grow flex-col items-center justify-center">
                 <h1 id="titleCountry" style={titleStyle}>{countryName}</h1>
                 <button id="toggleButton" onClick={handleToggle}>
