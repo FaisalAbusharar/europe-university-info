@@ -6,21 +6,13 @@
 }
 /* Titles */
 #titleCountry {
-  font-size: 65px;
-  text-align: center;
-  margin-top: 0;
-  font-weight: 900;
-  background: linear-gradient(to bottom, #003580, #ffffff, #003580);
-  background-size: 100% 200%; /* Adjust for smooth flow */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 5s linear infinite; /* Continuous animation */
-}
-
-@keyframes gradientAnimation {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 0% 100%; }
+    font-size: 65px;
+    text-align: center;
+    margin-top: 0px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
 }
 
 #subtitleLeft {
@@ -85,3 +77,19 @@
   color: #fed401;
 }
 
+/* Disadvantage & Advantage Section */
+#subtitleCenter {
+  font-size: 40px;
+  color: white;
+  margin-top: 20px;
+  margin-left: 15px;
+  text-align: center;
+  font-weight: 800;
+}
+
+#infoCenter {
+  display: block;
+  text-align: center;
+  margin-left: 0px;
+  font-size: 17.5px;
+}

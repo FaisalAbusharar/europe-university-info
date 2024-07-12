@@ -75,7 +75,7 @@ const Finland = () => {
         visaRequirementsInsurance: visaInsuranceRequirements,
         footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         whyChooseCountry: [{title: <>WHY <p id="gradientSub">FINLAND?</p></>, description: whyChooseFinland}],
-        titleColor1: "#002f6c",
+        titleColor1: "#003580",
         titleColor2: "#ffffff",
         optionalInformation: [{title: <>Studying under <p id="gradientSub">AICE</p></>, description: aiceInformation}]
 
