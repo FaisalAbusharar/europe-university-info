@@ -61,6 +61,21 @@ const whyChooseFinland = (
 )
 
 
+const finlandAdvantages = ["High Quality of Education, with innovative teaching methods",
+    "No Tuition fees for EU/EEA Students; relatively low fees for international students",
+    "Wide range of programs, many offered in english",
+    "High quality of life with excellent public services and infrastructure",
+    "Very safe country, one of the safest",
+    "Extensive student support services",
+    "Rich cultural heritage and vibrant student life",
+    "Diverse & welcoming community for international students",
+    "Opportunities for part-time work alongside studies",
+    "High Enviromental Quality, with clean and beautiful nature",
+    "Easy travel within EU for European Students",
+    "Opportunities to build international networks & connections",
+    "Strong focus on research and development, particularly in technology"
+]
+
 
 const Finland = () => {
     const CountryInformation = {
@@ -75,6 +90,7 @@ const Finland = () => {
         visaRequirementsInsurance: visaInsuranceRequirements,
         footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         whyChooseCountry: [{title: <>WHY <p id="gradientSub">FINLAND?</p></>, description: whyChooseFinland}],
+        advantages: finlandAdvantages,
         titleColor1: "#003580",
         titleColor2: "#ffffff",
         optionalInformation: [{title: <>Studying under <p id="gradientSub">AICE</p></>, description: aiceInformation}]
@@ -87,6 +103,7 @@ const Finland = () => {
             universityInformation={CountryInformation.universityInformation} internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
             footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
             whyChooseCountry={CountryInformation.whyChooseCountry}
+            advantages={CountryInformation.advantages}
             optionalInformation={CountryInformation.optionalInformation}
             visaRequirementsRequirements={CountryInformation.visaRequirementsRequirements} visaRequirementsFinancials={CountryInformation.visaRequirementsFinancials}
             visaRequirementsInsurance={CountryInformation.visaRequirementsInsurance}

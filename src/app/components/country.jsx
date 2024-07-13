@@ -4,6 +4,7 @@ import {Poppins } from 'next/font/google';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
+
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] })
 
 const Country = ({countryName, countryNameOptional,
@@ -16,8 +17,8 @@ const Country = ({countryName, countryNameOptional,
     visaRequirementsFinancials,
     visaRequirementsInsurance,
     whyChooseCountry = [{}],
-    advantages =["This is an Advantage Place Holder", "Unstyled"],
-    disadvantages = ["This is an Disadvantage Place Holder", "Unstyled"],
+    advantages =[],
+    disadvantages = [],
     footerInformation,
     titleColor1, titleColor2,
     optionalInformation= [{}],   })=> {
@@ -49,7 +50,7 @@ const Country = ({countryName, countryNameOptional,
 
     return (
         
-        <main className={`${poppins.className} flex flex-col min-h-screen bg-gradient-to-r from-black to-gray-900 ${loaded ? 'slide-in' : ''}`}>
+        <main id="bodyContainer" className={`${poppins.className} flex flex-col min-h-screen bg-gradient-to-r from-black to-gray-900 ${loaded ? 'slide-in' : ''}`}>
             <div  className="flex-grow flex-col items-center justify-center">
                 <h1 id="titleCountry" style={titleStyle}>{countryName}</h1>
                 <button id="toggleButton" onClick={handleToggle}>
@@ -68,9 +69,10 @@ const Country = ({countryName, countryNameOptional,
                 <h2 id="infoBody">{whyChooseCountry[0].description}</h2>
 
                 {/* Advantage & Disadvantage Section */}
+            
                 <div className="flex justify-around w-full">
                     <div className="w-1/2">
-                        <h3 id="subtitleCenter">ADVANTAGES</h3>
+                        <h3 style={{color: 'lightgreen'}} id="subtitleCenter">ADVANTAGES</h3>
                         <ul id="infoCenter">
                             {advantages.map((advantage, index) => (
                                 <li key={index}>{advantage}</li>
@@ -78,7 +80,7 @@ const Country = ({countryName, countryNameOptional,
                         </ul>
                     </div>
                     <div className="w-1/2">
-                        <h3 id="subtitleCenter">DISADVANTAGES</h3>
+                        <h3 style={{color: 'red'}} id="subtitleCenter">DISADVANTAGES</h3>
                         <ul id="infoCenter">
                             {disadvantages.map((disadvantage, index) => (
                                 <li key={index}>{disadvantage}</li>
@@ -86,7 +88,7 @@ const Country = ({countryName, countryNameOptional,
                         </ul>
                     </div>
                 </div>
-
+               
 
                 <h2 id="subtitleLeft">{isInternational ? (<>{optionalInformation[0].title}</>) : ("")}</h2>
                 <p id="infoBody">{isInternational ? optionalInformation[0].description : ""}</p>
