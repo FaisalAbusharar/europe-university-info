@@ -1,11 +1,13 @@
 "use client";
 
-import {Poppins } from 'next/font/google';
+import {Poppins, Exo } from 'next/font/google';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import BackgroundAnim from '../animation/backgroundAnimationFirst';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] })
+const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] })
+
 
 const Country = ({countryName, countryNameOptional,
     admissionInformation,
@@ -54,7 +56,7 @@ const Country = ({countryName, countryNameOptional,
             <div className="relative z-10 flex-grow flex-col items-center justify-center">
                 <h1 id="titleCountry" style={titleStyle}>{countryName}</h1>
                 <button id="toggleButton" onClick={handleToggle}>
-                    {isInternational ? "Switch to European" : "Switch to International"}
+                    {isInternational ? `Switch to European {}` : "Switch to International"}
                 </button>
                 <hr id="line" />
                 <h2 id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
