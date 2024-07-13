@@ -1,19 +1,25 @@
+/* animationBackground.css */
 .area {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; 
+  }
+  
+  .circles {
+    list-style: none;
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden;
-}
-
-.circles {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    list-style: none;
     padding: 0;
     margin: 0;
-}
+  }
+  
 
+  
 .circles li {
     position: absolute;
     display: block;

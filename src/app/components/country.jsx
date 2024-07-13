@@ -93,10 +93,10 @@ const Country = ({countryName, countryNameOptional,
                     </div>
                 </div>
 
-                <div className="bg-opacity-60 w-full p-4">
+                
                     <h2 id="subtitleLeft">{isInternational ? (<>{optionalInformation[0].title}</>) : ""}</h2>
                     <p id="infoBody">{isInternational ? optionalInformation[0].description : ""}</p>
-                </div>
+        
             </div>
             <div id="buffer"></div>
             <div className="footerContainer">
