@@ -1,7 +1,7 @@
 "use client"
 import {Poppins } from 'next/font/google';
 import Link from 'next/link';
-import './animations.css'
+import './animation/animations.css'
 import { useState,useEffect } from 'react';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
