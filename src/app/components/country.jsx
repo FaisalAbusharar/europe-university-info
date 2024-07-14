@@ -53,20 +53,20 @@ const Country = ({countryName, countryNameOptional,
       return (
         <main id="background" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in' : ''}`}>
             <BackgroundAnim className="absolute inset-0 z-0" />
-            <div className={`relative z-10 flex-grow flex-col items-center justify-center`}>
-                <h1 className={poppins.className} id="titleCountry" style={titleStyle}>{countryName}</h1>
+            <div className="relative z-10 flex-grow flex-col items-center justify-center">
+                <h1 id="titleCountry" style={titleStyle}>{countryName}</h1>
                 <button id="toggleButton" onClick={handleToggle}>
                     {isInternational ? "Switch to European" : "Switch to International"}
                 </button>
                 {/*<ThemeToggle />*/}
                 <hr id="line" />
-                <h2 className={poppins.className} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
+                <h2 id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
                 <p id="infoBody">{isInternational ? internationalAdmissionInformation : admissionInformation}</p>
-                <h2 className={poppins.className} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">UNIVERSITIES</p></h2>
+                <h2 id="subtitleLeft">{countryNameOptional} <p id="gradientSub">UNIVERSITIES</p></h2>
                 <p id="infoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
-                <h2 className={poppins.className} id="subtitleLeft">{isInternational ? <>{countryNameOptional} <p id="gradientGold">TUITIONS FEES</p></> : ""}</h2>
+                <h2 id="subtitleLeft">{isInternational ? <>{countryNameOptional} <p id="gradientGold">TUITIONS FEES</p></> : ""}</h2>
                 <p id="infoBody">{isInternational ? internationalUniversityFees : ""}</p>
-                <h2 className={poppins.className} id="subtitleLeft">{isInternational ? (<>FINNISH {<p id="gradientSubSub">STUDENT VISA</p>}</>) : ""}</h2>
+                <h2 id="subtitleLeft">{isInternational ? (<>FINNISH {<p id="gradientSubSub">STUDENT VISA</p>}</>) : ""}</h2>
                 <ul id="infoBody">{isInternational ? (visaRequirements.map((item, index) => (
                     <li key={index}>
                         <p id="subSubTitleLeft">VISA <span id="gradientSubSub"><strong>{item.title}</strong></span></p>
@@ -79,7 +79,7 @@ const Country = ({countryName, countryNameOptional,
                 {/* Advantage & Disadvantage Section */}
                 <div className="flex justify-around w-full">
                     <div className="w-1/2 bg-opacity-60">
-                        <h3 className={poppins.className} style={{ color: 'lightgreen' }} id="subtitleCenter">ADVANTAGES</h3>
+                        <h3 style={{ color: 'lightgreen' }} id="subtitleCenter">ADVANTAGES</h3>
                         <ul id="infoCenter">
                             {advantages.map((advantage, index) => (
                                 <li key={index}>{advantage}</li>
@@ -87,7 +87,7 @@ const Country = ({countryName, countryNameOptional,
                         </ul>
                     </div>
                     <div className="w-1/2 bg-opacity-60">
-                        <h3 className={poppins.className} style={{ color: 'red' }} id="subtitleCenter">DISADVANTAGES</h3>
+                        <h3 style={{ color: 'red' }} id="subtitleCenter">DISADVANTAGES</h3>
                         <ul id="infoCenter">
                             {disadvantages.map((disadvantage, index) => (
                                 <li key={index}>{disadvantage}</li>
