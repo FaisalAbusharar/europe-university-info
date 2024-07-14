@@ -77,6 +77,23 @@
   color: #fed401;
 }
 
+#toggleButtonTheme { 
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 10px;
+  border: 2px solid #ffffff;
+  border-radius: 20%;
+  color: #ffffff;
+  background: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  color: black;
+  background: linear-gradient(to left, #016afe, #1500ff);
+  font-weight: 900;
+}
+
 /* Disadvantage & Advantage Section */
 #subtitleCenter {
   font-size: 40px;
@@ -90,8 +107,11 @@
 #infoCenter {
   display: block;
   font-family: 'Exo', sans-serif;
+  border:5px solid yellow;
   text-align: center;
-  margin-left: 0px;
   font-size: 17.5px;
 }
 
+#background {
+  background-color: rgb(0, 0, 0);
+}

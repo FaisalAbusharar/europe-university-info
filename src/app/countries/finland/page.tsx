@@ -61,8 +61,9 @@ const whyChooseFinland = (
 )
 
 
-const finlandAdvantages = ["High Quality of Education, with innovative teaching methods",
-    "No Tuition fees for EU/EEA Students; relatively low fees for international students",
+const finlandAdvantages = [
+    "High Quality of Education, with innovative teaching methods",
+    "No Tuition fees for EU/EEA Students; relatively low fees for internationals",
     "Wide range of programs, many offered in english",
     "High quality of life with excellent public services and infrastructure",
     "Very safe country, one of the safest",
@@ -91,6 +92,7 @@ const Finland = () => {
         footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         whyChooseCountry: [{title: <>WHY <p id="gradientSub">FINLAND?</p></>, description: whyChooseFinland}],
         advantages: finlandAdvantages,
+        disadvantages: finlandAdvantages,
         titleColor1: "#003580",
         titleColor2: "#ffffff",
         optionalInformation: [{title: <>Studying under <p id="gradientSub">AICE</p></>, description: aiceInformation}]
@@ -103,7 +105,7 @@ const Finland = () => {
             universityInformation={CountryInformation.universityInformation} internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
             footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
             whyChooseCountry={CountryInformation.whyChooseCountry}
-            advantages={CountryInformation.advantages}
+            advantages={CountryInformation.advantages} disadvantages={CountryInformation.disadvantages}
             optionalInformation={CountryInformation.optionalInformation}
             visaRequirementsRequirements={CountryInformation.visaRequirementsRequirements} visaRequirementsFinancials={CountryInformation.visaRequirementsFinancials}
             visaRequirementsInsurance={CountryInformation.visaRequirementsInsurance}
