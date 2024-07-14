@@ -15,8 +15,8 @@ const Home = () => {
   }, []);
   
   return (
-    <main className={`${poppins.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
-      <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900 ">
+    <main id="background" className={`${poppins.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
+      <div className="flex-grow flex flex-col items-center justify-center ">
         <div className="text-center mb-auto mt-8">
           <h1 id="Title" className='text-custom-gradient'>EUROPEAN UNIVERSITIES</h1>
           <h2 id="Subtitle">Find Your <p id="gradientSub">Dream European University</p></h2>
