@@ -126,6 +126,7 @@ main {
   padding: 15px;
   text-align: center;
   flex-shrink: 0;
+  z-index: 2;
 }
 
 #footer {

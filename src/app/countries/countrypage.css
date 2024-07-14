@@ -106,11 +106,28 @@
 
 #infoCenter {
   display: block;
-  border:5px solid yellow;
   text-align: center;
   font-size: 17.5px;
 }
 
 #background {
   background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(24, 1, 24));
+}
+
+
+.vertical-line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem; /* Adjust padding as needed */
+}
+
+.vertical-line {
+  width: 3px; /* Width of the vertical line */
+  height: 85%; /* Height of the vertical line */
+  margin: 0; /* Remove default margins */
+  margin-top: 80px;
+  background-color: rgb(170, 11, 255); /* Color of the vertical line */
+  border: none; /* Remove the default border */
+  padding: 0;
 }

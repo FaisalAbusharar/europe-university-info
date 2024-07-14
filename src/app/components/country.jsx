@@ -79,15 +79,21 @@ const Country = ({countryName, countryNameOptional,
                 {/* Advantage & Disadvantage Section */}
                 <div className="flex justify-around w-full">
                     <div className="w-1/2 bg-opacity-60">
-                        <h3 style={{ color: 'lightgreen' }} id="subtitleCenter">ADVANTAGES</h3>
+                        <h3 className={`${poppins.className}`} style={{ color: 'lightgreen' }} id="subtitleCenter">ADVANTAGES</h3>
                         <ul id="infoCenter">
                             {advantages.map((advantage, index) => (
                                 <li className={`${exo.className}`} key={index}>{advantage}</li>
                             ))}
                         </ul>
                     </div>
+
+                      {/* Vertical Line */}
+                    <div className="vertical-line-container">
+                        <hr className="vertical-line" />
+                    </div>
+
                     <div className="w-1/2 bg-opacity-60">
-                        <h3 style={{ color: 'red' }} id="subtitleCenter">DISADVANTAGES</h3>
+                        <h3 className={`${poppins.className}`} style={{ color: 'red' }} id="subtitleCenter">DISADVANTAGES</h3>
                         <ul id="infoCenter">
                             {disadvantages.map((disadvantage, index) => (
                                 <li className={`${exo.className}`} key={index}>{disadvantage}</li>
