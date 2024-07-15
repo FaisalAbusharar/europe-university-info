@@ -18,9 +18,11 @@ const aiceInformation = (
 
 const admissionRequirements = (
     <>
-        It's important to note that many Finnish universities require UAS entrance exams or SAT scores for admission. Students should check the specific requirements for their intended degree by visiting <a href="https://www.studyinfo.fi" target="_blank" rel="noopener noreferrer">studyinfo.fi</a> to review the admission criteria for each program. This will ensure that you meet all necessary requirements for your application.
+        Many Finnish universities of applied sciences (UAS) require UAS entrance exams or SAT scores for admission. It's essential to check the specific requirements for your intended degree by visiting <a href="https://www.studyinfo.fi" target="_blank" rel="noopener noreferrer">studyinfo.fi</a>. This will help ensure you meet all necessary criteria for your application. Most universities with English-taught programs require a SAT test and typically have minimum score requirements, so it's advisable to prepare for these exams in advance. Additionally, universities often recommend taking the UAS test, which is generally easier. Proof of English proficiency is also required, usually through IELTS or other recognized tests. Be sure to review the admission criteria for your specific program.
     </>
 );
+
+
 
 const internationalAdmissionInformationText = (
     <>
