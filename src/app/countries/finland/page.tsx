@@ -80,6 +80,14 @@ const whyChooseFinland = (
     </>
 )
 
+const RegularVSUasUni = (
+    <>
+      Universities of Applied Sciences (UAS) focus on practical and professional skills, offering programs designed in collaboration with industries. These institutions emphasize hands-on training and internships, typically providing Bachelor's and Master's degrees with shorter programs, often three to four years for a Bachelor's degree. UAS have strong connections with local businesses and industries, ensuring graduates are well-prepared for the job market.
+  
+      Regular universities, on the other hand, focus on theoretical and academic education, offering a broader range of programs including Bachelor's, Master's, and Doctoral degrees. These institutions emphasize research and academic knowledge, often requiring a longer period of study for degrees. Regular universities are research-intensive and offer opportunities for students to engage in cutting-edge research projects. Graduates from regular universities are well-equipped for both professional careers and further academic pursuits.
+    </>
+  )
+  
 
 const finlandAdvantages = [
     "High Quality of Education: Innovative teaching methods and strong academic standards.",
@@ -134,6 +142,8 @@ const Finland = () => {
         optionalInformation: [
             {title: <>Studying under <p id="gradientSub">AICE</p></>, description: aiceInformation},
             {title: <><p id="gradientSub">Important Admission Information</p></>, description: admissionRequirements},
+            {title:  <><p id="gradientSub">Regular University</p> OR <p id="gradientSubSub">University of Applied Sciences</p> </>, description: RegularVSUasUni},
+
         ]
 
     }
