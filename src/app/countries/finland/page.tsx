@@ -75,20 +75,35 @@ const whyChooseFinland = (
 
 
 const finlandAdvantages = [
-    "High Quality of Education, with innovative teaching methods",
-    "No Tuition fees for EU/EEA Students; relatively low fees for internationals",
-    "Wide range of programs, many offered in english",
-    "High quality of life with excellent public services and infrastructure",
-    "Very safe country, one of the safest",
-    "Extensive student support services",
-    "Rich cultural heritage and vibrant student life",
-    "Diverse & welcoming community for international students",
-    "Opportunities for part-time work alongside studies",
-    "High Enviromental Quality, with clean and beautiful nature",
-    "Easy travel within EU for European Students",
-    "Opportunities to build international networks & connections",
-    "Strong focus on research and development, particularly in technology"
-]
+    "High Quality of Education: Innovative teaching methods and strong academic standards.",
+    "No Tuition Fees for EU/EEA Students: Relatively low fees for international students.",
+    "Wide Range of Programs: Many courses offered in English across various fields.",
+    "Excellent Quality of Life: Comprehensive public services and infrastructure.",
+    "Very Safe Country: One of the safest places to live and study.",
+    "Extensive Student Support: Various services available to assist students.",
+    "Rich Cultural Heritage: A vibrant student life with numerous cultural events.",
+    "Diverse Community: A welcoming environment for international students.",
+    "Part-Time Work Opportunities: Ability to work while studying to support living costs.",
+    "High Environmental Quality: Access to clean nature and beautiful landscapes.",
+    "Easy Travel within the EU: Convenient travel options for European students.",
+    "Networking Opportunities: Build valuable international connections.",
+    "Strong Focus on R&D: Emphasis on research, particularly in technology sectors."
+];
+
+const finlandDisadvantages = [
+    "Cold Climate: Harsh winters can be challenging for some students to adapt to.",
+    "Higher Cost of Living: Cities like Helsinki can be more expensive than other European cities.",
+    "Limited Part-Time Job Availability: Fewer job options in specific fields or during low seasons.",
+    "Small Job Market: Potential difficulty in finding employment after graduation.",
+    "Language Barrier: While English is widely spoken, knowing Finnish or Swedish is helpful.",
+    "Long Application Process: Bureaucratic procedures can be lengthy for international students.",
+    "Cultural Adjustment: Adapting to a new lifestyle and educational norms can be challenging.",
+    "Fewer Social Activities in Winter: Less social engagement during long, cold months.",
+    "Limited Public Transport in Rural Areas: Reliance on personal transportation in less urban regions.",
+    "Higher Competition for Popular Programs: Increased competition for limited spots in sought-after courses."
+];
+
+
 
 
 const Finland = () => {
@@ -105,7 +120,7 @@ const Finland = () => {
         footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         whyChooseCountry: [{title: <>WHY <p id="gradientSub">FINLAND?</p></>, description: whyChooseFinland}],
         advantages: finlandAdvantages,
-        disadvantages: finlandAdvantages,
+        disadvantages: finlandDisadvantages,
         titleColor1: "#003580",
         titleColor2: "#ffffff",
         optionalInformation: [
