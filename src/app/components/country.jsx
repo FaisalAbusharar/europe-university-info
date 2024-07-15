@@ -4,6 +4,7 @@ import {Poppins, Exo } from 'next/font/google';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import BackgroundAnim from '../animation/backgroundAnimationFirst';
+import '../animation/animations.css'
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] })
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] })
@@ -34,10 +35,14 @@ const Country = ({countryName, countryNameOptional,
 
     const [isInternational, setInternational] = useState(false);
     const [loaded, setLoaded] = useState(false);
+    const [animation, setAnimation] = useState(true);
 
     const handleToggle = () => {
-        setInternational(!isInternational);
-        setLoaded(false);
+        setInternational(!isInternational);      
+        setAnimation(false); // Set fade to true
+        
+        // Reset fade after the animation duration
+        setTimeout(() => setAnimation(true), 600);  
     }
 
     useEffect(() => {
@@ -55,7 +60,7 @@ const Country = ({countryName, countryNameOptional,
       
 
       return (
-        <main id="background" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
+        <main id="background" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in' : ''}${animation ? 'slide-in-top' : ''}`}>
             <BackgroundAnim className="absolute inset-0 z-0" />
             <div className="relative z-10 flex-grow flex-col items-center justify-center">
                 <h1 className={`${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
