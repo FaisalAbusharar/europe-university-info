@@ -140,10 +140,11 @@ const Finland = () => {
         titleColor1: "#003580",
         titleColor2: "#ffffff",
         optionalInformation: [
-            {title: <>Studying under <p id="gradientSub">AICE</p></>, description: aiceInformation},
             {title: <><p id="gradientSub">Important Admission Information</p></>, description: admissionRequirements},
             {title:  <><p id="gradientSub">Regular University</p> OR <p id="gradientSubSub">University of Applied Sciences</p> </>, description: RegularVSUasUni},
-
+        ],
+        internationalOptionalInformation: [
+            {title: <>Studying under <p id="gradientSub">AICE</p></>, description: aiceInformation},
         ]
 
     }
@@ -156,7 +157,7 @@ const Finland = () => {
             footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
             whyChooseCountry={CountryInformation.whyChooseCountry}
             advantages={CountryInformation.advantages} disadvantages={CountryInformation.disadvantages}
-            optionalInformation={CountryInformation.optionalInformation}
+            optionalInformation={CountryInformation.optionalInformation} internationalOptionalInformation={CountryInformation.internationalOptionalInformation}
             visaRequirementsRequirements={CountryInformation.visaRequirementsRequirements} visaRequirementsFinancials={CountryInformation.visaRequirementsFinancials}
             visaRequirementsInsurance={CountryInformation.visaRequirementsInsurance}
             ></Country>

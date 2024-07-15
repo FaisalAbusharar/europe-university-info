@@ -23,7 +23,8 @@ const Country = ({countryName, countryNameOptional,
     disadvantages = ["PlaceHolder for Information here", "PlaceHolder 2"],
     footerInformation,
     titleColor1, titleColor2,
-    optionalInformation= [{}],   })=> {
+    optionalInformation= [{}],
+    internationalOptionalInformation=[{}]   })=> {
     const titleStyle = {    
         background: `linear-gradient(to bottom, ${titleColor1}, ${titleColor2})`,
         WebkitBackgroundClip: 'text',
@@ -101,12 +102,20 @@ const Country = ({countryName, countryNameOptional,
                         </ul>
                     </div>
                 </div>
-                <ul className={`${exo.className}`} id="infoBody">{isInternational ? (optionalInformation.map((item, index) => (
+                <ul className={`${exo.className}`} id="infoBody">{(optionalInformation.map((item, index) => (
                     <li key={index}>
                         <p className={`${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>
                         <small className={`${exo.className}`} id="infoBody">{item.description}</small>
                     </li>
-                ))) : ""}</ul>        
+                )))}</ul>      
+
+                <ul className={`${exo.className}`} id="infoBody">{isInternational ? (internationalOptionalInformation.map((item, index) => (
+                    <li key={index}>
+                        <p className={`${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>
+                        <small className={`${exo.className}`} id="infoBody">{item.description}</small>
+                    </li>
+                ))) : ""}</ul>   
+
             </div>
             <div id="buffer"></div>
             <div className="footerContainer">
