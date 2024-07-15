@@ -60,6 +60,11 @@ const europeanAdmissionInformation = (
     </>
 );
 
+const internationalTuitionFees = (
+    <>
+    Information Will be avaliable to download here about specific universities soon, page should redirect. The average Tuition fees for a Bachelor's program in Finland for Non-EU/EEA Students is around <p id="warning">€10,000 per year</p>, and for Master's it's roughly <p id="warning">€12,000 per year</p>.
+    </>
+)
 
 const europeanStudentsUniversities = (
     <>
@@ -114,6 +119,7 @@ const Finland = () => {
         internationalAdmissionInformation: internationalAdmissionInformationText,
         universityInformation: europeanStudentsUniversities,
         internationalUniversityInformation: internationalUniversityInformationText,
+        internationalTuitionFeesInformation: internationalTuitionFees,
         visaRequirementsRequirements: visaGeneralRequirements,
         visaRequirementsFinancials: <div id="financial-requirements">{visaFinancialRequirements}</div>,
         visaRequirementsInsurance: visaInsuranceRequirements,
@@ -125,7 +131,7 @@ const Finland = () => {
         titleColor2: "#ffffff",
         optionalInformation: [
             {title: <>Studying under <p id="gradientSub">AICE</p></>, description: aiceInformation},
-            {title: <><p id="gradientSub">Important Admission Info</p></>, description: admissionRequirements},
+            {title: <><p id="gradientSub">Important Admission Information</p></>, description: admissionRequirements},
         ]
 
     }
@@ -134,6 +140,7 @@ const Finland = () => {
             <Country countryName={CountryInformation.countryName} countryNameOptional={CountryInformation.countryNameOptional}
             admissionInformation={CountryInformation.admissionInformation} internationalAdmissionInformation={CountryInformation.internationalAdmissionInformation}
             universityInformation={CountryInformation.universityInformation} internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
+            internationalUniversityFees={CountryInformation.internationalTuitionFeesInformation}
             footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
             whyChooseCountry={CountryInformation.whyChooseCountry}
             advantages={CountryInformation.advantages} disadvantages={CountryInformation.disadvantages}
