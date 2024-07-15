@@ -66,7 +66,7 @@ const Country = ({countryName, countryNameOptional,
                 <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
                 <h2 className={`${poppins.className}`} id="subtitleLeft">{isInternational ? <>{countryNameOptional} <p id="gradientGold">TUITIONS FEES</p></> : ""}</h2>
                 <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalUniversityFees : ""}</p>
-                <h2 className={`${exo.className}`} id="subtitleLeft">{isInternational ? (<>FINNISH {<p id="gradientSubSub">STUDENT VISA</p>}</>) : ""}</h2>
+                <h2 className={`${exo.className}`} id="subtitleLeft">{isInternational ? (<>{countryNameOptional} {<p id="gradientSubSub">STUDENT VISA</p>}</>) : ""}</h2>
                 <ul className={`${exo.className}`} id="infoBody">{isInternational ? (visaRequirements.map((item, index) => (
                     <li key={index}>
                         <p className={`${exo.className}`} id="subSubTitleLeft">VISA <span id="gradientSubSub"><strong>{item.title}</strong></span></p>
@@ -101,8 +101,12 @@ const Country = ({countryName, countryNameOptional,
                         </ul>
                     </div>
                 </div>
-                    <h2 className={poppins.className} id="subtitleLeft">{isInternational ? (<>{optionalInformation[0].title}</>) : ""}</h2>
-                    <p id="infoBody">{isInternational ? optionalInformation[0].description : ""}</p>        
+                <ul className={`${exo.className}`} id="infoBody">{isInternational ? (optionalInformation.map((item, index) => (
+                    <li key={index}>
+                        <p className={`${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>
+                        <small className={`${exo.className}`} id="infoBody">{item.description}</small>
+                    </li>
+                ))) : ""}</ul>        
             </div>
             <div id="buffer"></div>
             <div className="footerContainer">

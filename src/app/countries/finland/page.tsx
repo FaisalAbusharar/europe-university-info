@@ -5,7 +5,20 @@ import '../countrypage.css'
 
 const aiceInformation = (
     <>
-        If you are studying the British Education System, then you are in luck! Finland recognizes qualifications from the British Education System, such as boards like CIE & AQA. However, grades will need to be converted to a local grading system. If you’ve studied “English as a second language” in your O levels, you likely do not need to provide an IELTS Exam For English proficiency. You will need to also provide your O level results along with your A level results, they do not have as significant an impact as A Level results, however they are an important part of your admission. A Levels are crucial. Strong performance in subjects related to your degree is highly recommended. Having other ways to prove your skills, can also be helpful in your admission, these ways include having GitHub, Professional Certificates, and letters of endorsement. In Finland, there is typically no requirement for proficiency in your Mother Tongue for admission. For UK Grade equivalency please check <a href="https://www.grb.uk.com/recruiter-research/a-level-equivalents" target="_blank" rel="noopener noreferrer" id="hyperlink">This Website</a>.
+        If you are studying the British Education System, then you are in luck! Finland recognizes qualifications from the British Education System, such as boards like CIE & AQA. However, grades will need to be converted to a local grading system. It's important to note that not all Finnish universities accept these qualifications; many require UAS entrance exams or SAT scores for admission.
+
+        If you’ve studied “English as a Second Language” in your O Levels, some Finnish universities may exempt you from providing an IELTS exam for English proficiency. However, this varies by institution, so it's essential to check the specific requirements of each university. You will need to provide your O Level results along with your A Level results; while O Level results are important, A Level results carry more weight in the admission process. Strong performance in subjects related to your intended degree is highly recommended.
+
+        Having additional ways to prove your skills can also be beneficial for your admission. These include having a GitHub portfolio, professional certificates, and letters of endorsement. Typically, there is no requirement for proficiency in your mother tongue for admission in Finland.
+
+        For UK grade equivalency, please check <a href="https://www.grb.uk.com/recruiter-research/a-level-equivalents" target="_blank" rel="noopener noreferrer" id="hyperlink">this website</a>.
+    </>
+);
+
+
+const admissionRequirements = (
+    <>
+        It's important to note that many Finnish universities require UAS entrance exams or SAT scores for admission. Students should check the specific requirements for their intended degree by visiting <a href="https://www.studyinfo.fi" target="_blank" rel="noopener noreferrer">studyinfo.fi</a> to review the admission criteria for each program. This will ensure that you meet all necessary requirements for your application.
     </>
 );
 
@@ -95,7 +108,10 @@ const Finland = () => {
         disadvantages: finlandAdvantages,
         titleColor1: "#003580",
         titleColor2: "#ffffff",
-        optionalInformation: [{title: <>Studying under <p id="gradientSub">AICE</p></>, description: aiceInformation}]
+        optionalInformation: [
+            {title: <>Studying under <p id="gradientSub">AICE</p></>, description: aiceInformation},
+            {title: <><p id="gradientSub">Important Admission Info</p></>, description: admissionRequirements},
+        ]
 
     }
     return (
