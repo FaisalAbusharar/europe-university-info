@@ -140,12 +140,12 @@ const Finland = () => {
         titleColor1: "#003580",
         titleColor2: "#ffffff",
         optionalInformation: [
-            {title: <><p id="gradientSub">Important Admission Information</p></>, description: admissionRequirements},
-            {title:  <><p id="gradientSub">Regular University</p> OR <p id="gradientSubSub">University of Applied Sciences</p> </>, description: RegularVSUasUni},
+            {title: <><span id="gradientSub">Important Admission Information</span></>, description: admissionRequirements},
+            {title:  <><span id="gradientSub">Regular University</span> OR <span id="gradientSubSub">University of Applied Sciences</span></>, description: RegularVSUasUni},
         ],
         internationalOptionalInformation: [
-            {title: <>Studying under <p id="gradientSub">AICE</p></>, description: aiceInformation},
-        ]
+            {title: <>Studying under <span id="gradientSub">AICE</span></>, description: aiceInformation},
+        ],
 
     }
     return (

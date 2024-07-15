@@ -37,11 +37,14 @@ const Country = ({countryName, countryNameOptional,
 
     const handleToggle = () => {
         setInternational(!isInternational);
+        setLoaded(false);
     }
 
     useEffect(() => {
         setLoaded(true);
     }, []);
+
+  
 
     const visaRequirements = [
         { title: "General Requirements", description: visaRequirementsRequirements },
@@ -52,7 +55,7 @@ const Country = ({countryName, countryNameOptional,
       
 
       return (
-        <main id="background" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in' : ''}`}>
+        <main id="background" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
             <BackgroundAnim className="absolute inset-0 z-0" />
             <div className="relative z-10 flex-grow flex-col items-center justify-center">
                 <h1 className={`${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
