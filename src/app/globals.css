@@ -17,7 +17,6 @@
 }
 
 /* Main */
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(24, 1, 24));
@@ -30,13 +29,11 @@ main {
   min-height: 100vh;
 }
 
-
 .bg-custom-gradient {
   background: linear-gradient(to right, #0134fe, #2575fc);
 }
 
 /* Titles */
-
 #Title {
   font-size: 75px;
   color: rgb(0, 85, 255);
@@ -56,7 +53,7 @@ main {
   font-weight: 800;
 }
 
-
+/* Gradient Texts */
 #gradientSub {
   font-weight: bold; 
   background: linear-gradient(to right, #6625fc, rgb(255, 3, 184), rgb(60, 0, 255));
@@ -68,13 +65,6 @@ main {
   display: inline-block; 
 }
 
-@keyframes gradientAnimation {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-
 #gradientButtonText {
   font-weight: bold; 
   background: linear-gradient(to right, #6625fc, rgb(255, 3, 184), rgb(60, 0, 255));
@@ -84,7 +74,7 @@ main {
   display: inline-block; 
 }
 
-#gradientGold{
+#gradientGold {
   font-weight: bold; 
   background: linear-gradient(to right,#FFD700, #ffbf00, #ffa200);
   background-size: 300% 100%;
@@ -95,7 +85,7 @@ main {
   display: inline-block; 
 }
 
-#gradientSubSub{
+#gradientSubSub {
   font-weight: bold; 
   background: linear-gradient(to right,#004af8, rgb(3, 217, 255), rgb(0, 21, 255));
   background-size: 300% 100%;
@@ -106,13 +96,19 @@ main {
   display: inline-block; 
 }
 
+/* Keyframes */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
+/* Button Container */
 #buttonContainer {
   margin-top: 50px;
 }
 
 /* Footer */
-
 .footerContainer {
   background: linear-gradient(to right, #3801fe, #6625fc);
   padding: 15px;
@@ -149,7 +145,6 @@ main {
 }
 
 /* Sidebar */
-
 #sidebarHead {
   color: #01b2fe;
   font-weight: 900;
@@ -162,16 +157,14 @@ main {
   font-weight: 900;
 }
 
-
 /* Extra Text Decoration */
-
 #hyperlink {
   position: relative;
   display: inline-block;
+  color: transparent;
   background: linear-gradient(to right, #0067f7, rgb(3, 179, 255), rgb(0, 8, 255));
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
   text-decoration: none; 
   transition: transform 0.3s ease, text-decoration 0.3s ease; 
 }
@@ -205,15 +198,16 @@ main {
   -webkit-text-fill-color: transparent;
 }
 
+/* Insite Hyperlink Style */
 #hyperlink-insite {
   position: relative;
   display: inline-block;
+  color: transparent;
   background: linear-gradient(to top, #0067f7, rgb(3, 179, 255), rgb(0, 8, 255));
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transform: scale(0.99); 
   text-decoration: none; 
+  transform: scale(0.99); 
   transition: transform 0.3s ease, text-decoration 0.3s ease; 
 }
 
@@ -226,5 +220,3 @@ main {
 #buffer {
   margin-top: 45px;
 }
-
-

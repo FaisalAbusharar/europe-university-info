@@ -1,7 +1,7 @@
 "use client";
 import { Poppins } from 'next/font/google';
 import Link from 'next/link';
-import './animation/animations.css';
+import './styles/animations.css';
 import { useState, useEffect } from 'react';
 import StyledButton from './components/buttonStyles';
 

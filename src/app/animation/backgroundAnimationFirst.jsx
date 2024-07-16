@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import './animationBackground.css';
+import '../styles/animationBackground.css'
 
 
 const BackgroundAnim = ({ children, className }) => {

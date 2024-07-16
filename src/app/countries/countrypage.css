@@ -1,18 +1,23 @@
-/*General Text*/  
-#infoBody  {
-    display: block;
-    margin-left: 15px;
-    font-size: 17.5px;
+/* General Styles */
+#infoBody {
+  display: block;
+  margin-left: 15px;
+  font-size: 17.5px;
 }
+
+#background {
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(24, 1, 24));
+}
+
 /* Titles */
 #titleCountry {
-    font-size: 65px;
-    text-align: center;
-    margin-top: 0px;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 900;
+  font-size: 65px;
+  text-align: center;
+  margin-top: 0px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
 }
 
 #subtitleLeft {
@@ -33,8 +38,34 @@
   font-weight: 700;
 }
 
+#subtitleCenter {
+  font-size: 40px;
+  color: white;
+  margin-top: 20px;
+  margin-left: 15px;
+  text-align: center;
+  font-weight: 800;
+}
 
-/* Footer */
+#infoCenter {
+  display: block;
+  text-align: center;
+  font-size: 16.4px;
+}
+
+/* Button Styles */
+.countryButton {
+  font-size: 16px;
+  border-radius: 50px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  font-weight: 800;
+}
+
+/* Footer Button */
 #footerReturnButton {
   font-size: 14px;
   border-radius: 50px;
@@ -53,7 +84,7 @@
   background: linear-gradient(to left, #0134fe, #2575fc);
 }
 
-/* ToggleButton */
+/* Toggle Buttons */
 #toggleButton {
   position: absolute;
   top: 20px;
@@ -72,12 +103,11 @@
 
 #toggleButton:hover {
   border: 2px solid black;
-  background: linear-gradient(to left, #fed401, #eeff00);
   background: black;
   color: #fed401;
 }
 
-#toggleButtonTheme { 
+#toggleButtonTheme {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -94,40 +124,25 @@
   font-weight: 900;
 }
 
-/* Disadvantage & Advantage Section */
-#subtitleCenter {
-  font-size: 40px;
-  color: white;
-  margin-top: 20px;
-  margin-left: 15px;
-  text-align: center;
-  font-weight: 800;
-}
-
-#infoCenter {
-  display: block;
-  text-align: center;
-  font-size: 16.4px;
-}
-
-#background {
-  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(24, 1, 24));
-}
-
-
+/* Vertical Line */
 .vertical-line-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem; /* Adjust padding as needed */
+  padding: 0 1rem; 
 }
 
 .vertical-line {
-  width: 3px; /* Width of the vertical line */
-  height: 85%; /* Height of the vertical line */
-  margin: 0; /* Remove default margins */
+  width: 3px; 
+  height: 85%; 
+  margin: 0; 
   margin-top: 80px;
-  background-color: rgb(170, 11, 255); /* Color of the vertical line */
-  border: none; /* Remove the default border */
+  background-color: rgb(170, 11, 255); 
+  border: none; 
   padding: 0;
+}
+
+/* Country Button Container */
+#countryContainer {
+  margin-top: 20px;
 }

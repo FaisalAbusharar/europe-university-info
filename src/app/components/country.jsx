@@ -4,7 +4,7 @@ import {Poppins, Exo } from 'next/font/google';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import BackgroundAnim from '../animation/backgroundAnimationFirst';
-import '../animation/animations.css'
+import '../styles/animations.css'
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] })
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] })

@@ -1,7 +1,7 @@
 "use client"
 import { Poppins } from 'next/font/google';
 import Link from 'next/link';
-import './country.css'
+import './countrypage.css'
 import '../styles/gradientButtonStyles.css'
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
