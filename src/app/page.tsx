@@ -26,11 +26,11 @@ const Home = () => {
         <div className="flex-grow flex flex-col" id="buttonContainer">
           <div className="flex space-x-4 mb-8">
             <Link href="/countries">
-              <StyledButton>Countries</StyledButton>
+              <StyledButton><p id="gradientButtonText">Countries</p></StyledButton>
             </Link>
-            <StyledButton>Financials</StyledButton>
-            <StyledButton>Admissions</StyledButton>
-            <StyledButton>Scholarships</StyledButton>
+            <StyledButton><p id="gradientButtonText">Finanicals</p></StyledButton>
+            <StyledButton><p id="gradientButtonText">Admissions</p></StyledButton>
+            <StyledButton><p id="gradientButtonText">Scholarships</p></StyledButton>
           </div>
         </div>
       </div>

@@ -31,10 +31,12 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
     color: isHovered ? 'white' : 'transparent',
     fontWeight: 900,
     transform: isHovered ? `rotate(${rotation}deg) scale(1.3)` : 'none',
-    WebkitBackgroundClip: isHovered ? '' : 'text',
+    WebkitBackgroundClip: isHovered ? 'padding-box' : 'text',
     backgroundClip: 'text',
     marginLeft: isHovered ? '15px' : '5px',
     marginRight: isHovered ? '15px' : '5px',
+    WebkitTextFillColor: isHovered ? 'white' : 'transparent',
+    animation: isHovered ? 'gradientAnimation 6s linear infinite' : 'none',
   };
 
   return (
@@ -47,5 +49,13 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
     </button>
   );
 };
+
+const GlobalStyles = `
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+`;
 
 export default StyledButton;
