@@ -1,0 +1,97 @@
+.button {
+    font-size: 16px;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 14px 28px;
+    cursor: pointer;
+    transition: transform 0.5s ease, border 0.5s ease, color 0.5s ease, background-color 0.5s ease, margin 0.5s ease;
+    color: transparent;
+    font-weight: 900;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-image-slice: 1; 
+  }
+  
+  /* Specific styles for each button */
+  
+  #gradientButtonTextGermany {
+    background-image: linear-gradient(to left, #fe0101, #ffe600);
+    border-image: linear-gradient(to left, #fe0101, #ffe600) 1;
+  }
+  
+  #gradientButtonTextGermany:hover {
+    border-image: linear-gradient(to left, #fe0101, #ffe600) 1; 
+    color: white;
+    transform: scale(1.3);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-image: linear-gradient(to right, #fe0101, #ffe600); 
+  }
+  
+  #gradientButtonTextFinland {
+    background-image: linear-gradient(to left, #ffffff, #003cff);
+    border-image: linear-gradient(to left, #ffffff, #003cff) 1;
+  }
+  
+  #gradientButtonTextFinland:hover {
+    border-image: linear-gradient(to left, #ffffff, #003cff) 1; 
+    color: white;
+    transform: scale(1.3);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-image: linear-gradient(to right, #ffffff, #003cff); 
+  }
+  
+  #gradientButtonTextSweden {
+    background-image: linear-gradient(to left, #f6ff00, #003cff);
+    border-image: linear-gradient(to left, #f6ff00, #003cff) 1;
+  }
+  
+  #gradientButtonTextSweden:hover {
+    border-image: linear-gradient(to left, #f6ff00, #003cff) 1; 
+    color: white;
+    transform: scale(1.3);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-image: linear-gradient(to right, #f6ff00, #003cff); 
+  }
+  
+  #gradientButtonTextUK {
+    background-image: linear-gradient(to left, #ff0000, #003cff, #ffffff);
+    border-image: linear-gradient(to left, #ff0000, #003cff, #ffffff) 1;
+  }
+  
+  #gradientButtonTextUK:hover {
+    border-image: linear-gradient(to left, #ff0000, #003cff, #ffffff) 1; 
+    color: white;
+    transform: scale(1.3);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-image: linear-gradient(to right, #ff0000, #003cff, #ffffff); 
+  }
+  
+  #gradientButtonTextNorway {
+    background-image: linear-gradient(to left, #ff0000, #ffffff);
+    border-image: linear-gradient(to left, #ff0000, #ffffff) 1;
+  }
+  
+  #gradientButtonTextNorway:hover {
+    border-image: linear-gradient(to left, #ff0000, #ffffff) 1; 
+    color: white;
+    transform: scale(1.3);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-image: linear-gradient(to right, #ff0000, #ffffff); 
+  }
+  

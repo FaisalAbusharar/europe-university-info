@@ -1,7 +1,8 @@
+"use client"
 import { Poppins } from 'next/font/google';
 import Link from 'next/link';
 import './country.css'
-
+import '../styles/gradientButtonStyles.css'
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -13,14 +14,20 @@ const Countries = () => {
         <h2 id="Subtitle">Find your <p id="gradientSub">European Country</p></h2>
           <div id="countryContainer" className="flex space-x-4 mb-8">
             <Link href="/countries/germany">
-            <button className="countryButton" data-gradient="germany">Germany</button>
+            <button className='button' id="gradientButtonTextGermany">Germany</button>
             </Link>
             <Link href="/countries/finland">
-            <button className="countryButton" data-gradient="finland">Finland</button>
+            <button className='button' id="gradientButtonTextFinland">Finland</button>
             </Link>
-            <button className="countryButton" data-gradient="sweden">Sweden</button>
-            <button className="countryButton" data-gradient="uk">United Kingdom</button>
-            <button className="countryButton" data-gradient="norway">Norway</button>
+            <Link href="/countries/sweden">
+            <button className='button' id="gradientButtonTextSweden">Sweden</button>
+            </Link>
+            <Link href="/countries/unitedkingdom">
+            <button className='button' id="gradientButtonTextUK">United Kingdom</button>
+            </Link>
+            <Link href="/countries/norway">
+            <button className='button' id="gradientButtonTextNorway">Norway</button>
+            </Link>
           </div>
       </div>
       <div className="footerContainer">

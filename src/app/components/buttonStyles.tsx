@@ -23,11 +23,13 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
   const buttonStyles = {
     fontSize: '16px',
     borderRadius: '50px',
-    border: isHovered ? '2px solid white' : '2px solid rgb(255, 255, 255)',
+    border: 'solid rgb(255, 255, 255)',
     padding: '14px 28px',
     cursor: 'pointer',
-    transition: 'transform 0.5s ease, border 0.5s ease, color 0.5s ease, background-color 20.5s ease, margin 0.5s ease',
-    backgroundImage:  'linear-gradient(to right, #6625fc, rgb(255, 3, 184))',
+    transition: 'transform 0.5s ease, border 0.5s ease, color 0.5s ease, background-color 0.5s ease, margin 0.5s ease, background-clip 0.5s ease',
+    backgroundImage: isHovered 
+    ? 'linear-gradient(to right, #6625fc, rgb(255, 3, 184))'
+    : 'transparent', // Change to transparent when not hovered
     color: isHovered ? 'white' : 'transparent',
     fontWeight: 900,
     transform: isHovered ? `rotate(${rotation}deg) scale(1.3)` : 'none',
@@ -50,12 +52,6 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
   );
 };
 
-const GlobalStyles = `
-  @keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-`;
+
 
 export default StyledButton;

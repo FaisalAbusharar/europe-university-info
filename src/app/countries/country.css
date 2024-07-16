@@ -3,22 +3,6 @@
 @tailwind utilities;
 
 
-:root {
-    --gradient-germany: linear-gradient(to left, #fe0101, #ffe600);
-    --gradient-germany-hover: linear-gradient(to left, #e9fe01, #fe0101);
-    
-    --gradient-finland: linear-gradient(to left, #ffffff, #0055ff);
-    --gradient-finland-hover: linear-gradient(to right, #ffffff, #0055ff);
-    
-    --gradient-sweden: linear-gradient(to left, #f6ff00, #0055ff);
-    --gradient-sweden-hover: linear-gradient(to right, #f6ff00, #0055ff);
-    
-    --gradient-uk: linear-gradient(to left, #ff0000, #0055ff);
-    --gradient-uk-hover: linear-gradient(to right, #ff0000, #0055ff);
-    
-    --gradient-norway: linear-gradient(to left, #ff0000, #ffffff);
-    --gradient-norway-hover: linear-gradient(to right, #ff0000, #ffffff);
-}
 
 #countryContainer{
     margin-top: 20px;
@@ -36,57 +20,9 @@
     font-weight: 800;
   }
   
-  .countryButton[data-gradient="germany"] {
-    background: var(--gradient-germany);
-  }
-  
-  .countryButton[data-gradient="germany"]:hover {
-    border: 2px solid black;
-    color: black;
-    background: var(--gradient-germany-hover);
-  }
-  
-  .countryButton[data-gradient="finland"] {
-    background: var(--gradient-finland);
-  }
-  
-  .countryButton[data-gradient="finland"]:hover {
-    border: 2px solid black;
-    color: black;
-    background: var(--gradient-finland-hover);
-  }
-  
-  .countryButton[data-gradient="sweden"] {
-    background: var(--gradient-sweden);
-  }
-  
-  .countryButton[data-gradient="sweden"]:hover {
-    border: 2px solid black;
-    color: black;
-    background: var(--gradient-sweden-hover);
-  }
-  
-  .countryButton[data-gradient="uk"] {
-    background: var(--gradient-uk);
-  }
-  
-  .countryButton[data-gradient="uk"]:hover {
-    border: 2px solid black;
-    color: black;
-    background: var(--gradient-uk-hover);
-  }
-  
-  .countryButton[data-gradient="norway"] {
-    background: var(--gradient-norway);
-  }
-  
-  .countryButton[data-gradient="norway"]:hover {
-    border: 2px solid black;
-    color: black;
-    background: var(--gradient-norway-hover);
-  } 
-  
-  #footerReturnButton {
+
+
+#footerReturnButton {
     font-size: 14px;
     border-radius: 50px;
     border: 2px solid #ffffff;
