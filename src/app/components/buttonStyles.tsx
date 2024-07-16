@@ -23,13 +23,11 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
   const buttonStyles = {
     fontSize: '16px',
     borderRadius: '50px',
-    border: isHovered ? '2px solid transparent' : '2px solid rgb(255, 255, 255)',
+    border: isHovered ? '2px solid white' : '2px solid rgb(255, 255, 255)',
     padding: '14px 28px',
     cursor: 'pointer',
     transition: 'transform 0.5s ease, border 0.5s ease, color 0.5s ease, background-color 20.5s ease, margin 0.5s ease',
-    backgroundImage: isHovered
-      ? 'linear-gradient(to right, #FFD700, #ffbf00, #ffa200)'
-      : 'linear-gradient(to right, #6625fc, rgb(255, 3, 184), rgb(60, 0, 255))',
+    backgroundImage:  'linear-gradient(to right, #6625fc, rgb(255, 3, 184))',
     color: isHovered ? 'white' : 'transparent',
     fontWeight: 900,
     transform: isHovered ? `rotate(${rotation}deg) scale(1.3)` : 'none',

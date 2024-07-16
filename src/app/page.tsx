@@ -3,7 +3,7 @@ import { Poppins } from 'next/font/google';
 import Link from 'next/link';
 import './animation/animations.css';
 import { useState, useEffect } from 'react';
-import StyledButton from './components/buttonStyles'; // Adjust the path if necessary
+import StyledButton from './components/buttonStyles';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 
