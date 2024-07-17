@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import StyledButton from './components/buttonStyles';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
-
+// Git
 const Home = () => {
   const [loaded, setLoaded] = useState(false);
 
