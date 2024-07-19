@@ -17,6 +17,11 @@ const BackgroundAnim = ({ children, className }) => {
           <li></li>
           <li></li>
           <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
         </ul>
       </div>
       {children}
