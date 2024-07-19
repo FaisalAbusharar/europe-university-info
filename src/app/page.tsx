@@ -3,10 +3,12 @@ import { Poppins } from 'next/font/google';
 import Link from 'next/link';
 import './styles/animations.css';
 import { useState, useEffect } from 'react';
+import Footer from './components/footer';
 import StyledButton from './components/buttonStyles';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
-// Git
+const footerInformation = 'The website provides information you need to be able to study in Europe, from costs to admissions and scholarships'
+const returnTextCredit = <>❤️Github <a id="Hyperlink" href="https://github.com/FaisalAbusharar/europe-uni-info">Open Source</a></>
 const Home = () => {
   const [loaded, setLoaded] = useState(false);
 
@@ -34,21 +36,11 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="footerContainer">
-        <p id="footer">
-          This website provides information you need to be able to study in Europe, from costs to admissions and scholarships!
-          <br />
-          Studying in Europe is always a good idea! But you have to know if you are able to do it!
-        </p>
-        <div className="credit-container">
-          <p id="leftCredit">Developed by Faisal Abusharar</p>
-          <p id="rightCredit">
-            ❤️Github <a id="Hyperlink" href="https://github.com/FaisalAbusharar/europe-uni-info">Open Source</a>
-          </p>
-        </div>
-      </div>
+      <Footer returnText={returnTextCredit} returnButton={false} footerInformation={footerInformation}></Footer>
     </main>
   );
 };
+
+
 
 export default Home;

@@ -3,8 +3,10 @@ import { Poppins } from 'next/font/google';
 import Link from 'next/link';
 import './countrypage.css'
 import '../styles/gradientButtonStyles.css'
+import Footer from '../components/footer';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
+const footerInformation = 'Figuring out where you want to study is pretty simple, see the costs, culture, enviorment, careers and decide!'
 
 const Countries = () => {
   return (
@@ -30,18 +32,11 @@ const Countries = () => {
             </Link>
           </div>
       </div>
-      <div className="footerContainer">
-        <p id="footer">Figuring out where you want to study is pretty simple, see the costs, culture, enviorment, careers and decide!
-          <br />Studying in Europe is always a good idea! But you have to know if you are able to do it!</p>
-        <div className="credit-container">
-          <p id="leftCredit">Developed by Faisal Abusharar</p>
-          <Link href="/">
-              <button id="footerReturnButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Return Home</button>
-            </Link>
-        </div>
-      </div>
+      <Footer returnPage='' footerInformation={footerInformation}></Footer>
     </main>
   );
 }
+
+
 
 export default Countries;

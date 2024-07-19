@@ -1,10 +1,10 @@
 "use client";
 
 import { Poppins, Exo } from 'next/font/google';
-import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import BackgroundAnim from '../animation/backgroundAnimationFirst';
 import '../styles/animations.css';
+import Footer from './footer'
 import '../styles/transitions.css';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
@@ -115,16 +115,7 @@ const Country = ({
 
       </div>
       <div id="buffer"></div>
-      <div className="footerContainer">
-        <p id="footer">{footerInformation}
-          <br />Studying in Europe is always a good idea! But you have to know if you are able to do it!</p>
-        <div className="credit-container">
-          <p id="leftCredit">Developed by Faisal Abusharar</p>
-          <Link href="/countries">
-            <button id="footerReturnButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">Go back</button>
-          </Link>
-        </div>
-      </div>
+      <Footer returnPage='countries' footerInformation={footerInformation}></Footer>
     </main>
   );
 }
