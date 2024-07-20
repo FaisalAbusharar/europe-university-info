@@ -24,6 +24,25 @@ const BackgroundAnim = ({ children, className }) => {
           <li></li>
         </ul>
       </div>
+      <div className="areaTop">
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
       {children}
     </main>
   );

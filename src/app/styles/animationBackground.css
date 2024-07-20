@@ -8,6 +8,16 @@
     overflow: hidden;
     z-index: -1; 
   }
+
+  .areaTop {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150vh;
+    overflow: hidden;
+    z-index: -1; 
+  }
   
   .circles {
     list-style: none;
