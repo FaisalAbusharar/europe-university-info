@@ -137,6 +137,24 @@ main {
   margin-bottom: 20px;
 }
 
+.successfulTitle {
+  align-items: center;
+  color: rgb(0, 255, 51);
+  margin-top: 30px;
+  position: relative;
+  text-align: center;
+  font-size: large;
+}
+
+.successfulContext {
+  align-items: center;
+  color: rgb(255, 255, 255);
+  margin-top: 30px;
+  position: relative;
+  text-align: center;
+  font-size: large;
+}
+
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
