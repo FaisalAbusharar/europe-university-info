@@ -44,6 +44,7 @@ main {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 900;
+  margin-right: 70px;
 }
 
 #Subtitle {
@@ -220,4 +221,41 @@ main {
 /* MISC */
 #buffer {
   margin-top: 45px;
+}
+
+
+/* Profile Section */
+
+#profile-button {
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 100px; /* Ensure button is same size as SVG */
+  height: 100px; /* Ensure button is same size as SVG */
+  display: flex; /* Center the SVG inside the button */
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  bottom: 2px;
+  right: 100px
+}
+
+.profile-image {
+  transition: transform 0.35s ease, color 0.35s ease; /* Smooth transition for hover effects */
+  
+}
+
+
+#profile-button:hover .profile-image {
+  transform: scale(1.3);
+  fill: lightblue; /* Change color on hover */
+}
+
+#title-container {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }

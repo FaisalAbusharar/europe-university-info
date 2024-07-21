@@ -5,6 +5,7 @@ import './styles/animations.css';
 import { useState, useEffect } from 'react';
 import Footer from './components/footer';
 import StyledButton from './components/buttonStyles';
+import Image from 'next/image'
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 const footerInformation = 'The website provides information you need to be able to study in Europe, from costs to admissions and scholarships'
@@ -20,7 +21,18 @@ const Home = () => {
     <main id="background" className={`${poppins.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
       <div className="flex-grow flex flex-col items-center justify-center">
         <div className="text-center mb-auto mt-8">
-          <h1 id="Title" className="text-custom-gradient">EUROPEAN UNIVERSITIES</h1>
+          <div id="title-container">
+            <button id='profile-button'>
+              <Image 
+              src="/profile.svg" 
+              alt="Profile" 
+              width={40} 
+              height={40} 
+              className="profile-image" 
+            />
+            </button>
+            <h1 id="Title" className="text-custom-gradient">EUROPEAN UNIVERSITIES</h1>
+          </div>
           <h2 id="Subtitle">
             Find Your <p id="gradientSub">Dream European University</p>
           </h2>
