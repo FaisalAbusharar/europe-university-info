@@ -9,3 +9,13 @@ body {
     flex-direction: column;
     min-height: 100vh;
   }
+
+
+.containerForm {
+  position: relative;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  margin-top: 350px;
+  border: solid white 5px;
+}

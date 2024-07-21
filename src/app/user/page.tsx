@@ -1,5 +1,5 @@
 
-import './userPage.css'
+import '../styles/userPage.css'
 
 const profilepage = () => {
     return (
