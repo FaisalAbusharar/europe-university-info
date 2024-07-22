@@ -2,8 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import '../../styles/userPage.css'
-import { Exo } from 'next/font/google';
-import { signIn } from 'next-auth/react';
+import { Poppins, Exo } from 'next/font/google';
 
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -32,7 +31,7 @@ const Signup: React.FC = () => {
     if (submitted) {
       // Redirect to login page after 2 seconds
       const timer = setTimeout(() => {
-        router.push('/auth/login');
+        //router.push('/auth/login');
       }, 2000);
       return () => clearTimeout(timer);
     }
@@ -44,9 +43,10 @@ const Signup: React.FC = () => {
       <p className='context'>Sign up to save important information, choose a country, learn more, and interact with others!</p>
       <div className='container'>
         {submitted ? (
-          <div className='sucessfulForm'>
-            <h1>Signup Successful!</h1>
-            <p>Redirecting to login page...</p>
+          <div className='successfulForm'>
+            <hr className='sucessfulLine'></hr>
+            <h1 className='successfulTitle'>Signup Successful!</h1>
+            <p className='successfulContext'>Redirecting to login page...</p>
           </div>
         ) : (
           <div className="containerForm">
@@ -68,10 +68,8 @@ const Signup: React.FC = () => {
                   required
                 />
               </div>
-              <button className='inputFormSubmit' type="submit">Signup</button>
+              <button className='inputFormSubmit' type="submit">SIGN UP</button>
             </form>
-            <button onClick={() => signIn('google')} className="googleSignInButton">Sign Up with Google</button>
-            {/* Apple sign-in implementation would go here */}
             {error && <p style={{ color: 'red' }}>{error}</p>}
           </div>
         )}
@@ -81,3 +79,4 @@ const Signup: React.FC = () => {
 };
 
 export default Signup;
+
