@@ -1,9 +1,11 @@
-"use client";
+"use client"
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import '../../styles/userPage.css';
+import '../../styles/userPage.css'
 import { Exo } from 'next/font/google';
 import { signIn } from 'next-auth/react';
+
+
 
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -14,37 +16,23 @@ const Signup: React.FC = () => {
   const [submitted, setSubmitted] = useState<boolean>(false);
   const router = useRouter();
 
-  const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSignup = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(''); // Reset error before new action
 
+    // Simple validation for demonstration purposes
     if (!email || !password) {
       setError('Email and password are required');
       return;
     }
 
-    try {
-      const res = await fetch('/api/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
-
-      if (res.ok) {
-        setSubmitted(true);
-      } else {
-        const data = await res.json();
-        setError(data.message);
-      }
-    } catch (error) {
-      setError('An error occurred. Please try again.');
-    }
+    
+    setSubmitted(true);
   };
 
   useEffect(() => {
     if (submitted) {
+      // Redirect to login page after 2 seconds
       const timer = setTimeout(() => {
         router.push('/auth/login');
       }, 2000);
@@ -85,6 +73,7 @@ const Signup: React.FC = () => {
               <button className='inputFormSubmit' type="submit">Signup</button>
             </form>
             <button onClick={() => signIn('google')} className="googleSignInButton">Sign Up with Google</button>
+            {/* Apple sign-in implementation would go here */}
             {error && <p style={{ color: 'red' }}>{error}</p>}
           </div>
         )}
