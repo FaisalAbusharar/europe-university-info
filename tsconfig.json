@@ -26,7 +26,7 @@
   "src/app/components/country.jsx",
    "", "src/app/components/scrollFunction.jsx",
     "src/app/components/scrollFunction.jsx",
-     "src/app/auth/login/page.jsx", "src/app/auth/signup.jsx",
+     "src/app/auth/login/page.tsx", "src/app/auth/signup.jsx",
       "src/app/user/page.jsx"],
   "exclude": ["node_modules"]
 }
