@@ -6,7 +6,6 @@ import { Exo } from 'next/font/google';
 import { signIn } from 'next-auth/react';
 
 
-
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 
 const Signup: React.FC = () => {
@@ -26,7 +25,7 @@ const Signup: React.FC = () => {
       return;
     }
 
-    
+    // Simulate successful signup
     setSubmitted(true);
   };
 
