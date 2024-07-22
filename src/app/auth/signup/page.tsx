@@ -38,7 +38,7 @@ const Signup: React.FC = () => {
   }, [submitted, router]);
 
   return (
-    <main className={`${exo.className}`}>
+    <main id="background" className={`${exo.className}`}>
       <h1 className='contextTitle'>Europe University Information</h1>
       <p className='context'>Sign up to save important information, choose a country, learn more, and interact with others!</p>
       <div className='container'>

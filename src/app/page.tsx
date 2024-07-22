@@ -18,10 +18,11 @@ const Home = () => {
   }, []);
   
   return (
-    <main id="background" className={`${poppins.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
-      <div className="flex-grow flex flex-col items-center justify-center">
+    <main className={`${poppins.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
+      <div  className="flex-grow flex flex-col items-center justify-center">
         <div className="text-center mb-auto mt-8">
           <div id="title-container">
+            <Link href='/auth/signup'>
             <button id='profile-button'>
               <Image 
               src="/profile.svg" 
@@ -31,6 +32,7 @@ const Home = () => {
               className="profile-image" 
             />
             </button>
+            </Link>
             <h1 id="Title" className="text-custom-gradient">EUROPEAN UNIVERSITIES</h1>
           </div>
           <h2 id="Subtitle">
