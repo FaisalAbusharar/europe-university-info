@@ -5,6 +5,7 @@ import './styles/animations.css';
 import { useState, useEffect } from 'react';
 import Footer from './components/footer';
 import StyledButton from './components/buttonStyles';
+import BackgroundAnim from './animation/backgroundAnimationFirst';
 import Image from 'next/image'
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
@@ -18,7 +19,8 @@ const Home = () => {
   }, []);
   
   return (
-    <main className={`${poppins.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
+    <main id='mainContainer' className={`${poppins.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
+      <BackgroundAnim objectColor={[0, 225, 250]} className="absolute inset-0 z-0">
       <div  className="flex-grow flex flex-col items-center justify-center">
         <div className="text-center mb-auto mt-8">
           <div id="title-container">
@@ -52,6 +54,7 @@ const Home = () => {
         </div>
       </div>
       <Footer returnText={returnTextCredit} returnButton={false} footerInformation={footerInformation}></Footer>
+      </BackgroundAnim>
     </main>
   );
 };
