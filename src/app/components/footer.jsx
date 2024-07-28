@@ -1,4 +1,5 @@
 import Link from "next/link"
+import '../countries/countryPage.css'
 
 const Footer = ({
     footerInformation,
@@ -9,6 +10,8 @@ const Footer = ({
     returnButton = true,
 
 }) => {
+
+
 return(
     <div className="footerContainer">
         <p id="footer">{footerInformation}

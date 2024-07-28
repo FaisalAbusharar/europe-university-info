@@ -49,7 +49,9 @@ const Home = () => {
             <StyledButton><p id="gradientButtonText">Finanicals</p></StyledButton>
             <StyledButton><p id="gradientButtonText">Admissions</p></StyledButton>
             <StyledButton><p id="gradientButtonText">Scholarships</p></StyledButton>
-            <StyledButton><p id="gradientButtonText">Language</p></StyledButton>
+            <Link href='/language'>
+              <StyledButton><p id="gradientButtonText">Language</p></StyledButton>
+            </Link>
           </div>
         </div>
       </div>
