@@ -114,6 +114,8 @@ main {
 .footerContainer {
   background: linear-gradient(to right, #3801fe, #6625fc);
   padding: 15px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   flex-shrink: 0;
   z-index: 2;
@@ -123,6 +125,8 @@ main {
   font-size: 14px;
   color: rgb(255, 255, 255);
   font-weight: 800;
+  width: 100%;
+  margin-top: auto;
   flex-grow: 1;
 }
 
