@@ -15,6 +15,15 @@ main {
   min-height: 100vh;
 }
 
+.container {
+  display: flex;
+  justify-content: center; /* Horizontally centers the child */
+  align-items: center;    /* Vertically centers the child */
+  min-height: 20vh;      /* Full viewport height */
+  margin-right: 20px;
+}
+
+
 .containerForm {
   display: flex;
   flex-direction: column;
@@ -25,7 +34,6 @@ main {
   background-color: rgb(22, 22, 22);
   width: 650px;
   border: solid rgb(39, 38, 38) 5px;
-  left: 450px;
   transition: transform 0.5s ease;
 }
 

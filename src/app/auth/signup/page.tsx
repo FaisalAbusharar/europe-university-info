@@ -1,9 +1,10 @@
-"use client";
+"use client"
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import '../../styles/userPage.css';
-import { Exo } from 'next/font/google';
-import { signIn } from 'next-auth/react';
+import '../../styles/userPage.css'
+import { Poppins, Exo } from 'next/font/google';
+import connectDb from '@/app/api/signup';
+
 
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -18,49 +19,45 @@ const Signup: React.FC = () => {
     e.preventDefault();
     setError(''); // Reset error before new action
 
+    // Simple validation for demonstration purposes
     if (!email || !password) {
       setError('Email and password are required');
       return;
     }
 
     try {
-      const res = await fetch('/api/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-      });
-
-      if (res.ok) {
-        setSubmitted(true);
-      } else {
-        const data = await res.json();
-        setError(data.message);
-      }
-    } catch (error) {
-      setError('An error occurred. Please try again.');
+      await connectDb(
+        process.env.mongoDatabaseUser, process.env.mongoDatabasePass,
+        email, password,
+        process.env.mongoDatabaseName, process.env.mongoCollectionName
+        );
+      setSubmitted(true);
+    } catch (err) {
+      setError('Failed to connect to the database.')
     }
+
   };
 
   useEffect(() => {
     if (submitted) {
+      // Redirect to login page after 2 seconds
       const timer = setTimeout(() => {
-        router.push('/auth/login');
+        //router.push('/auth/login');
       }, 2000);
       return () => clearTimeout(timer);
     }
   }, [submitted, router]);
 
   return (
-    <main className={`${exo.className}`}>
+    <main id="background" className={`${exo.className}`}>
       <h1 className='contextTitle'>Europe University Information</h1>
       <p className='context'>Sign up to save important information, choose a country, learn more, and interact with others!</p>
       <div className='container'>
         {submitted ? (
-          <div className='sucessfulForm'>
-            <h1>Signup Successful!</h1>
-            <p>Redirecting to login page...</p>
+          <div className='successfulForm'>
+            <hr className='sucessfulLine'></hr>
+            <h1 className='successfulTitle'>Signup Successful!</h1>
+            <p className='successfulContext'>Redirecting to login page...</p>
           </div>
         ) : (
           <div className="containerForm">
@@ -82,9 +79,8 @@ const Signup: React.FC = () => {
                   required
                 />
               </div>
-              <button className='inputFormSubmit' type="submit">Signup</button>
+              <button className='inputFormSubmit' type="submit">SIGN UP</button>
             </form>
-            <button onClick={() => signIn('google')} className="googleSignInButton">Sign Up with Google</button>
             {error && <p style={{ color: 'red' }}>{error}</p>}
           </div>
         )}
@@ -94,3 +90,4 @@ const Signup: React.FC = () => {
 };
 
 export default Signup;
+
