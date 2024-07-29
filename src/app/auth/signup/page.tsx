@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import '../../styles/userPage.css'
 import { Poppins, Exo } from 'next/font/google';
+import connectDb from '@/app/api/signup';
+
 
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -13,7 +15,7 @@ const Signup: React.FC = () => {
   const [submitted, setSubmitted] = useState<boolean>(false);
   const router = useRouter();
 
-  const handleSignup = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError(''); // Reset error before new action
 
@@ -23,8 +25,17 @@ const Signup: React.FC = () => {
       return;
     }
 
-    // Simulate successful signup
-    setSubmitted(true);
+    try {
+      await connectDb(
+        process.env.mongoDatabaseUser, process.env.mongoDatabasePass,
+        email, password,
+        process.env.mongoDatabaseName, process.env.mongoCollectionName
+        );
+      setSubmitted(true);
+    } catch (err) {
+      setError('Failed to connect to the database.')
+    }
+
   };
 
   useEffect(() => {
