@@ -19,7 +19,6 @@
 /* Main */
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(1, 18, 24));
   margin: 0;
 }
 
@@ -30,7 +29,7 @@ main {
 }
 
 #mainContainer {
-  background: linear-gradient(#000000, #2574fc28);
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(1, 18, 24));
 }
 
 .bg-custom-gradient {
