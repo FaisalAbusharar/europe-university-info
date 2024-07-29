@@ -5,6 +5,7 @@ import './styles/animations.css';
 import { useState, useEffect } from 'react';
 import Footer from './components/footer';
 import StyledButton from './components/buttonStyles';
+import BackgroundAnim from './animation/backgroundAnimationFirst';
 import Image from 'next/image'
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
@@ -18,10 +19,12 @@ const Home = () => {
   }, []);
   
   return (
-    <main id="background" className={`${poppins.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
-      <div className="flex-grow flex flex-col items-center justify-center">
+    <main id='mainContainer' className={`${poppins.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
+      <BackgroundAnim objectColor={[0, 225, 250]} className="absolute inset-0 z-0">
+      <div  className="flex-grow flex flex-col items-center justify-center">
         <div className="text-center mb-auto mt-8">
           <div id="title-container">
+            <Link href='/auth/signup'>
             <button id='profile-button'>
               <Image 
               src="/profile.svg" 
@@ -31,6 +34,7 @@ const Home = () => {
               className="profile-image" 
             />
             </button>
+            </Link>
             <h1 id="Title" className="text-custom-gradient">EUROPEAN UNIVERSITIES</h1>
           </div>
           <h2 id="Subtitle">
@@ -45,10 +49,14 @@ const Home = () => {
             <StyledButton><p id="gradientButtonText">Finanicals</p></StyledButton>
             <StyledButton><p id="gradientButtonText">Admissions</p></StyledButton>
             <StyledButton><p id="gradientButtonText">Scholarships</p></StyledButton>
+            <Link href='/language'>
+              <StyledButton><p id="gradientButtonText">Language</p></StyledButton>
+            </Link>
           </div>
         </div>
       </div>
       <Footer returnText={returnTextCredit} returnButton={false} footerInformation={footerInformation}></Footer>
+      </BackgroundAnim>
     </main>
   );
 };

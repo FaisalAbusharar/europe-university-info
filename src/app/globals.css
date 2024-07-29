@@ -19,7 +19,7 @@
 /* Main */
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(24, 1, 24));
+  background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(1, 18, 24));
   margin: 0;
 }
 
@@ -27,6 +27,10 @@ main {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+#mainContainer {
+  background: linear-gradient(#000000, #2574fc28);
 }
 
 .bg-custom-gradient {
@@ -114,6 +118,8 @@ main {
 .footerContainer {
   background: linear-gradient(to right, #3801fe, #6625fc);
   padding: 15px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   flex-shrink: 0;
   z-index: 2;
@@ -123,6 +129,8 @@ main {
   font-size: 14px;
   color: rgb(255, 255, 255);
   font-weight: 800;
+  width: 100%;
+  margin-top: auto;
   flex-grow: 1;
 }
 
