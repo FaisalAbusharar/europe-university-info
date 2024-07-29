@@ -46,9 +46,15 @@ const Home = () => {
             <Link href="/countries">
               <StyledButton><p id="gradientButtonText">Countries</p></StyledButton>
             </Link>
+            <Link href="/">
             <StyledButton><p id="gradientButtonText">Finanicals</p></StyledButton>
+            </Link>
+            <Link href="/">
             <StyledButton><p id="gradientButtonText">Admissions</p></StyledButton>
+            </Link>
+            <Link href='/'>
             <StyledButton><p id="gradientButtonText">Scholarships</p></StyledButton>
+            </Link>
             <Link href='/language'>
               <StyledButton><p id="gradientButtonText">Language</p></StyledButton>
             </Link>
