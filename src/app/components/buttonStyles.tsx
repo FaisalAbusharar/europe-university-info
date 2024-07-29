@@ -28,7 +28,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
     cursor: 'pointer',
     transition: 'transform 0.5s ease, border 0.5s ease, color 0.5s ease, background-color 0.5s ease, margin 0.5s ease, background-clip 0.5s ease',
     backgroundImage: isHovered 
-    ? 'linear-gradient(to right, #6625fc, rgb(255, 3, 184))'
+    ? 'linear-gradient(to right, rgb(3, 217, 255), rgb(0, 21, 255))'
     : 'transparent',
     color: isHovered ? 'white' : 'transparent',
     fontWeight: 900,

@@ -38,7 +38,7 @@ const Home = () => {
             <h1 id="Title" className="text-custom-gradient">EUROPEAN UNIVERSITIES</h1>
           </div>
           <h2 id="Subtitle">
-            Find Your <p id="gradientSub">Dream European University</p>
+            Find Your <p id="gradientSubSub">Dream European University</p>
           </h2>
         </div>
         <div className="flex-grow flex flex-col" id="buttonContainer">

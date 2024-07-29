@@ -50,7 +50,7 @@ const Country = ({
   ];
 
   return (
-    <main id="background" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in-top' : ''}`}>
+    <main id="backgroundCountry" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in-top' : ''}`}>
       <BackgroundAnim objectColor={[184, 5, 201]} className="absolute inset-0 z-0" />
       <div className={`relative z-10 flex-grow flex-col items-center justify-center ${animation ? 'fade-enter-active' : 'fade-exit-active'}`}>
         <h1 className={`${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
