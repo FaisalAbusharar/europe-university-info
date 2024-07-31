@@ -18,6 +18,8 @@ const Home = () => {
     setLoaded(true);
   }, []);
   
+  const hoverButtonColor = 'linear-gradient(to right, rgb(3, 217, 255), rgb(0, 20, 255))'
+
   return (
     <main id='mainContainer' className={`${poppins.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
       <BackgroundAnim objectColor={[0, 225, 250]} className="absolute inset-0 z-0">
@@ -44,19 +46,19 @@ const Home = () => {
         <div className="flex-grow flex flex-col" id="buttonContainer">
           <div className="flex space-x-4 mb-8">
             <Link href="/countries">
-              <StyledButton><p id="gradientButtonText">Countries</p></StyledButton>
+              <StyledButton backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Countries</p></StyledButton>
             </Link>
             <Link href="/">
-            <StyledButton><p id="gradientButtonText">Finanicals</p></StyledButton>
+            <StyledButton backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Finanicals</p></StyledButton>
             </Link>
             <Link href="/">
-            <StyledButton><p id="gradientButtonText">Admissions</p></StyledButton>
+            <StyledButton backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Admissions</p></StyledButton>
             </Link>
             <Link href='/'>
-            <StyledButton><p id="gradientButtonText">Scholarships</p></StyledButton>
+            <StyledButton backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Scholarships</p></StyledButton>
             </Link>
             <Link href='/language'>
-              <StyledButton><p id="gradientButtonText">Language</p></StyledButton>
+              <StyledButton backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Language</p></StyledButton>
             </Link>
           </div>
         </div>

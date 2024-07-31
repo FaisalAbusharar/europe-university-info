@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 
 interface StyledButtonProps {
   children: React.ReactNode;
+  backgroundHoverButtonColor: string;
 }
 
-const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
+const StyledButton: React.FC<StyledButtonProps> = ({ children , backgroundHoverButtonColor}) => {
   const [rotation, setRotation] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -28,7 +29,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
     cursor: 'pointer',
     transition: 'transform 0.5s ease, border 0.5s ease, color 0.5s ease, background-color 0.5s ease, margin 0.5s ease, background-clip 0.5s ease',
     backgroundImage: isHovered 
-    ? 'linear-gradient(to right, rgb(3, 217, 255), rgb(0, 20, 255))'
+    ? backgroundHoverButtonColor
     : 'transparent',
     color: isHovered ? 'white' : 'transparent',
     fontWeight: 900,
