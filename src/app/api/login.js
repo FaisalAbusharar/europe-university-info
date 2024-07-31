@@ -1,6 +1,6 @@
 "use server"
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const jwt = require('jsonwebtoken')
+// const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt');
 
 
@@ -8,6 +8,7 @@ const loginDatabase = async (
     mongoAuthUser, mongoAuthPass,
     user, password,
     databaseName, collectionName) => {
+
 const uri = `mongodb+srv://${mongoAuthUser}:${mongoAuthPass}@vault.wsqakcv.mongodb.net/?retryWrites=true&w=majority&appName=Vault`;
 
 const client = new MongoClient(uri, {
