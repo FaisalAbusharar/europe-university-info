@@ -1,7 +1,7 @@
 "use client"
 import { Poppins } from 'next/font/google';
 import Link from 'next/link';
-import './countrypage.css'
+import '../styles/countrypage.css'
 import '../styles/gradientButtonStyles.css'
 import Footer from '../components/footer';
 

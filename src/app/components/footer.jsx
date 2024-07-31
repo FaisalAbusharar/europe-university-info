@@ -1,5 +1,5 @@
 import Link from "next/link"
-import '../countries/countrypage.css'
+import '../styles/countrypage.css'
 
 const Footer = ({
     footerInformation,

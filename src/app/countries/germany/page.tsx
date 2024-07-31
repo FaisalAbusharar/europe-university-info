@@ -1,5 +1,5 @@
 import Country from '../../components/country';
-import '../countrypage.css'
+import '../../styles/countrypage.css'
 
 
 
