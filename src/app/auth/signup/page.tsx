@@ -26,10 +26,12 @@ const Signup: React.FC = () => {
     }
 
     try {
+      console.log(process.env.saltRounds, "........")
       await connectDb(
         process.env.mongoDatabaseUser, process.env.mongoDatabasePass,
         email, password,
-        process.env.mongoDatabaseName, process.env.mongoCollectionName
+        process.env.mongoDatabaseName, process.env.mongoCollectionName,
+        process.env.saltRounds
         );
       setSubmitted(true);
     } catch (err) {

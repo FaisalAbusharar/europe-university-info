@@ -2,12 +2,11 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 
 const bcrypt = require('bcrypt');
-const saltRounds = 10;
 
 const connectDb = async (
     mongoAuthUser, mongoAuthPass,
     user, password,
-    databaseName, collectionName) => {
+    databaseName, collectionName, saltRounds) => {
 const uri = `mongodb+srv://${mongoAuthUser}:${mongoAuthPass}@vault.wsqakcv.mongodb.net/?retryWrites=true&w=majority&appName=Vault`;
 
 const client = new MongoClient(uri, {
@@ -19,7 +18,7 @@ const client = new MongoClient(uri, {
 });
 
 const hashPassword = async (password) => {
-    return await bcrypt.hash(password, saltRounds);
+    return await bcrypt.hash(password, parseInt(saltRounds));
   };
   
 
