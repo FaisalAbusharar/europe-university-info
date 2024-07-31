@@ -33,7 +33,13 @@ const Signup: React.FC = () => {
         );
       setSubmitted(true);
     } catch (err) {
-      setError('Failed to connect to the database.')
+      if (err instanceof Error) {
+        if (err.message == "UserAlreadyExists") {
+          setError("User with this email already exists.")
+        }
+      } else {
+      setError('Unexpected Error occured.')
+      }
     }
 
   };
@@ -42,7 +48,7 @@ const Signup: React.FC = () => {
     if (submitted) {
       // Redirect to login page after 2 seconds
       const timer = setTimeout(() => {
-        //router.push('/auth/login');
+        router.push('/auth/login');
       }, 2000);
       return () => clearTimeout(timer);
     }

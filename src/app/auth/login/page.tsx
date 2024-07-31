@@ -1,8 +1,105 @@
-const Login = () => {
-    return (
-        <h1></h1>
-    )
-}
+"use client"
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import '../../styles/userPage.css'
+import { Poppins, Exo } from 'next/font/google';
+import loginDatabase from '@/app/api/login';
 
 
-export default Login
+const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
+
+const Signup: React.FC = () => {
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
+  const [error, setError] = useState<string>('');
+  const [submitted, setSubmitted] = useState<boolean>(false);
+  const router = useRouter();
+
+  const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setError(''); // Reset error before new action
+
+    // Simple validation for demonstration purposes
+    if (!email || !password) {
+      setError('Email and password are required');
+      return;
+    }
+    try {
+        const res = await loginDatabase(
+          process.env.mongoDatabaseUser, 
+          process.env.mongoDatabasePass,
+          email, 
+          password,
+          process.env.mongoDatabaseName, 
+          process.env.mongoCollectionName
+        );
+        setSubmitted(true);
+      
+      } catch (err) {
+        if (err instanceof Error) {
+          if (err.message === 'UserNotFound') {
+            setError('User not found. Please check your email and try again.');
+          } else if (err.message === 'InvalidCredentials') {
+            setError('Invalid credentials. Please check your password and try again.');
+          } else {
+            setError('Failed to connect to the database. Please try again later.');
+          }
+        } else {
+          setError('An unexpected error occurred.');
+        }
+      }
+
+  };
+
+  useEffect(() => {
+    if (submitted) {
+      // Redirect to login page after 2 seconds
+      const timer = setTimeout(() => {
+        router.push('/auth/login');
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitted, router]);
+
+  return (
+    <main id="background" className={`${exo.className}`}>
+      <h1 className='contextTitle'>Europe University Information</h1>
+      <p className='context'>Sign up to save important information, choose a country, learn more, and interact with others!</p>
+      <div className='container'>
+        {submitted ? (
+          <div className='successfulForm'>
+            <hr className='sucessfulLine'></hr>
+            <h1 className='successfulTitle'>Login Successful!</h1>
+          </div>
+        ) : (
+          <div className="containerForm">
+            <h1 className='titleForm'>LOGIN</h1>
+            <form className='form' onSubmit={handleSignup}>
+              <div className='inputsContainer'>
+                <input className='inputFormEmail'
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+                <input className='inputFormPassword'
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
+              </div>
+              <button className='inputFormSubmit' type="submit">LOGIN</button>
+            </form>
+            {error && <p style={{ color: 'red' }}>{error}</p>}
+          </div>
+        )}
+      </div>
+    </main>
+  );
+};
+
+export default Signup;
+

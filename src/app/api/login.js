@@ -1,10 +1,10 @@
 "use server"
 const { MongoClient, ServerApiVersion } = require('mongodb');
-
+const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
-const connectDb = async (
+const loginDatabase = async (
     mongoAuthUser, mongoAuthPass,
     user, password,
     databaseName, collectionName) => {
@@ -28,18 +28,34 @@ const collection = db.collection(collectionName)
 
 
   try {
+
     await client.connect();
-    const isExist = await collection.findOne({"_id": user})
-    if (isExist) {
-      throw new Error("UserAlreadyExists")
+    try {
+        const result = await collection.findOne({"_id": user})
+        if (!result) {
+            throw new Error("UserNotFound")
+        }
+        const isMatch = await bcrypt.compare(password, result.password)
+        if (!isMatch) {
+            throw new Error('InvalidCredentials');
+        }
+
+        // const token = jwt.sign({userId: user}, "SecertKeyHere", {expiresIn: '1h'})
+        return { success: true, userId: user };
+
     }
-    const result = await collection.insertOne({"_id": user, "password": await hashPassword(password)})
-    
+    catch (err) {
+        throw err
+        
+    }
+
+
   } finally {
 
     await client.close();
   }
 }
+    
 
 
-export default connectDb
+export default loginDatabase
