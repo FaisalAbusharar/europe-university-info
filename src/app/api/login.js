@@ -2,7 +2,7 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt');
-const saltRounds = 10;
+
 
 const loginDatabase = async (
     mongoAuthUser, mongoAuthPass,
@@ -18,10 +18,7 @@ const client = new MongoClient(uri, {
   }
 });
 
-const hashPassword = async (password) => {
-    return await bcrypt.hash(password, saltRounds);
-  };
-  
+
 
 const db = client.db(databaseName);
 const collection = db.collection(collectionName)
