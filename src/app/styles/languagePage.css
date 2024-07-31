@@ -1,5 +1,7 @@
 
-
+#langaugeContainer{
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(1, 18, 24));
+}
 
 #titleContainer {
     margin-top: 50px;
