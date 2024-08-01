@@ -34,7 +34,7 @@ const collection = db.collection(collectionName)
     }
 
     const isExistUser = await collection.findOne({"_id": user})
-    if (isExist) {
+    if (isExistUser) {
       throw new Error("UserAlreadyExistsUser")
     }
 

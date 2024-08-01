@@ -33,6 +33,7 @@ const Signup: React.FC = () => {
         process.env.mongoDatabaseName, process.env.mongoCollectionName,
         process.env.saltRounds
         );
+        
       setSubmitted(true);
     } catch (err) {
       if (err instanceof Error) {
