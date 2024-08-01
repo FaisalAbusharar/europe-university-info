@@ -77,8 +77,8 @@ const Signup: React.FC = () => {
             <form className='form' onSubmit={handleSignup}>
               <div className='inputsContainer'>
                 <input className='inputFormEmail'
-                  type="email"
-                  placeholder="Email"
+                  type="text"
+                  placeholder="Email/Username"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -91,7 +91,10 @@ const Signup: React.FC = () => {
                   required
                 />
               </div>
-              <button className='inputFormSubmit' type="submit">LOGIN</button>
+              <div id='optionsContainer'>
+              <button className='inputFormSubmit' type="submit">CONTINUE</button>
+              <p>Don't have an acccount? <a href='/auth/signup' id="hyperlink">Sign up!</a></p>
+              </div>
             </form>
             {error && <p style={{ color: 'red' }}>{error}</p>}
           </div>

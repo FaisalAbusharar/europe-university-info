@@ -11,6 +11,7 @@ const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 const Signup: React.FC = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const [username, setUsername] = useState<string>('')
   const [error, setError] = useState<string>('');
   const [submitted, setSubmitted] = useState<boolean>(false);
   const router = useRouter();
@@ -20,24 +21,26 @@ const Signup: React.FC = () => {
     setError(''); // Reset error before new action
 
     // Simple validation for demonstration purposes
-    if (!email || !password) {
-      setError('Email and password are required');
+    if (!email || !password || !username) {
+      setError('Fill all the input fields, all are required');
       return;
     }
 
     try {
-      console.log(process.env.saltRounds, "........")
       await connectDb(
         process.env.mongoDatabaseUser, process.env.mongoDatabasePass,
-        email, password,
+        username, email, password,
         process.env.mongoDatabaseName, process.env.mongoCollectionName,
         process.env.saltRounds
         );
       setSubmitted(true);
     } catch (err) {
       if (err instanceof Error) {
-        if (err.message == "UserAlreadyExists") {
+        if (err.message == "UserAlreadyExistsEmail") {
           setError("User with this email already exists.")
+        }
+        else if (err.message == 'UserAlreadyExistsUser') {
+          setError("This username is taken, please choose another")
         }
       } else {
       setError('Unexpected Error occured.')
@@ -71,6 +74,13 @@ const Signup: React.FC = () => {
           <div className="containerForm">
             <h1 className='titleForm'>SIGN UP</h1>
             <form className='form' onSubmit={handleSignup}>
+            <input className='inputFormEmail'
+                  type="text"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
+                />
               <div className='inputsContainer'>
                 <input className='inputFormEmail'
                   type="email"
@@ -79,7 +89,7 @@ const Signup: React.FC = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   required
                 />
-                <input className='inputFormPassword'
+                <input className='inputFormEmail'
                   type="password"
                   placeholder="Password"
                   value={password}
@@ -87,7 +97,10 @@ const Signup: React.FC = () => {
                   required
                 />
               </div>
-              <button className='inputFormSubmit' type="submit">SIGN UP</button>
+              <div id='optionsContainer'>
+              <button className='inputFormSubmit' type="submit">CONTINUE</button>
+              <p>Already have an acccount? <a href='/auth/login' id="hyperlink">Login!</a></p>
+              </div>
             </form>
             {error && <p style={{ color: 'red' }}>{error}</p>}
           </div>

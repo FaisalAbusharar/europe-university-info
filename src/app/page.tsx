@@ -26,7 +26,7 @@ const Home = () => {
       <div  className="flex-grow flex flex-col items-center justify-center">
         <div className="text-center mb-auto mt-8">
           <div id="title-container">
-            <Link href='/auth/signup'>
+            <Link href='/auth/login'>
             <button id='profile-button'>
               <Image 
               src="/profile.svg" 
