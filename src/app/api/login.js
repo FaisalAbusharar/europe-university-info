@@ -28,7 +28,7 @@ const collection = db.collection(collectionName)
 
     await client.connect();
     try {
-        const result = await collection.findOne({"_id": user})
+        const result = await collection.findOne({"_id": user}) || await collection.findOne({"email": user})
         if (!result) {
             throw new Error("UserNotFound")
         }
