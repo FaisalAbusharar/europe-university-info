@@ -38,7 +38,7 @@ const Signup: React.FC = () => {
       } catch (err) {
         if (err instanceof Error) {
           if (err.message === 'UserNotFound') {
-            setError('User not found. Please check your email and try again.');
+            setError('User not found. Please check your user/email and try again.');
           } else if (err.message === 'InvalidCredentials') {
             setError('Invalid credentials. Please check your password and try again.');
           } else {
@@ -64,7 +64,7 @@ const Signup: React.FC = () => {
   return (
     <main id="background" className={`${exo.className}`}>
       <h1 className='contextTitle'>Europe University Information</h1>
-      <p className='context'>Sign up to save important information, choose a country, learn more, and interact with others!</p>
+      <p className='context'>Login to save important information, choose a country, learn more, and interact with others!</p>
       <div className='container'>
         {submitted ? (
           <div className='successfulForm'>
