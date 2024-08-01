@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import '../../styles/userPage.css'
 import { Poppins, Exo } from 'next/font/google';
 import loginDatabase from '@/app/api/login';
+import Footer from '@/app/components/footer';
 
 
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
@@ -50,7 +51,7 @@ const Signup: React.FC = () => {
       }
 
   };
-
+  const tempSolutionFooterPosition= {top: '98.9px'}
   useEffect(() => {
     if (submitted) {
       // Redirect to login page after 2 seconds
@@ -99,6 +100,9 @@ const Signup: React.FC = () => {
             {error && <p style={{ color: 'red' }}>{error}</p>}
           </div>
         )}
+      </div>
+      <div style={tempSolutionFooterPosition} className='containerFooter'>
+      <Footer footerInformation={"EUI offers a community of people willing to help each other!"}></Footer>
       </div>
     </main>
   );
