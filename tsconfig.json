@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
+    "allowSyntheticDefaultImports": true,
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
-    "target": "es5",
+    "target": "es6",
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
     "module": "esnext",

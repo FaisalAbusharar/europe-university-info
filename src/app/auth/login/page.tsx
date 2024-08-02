@@ -4,6 +4,8 @@ import { useRouter } from 'next/navigation';
 import '../../styles/userPage.css'
 import { Poppins, Exo } from 'next/font/google';
 import loginDatabase from '@/app/api/login';
+import Cookies from 'js-cookie'
+import Footer from '@/app/components/footer';
 
 
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
@@ -33,12 +35,13 @@ const Signup: React.FC = () => {
           process.env.mongoDatabaseName, 
           process.env.mongoCollectionName
         );
+        Cookies.set('token', res, {expires: 2})
         setSubmitted(true);
       
       } catch (err) {
         if (err instanceof Error) {
           if (err.message === 'UserNotFound') {
-            setError('User not found. Please check your email and try again.');
+            setError('User not found. Please check your user/email and try again.');
           } else if (err.message === 'InvalidCredentials') {
             setError('Invalid credentials. Please check your password and try again.');
           } else {
@@ -50,12 +53,12 @@ const Signup: React.FC = () => {
       }
 
   };
-
+  const tempSolutionFooterPosition= {top: '98.9px'}
   useEffect(() => {
     if (submitted) {
       // Redirect to login page after 2 seconds
       const timer = setTimeout(() => {
-        router.push('/auth/login');
+        router.push('/user');
       }, 2000);
       return () => clearTimeout(timer);
     }
@@ -63,12 +66,11 @@ const Signup: React.FC = () => {
 
   return (
     <main id="background" className={`${exo.className}`}>
-      <h1 className='contextTitle'>Europe University Information</h1>
-      <p className='context'>Sign up to save important information, choose a country, learn more, and interact with others!</p>
+      {submitted ? <></> : <h1 className='contextTitle'>Europe University Information</h1>}
+      {submitted ? <></> : <p className='context'>Login to save important information, choose a country, learn more, and interact with others!</p>}
       <div className='container'>
         {submitted ? (
           <div className='successfulForm'>
-            <hr className='sucessfulLine'></hr>
             <h1 className='successfulTitle'>Login Successful!</h1>
           </div>
         ) : (
@@ -77,8 +79,8 @@ const Signup: React.FC = () => {
             <form className='form' onSubmit={handleSignup}>
               <div className='inputsContainer'>
                 <input className='inputFormEmail'
-                  type="email"
-                  placeholder="Email"
+                  type="text"
+                  placeholder="Email/Username"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -91,11 +93,17 @@ const Signup: React.FC = () => {
                   required
                 />
               </div>
-              <button className='inputFormSubmit' type="submit">LOGIN</button>
+              <div id='optionsContainer'>
+              <button className='inputFormSubmit' type="submit">CONTINUE</button>
+              <p>Don't have an acccount? <a href='/auth/signup' id="hyperlink">Sign up!</a></p>
+              </div>
             </form>
             {error && <p style={{ color: 'red' }}>{error}</p>}
           </div>
         )}
+      </div>
+      <div style={tempSolutionFooterPosition} className='containerFooter'>
+      {/*submitted ? <></>: <Footer footerInformation={"EUI offers a community of people willing to help each other!"}></Footer> */}
       </div>
     </main>
   );

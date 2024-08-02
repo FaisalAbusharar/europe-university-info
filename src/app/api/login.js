@@ -2,6 +2,7 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt');
+import { generateToken } from '../lib/jwt';
 
 
 const loginDatabase = async (
@@ -37,8 +38,10 @@ const collection = db.collection(collectionName)
             throw new Error('InvalidCredentials');
         }
 
-        // const token = jwt.sign({userId: user}, "SecertKeyHere", {expiresIn: '1h'})
-        return { success: true, userId: user };
+       const token = generateToken(result, '5h');
+
+
+       return token
 
     }
     catch (err) {
