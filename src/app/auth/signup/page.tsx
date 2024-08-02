@@ -112,7 +112,7 @@ const Signup: React.FC = () => {
         )}
       </div>
       <div style={tempSolutionFooterPosition} className='containerFooter'>
-      {submitted ? <></>: <Footer footerInformation={"EUI offers a community of people willing to help each other!"}></Footer> }
+            {/*submitted ? <></>: <Footer footerInformation={"EUI offers a community of people willing to help each other!"}></Footer> */}
       </div>
     </main>
   );

@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import '../../styles/userPage.css'
 import { Poppins, Exo } from 'next/font/google';
 import loginDatabase from '@/app/api/login';
+import Cookies from 'js-cookie'
 import Footer from '@/app/components/footer';
 
 
@@ -34,6 +35,7 @@ const Signup: React.FC = () => {
           process.env.mongoDatabaseName, 
           process.env.mongoCollectionName
         );
+        Cookies.set('token', res, {expires: 2})
         setSubmitted(true);
       
       } catch (err) {
@@ -101,7 +103,7 @@ const Signup: React.FC = () => {
         )}
       </div>
       <div style={tempSolutionFooterPosition} className='containerFooter'>
-      {submitted ? <></>: <Footer footerInformation={"EUI offers a community of people willing to help each other!"}></Footer> }
+      {/*submitted ? <></>: <Footer footerInformation={"EUI offers a community of people willing to help each other!"}></Footer> */}
       </div>
     </main>
   );
