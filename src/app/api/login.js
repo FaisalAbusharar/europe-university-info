@@ -38,7 +38,7 @@ const collection = db.collection(collectionName)
             throw new Error('InvalidCredentials');
         }
 
-       const token = generateToken(user, '5h');
+       const token = generateToken(result, '5h');
 
 
        return token
