@@ -58,7 +58,7 @@ const Signup: React.FC = () => {
     if (submitted) {
       // Redirect to login page after 2 seconds
       const timer = setTimeout(() => {
-        router.push('/auth/login');
+        router.push('/user');
       }, 2000);
       return () => clearTimeout(timer);
     }

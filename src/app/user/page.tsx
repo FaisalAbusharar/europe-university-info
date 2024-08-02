@@ -1,8 +1,9 @@
-"use client"
+"use client";
 import { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
-import {jwtDecode} from 'jwt-decode';  // Ensure this import works
+import {jwtDecode} from 'jwt-decode';
 import '../styles/userPage.css';
+import { useRouter } from 'next/navigation';
 
 interface JwtPayload {
   email?: string;
@@ -13,16 +14,14 @@ interface JwtPayload {
 const ProfilePage = () => {
   const [token, setToken] = useState<string | null>(null);
   const [userInfo, setUserInfo] = useState<JwtPayload | null>(null);
+  const router = useRouter();
 
   useEffect(() => {
     const existingToken = Cookies.get('token');
-    console.log('Retrieved token:', existingToken);
     if (existingToken) {
       setToken(existingToken);
       try {
         const decodedToken = jwtDecode<JwtPayload>(existingToken);
-        console.log(decodedToken + "<----")
-        console.log('Decoded token:', decodedToken);
         setUserInfo(decodedToken);
       } catch (error) {
         console.error('Failed to decode token:', error);
@@ -30,19 +29,19 @@ const ProfilePage = () => {
       }
     } else {
       console.log('No token cookie found');
+      router.push('/auth/login'); // Redirect if no token is found
     }
-  }, []);
+  }, [router]);
 
   return (
     <main id='background'>
-      <h1 id="Title">Your Profile</h1>
+      <h1 id="Title">Welcome, {userInfo?.username}</h1>
       {token ? (
         <div>
-          <p>Logged in with token: {token}</p>
+          {/*<p>Logged in with token: {token}</p>*/}
           {userInfo ? (
             <div>
-              <p>Email: {userInfo.email}</p>
-              <p>Username: {userInfo.id}</p>
+              <p>Your Email: {userInfo.email}</p>
               {/* Render other user info as necessary */}
             </div>
           ) : (
@@ -50,7 +49,7 @@ const ProfilePage = () => {
           )}
         </div>
       ) : (
-        <p>No token found. Please log in.</p>
+        <p>Redirecting to login...</p>
       )}
     </main>
   );
