@@ -1,14 +1,14 @@
 "use server"
 const { MongoClient, ServerApiVersion } = require('mongodb');
-// const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt');
+import { generateToken } from '../lib/jwt';
 
 
 const loginDatabase = async (
     mongoAuthUser, mongoAuthPass,
     user, password,
     databaseName, collectionName) => {
-
 const uri = `mongodb+srv://${mongoAuthUser}:${mongoAuthPass}@vault.wsqakcv.mongodb.net/?retryWrites=true&w=majority&appName=Vault`;
 
 const client = new MongoClient(uri, {
@@ -29,7 +29,7 @@ const collection = db.collection(collectionName)
 
     await client.connect();
     try {
-        const result = await collection.findOne({"_id": user})
+        const result = await collection.findOne({"_id": user}) || await collection.findOne({"email": user})
         if (!result) {
             throw new Error("UserNotFound")
         }
@@ -38,8 +38,10 @@ const collection = db.collection(collectionName)
             throw new Error('InvalidCredentials');
         }
 
-        // const token = jwt.sign({userId: user}, "SecertKeyHere", {expiresIn: '1h'})
-        return { success: true, userId: user };
+       const token = generateToken(result, '5h');
+
+
+       return token
 
     }
     catch (err) {

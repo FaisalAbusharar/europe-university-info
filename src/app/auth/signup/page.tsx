@@ -34,6 +34,7 @@ const Signup: React.FC = () => {
         process.env.mongoDatabaseName, process.env.mongoCollectionName,
         process.env.saltRounds
         );
+        
       setSubmitted(true);
     } catch (err) {
       if (err instanceof Error) {
@@ -66,12 +67,11 @@ const Signup: React.FC = () => {
 
   return (
     <main id="background" className={`${exo.className}`}>
-      <h1 className='contextTitle'>Europe University Information</h1>
-      <p className='context'>Sign up to save important information, choose a country, learn more, and interact with others!</p>
+       {submitted ? <></> : <h1 className='contextTitle'>Europe University Information</h1>}
+       {submitted ? <></> : <p className='context'>Login to save important information, choose a country, learn more, and interact with others!</p>}
       <div className='container'>
         {submitted ? (
           <div className='successfulForm'>
-            <hr className='sucessfulLine'></hr>
             <h1 className='successfulTitle'>Signup Successful!</h1>
             <p className='successfulContext'>Redirecting to login page...</p>
           </div>
@@ -112,7 +112,7 @@ const Signup: React.FC = () => {
         )}
       </div>
       <div style={tempSolutionFooterPosition} className='containerFooter'>
-      <Footer footerInformation={"EUI offers a community of people willing to help each other!"}></Footer>
+            {/*submitted ? <></>: <Footer footerInformation={"EUI offers a community of people willing to help each other!"}></Footer> */}
       </div>
     </main>
   );

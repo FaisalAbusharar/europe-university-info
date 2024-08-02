@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 
 const connectDb = async (
     mongoAuthUser, mongoAuthPass,
-    user, password,
+    user, email, password,
     databaseName, collectionName, saltRounds) => {
 const uri = `mongodb+srv://${mongoAuthUser}:${mongoAuthPass}@vault.wsqakcv.mongodb.net/?retryWrites=true&w=majority&appName=Vault`;
 
@@ -28,11 +28,17 @@ const collection = db.collection(collectionName)
 
   try {
     await client.connect();
-    const isExist = await collection.findOne({"_id": user})
+    const isExist = await collection.findOne({"email": email})
     if (isExist) {
-      throw new Error("UserAlreadyExists")
+      throw new Error("UserAlreadyExistsEmail")
     }
-    const result = await collection.insertOne({"_id": user, "password": await hashPassword(password)})
+
+    const isExistUser = await collection.findOne({"_id": user})
+    if (isExistUser) {
+      throw new Error("UserAlreadyExistsUser")
+    }
+
+    const result = await collection.insertOne({"_id": user, "email": email, "password": await hashPassword(password)})
     
   } finally {
 

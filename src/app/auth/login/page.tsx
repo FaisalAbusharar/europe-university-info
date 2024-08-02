@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import '../../styles/userPage.css'
 import { Poppins, Exo } from 'next/font/google';
 import loginDatabase from '@/app/api/login';
+import Cookies from 'js-cookie'
 import Footer from '@/app/components/footer';
 
 
@@ -34,6 +35,7 @@ const Signup: React.FC = () => {
           process.env.mongoDatabaseName, 
           process.env.mongoCollectionName
         );
+        Cookies.set('token', res, {expires: 2})
         setSubmitted(true);
       
       } catch (err) {
@@ -56,7 +58,7 @@ const Signup: React.FC = () => {
     if (submitted) {
       // Redirect to login page after 2 seconds
       const timer = setTimeout(() => {
-        router.push('/auth/login');
+        router.push('/user');
       }, 2000);
       return () => clearTimeout(timer);
     }
@@ -64,12 +66,11 @@ const Signup: React.FC = () => {
 
   return (
     <main id="background" className={`${exo.className}`}>
-      <h1 className='contextTitle'>Europe University Information</h1>
-      <p className='context'>Login to save important information, choose a country, learn more, and interact with others!</p>
+      {submitted ? <></> : <h1 className='contextTitle'>Europe University Information</h1>}
+      {submitted ? <></> : <p className='context'>Login to save important information, choose a country, learn more, and interact with others!</p>}
       <div className='container'>
         {submitted ? (
           <div className='successfulForm'>
-            <hr className='sucessfulLine'></hr>
             <h1 className='successfulTitle'>Login Successful!</h1>
           </div>
         ) : (
@@ -102,7 +103,7 @@ const Signup: React.FC = () => {
         )}
       </div>
       <div style={tempSolutionFooterPosition} className='containerFooter'>
-      <Footer footerInformation={"EUI offers a community of people willing to help each other!"}></Footer>
+      {/*submitted ? <></>: <Footer footerInformation={"EUI offers a community of people willing to help each other!"}></Footer> */}
       </div>
     </main>
   );
