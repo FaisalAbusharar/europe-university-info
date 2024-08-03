@@ -41,7 +41,7 @@ const ProfilePage = () => {
           {/*<p>Logged in with token: {token}</p>*/}
           {userInfo ? (
             <div>
-              <p>Your Email: {userInfo.email}</p>
+              <p id='Subtitle'>Your Email: {userInfo.email}</p>
               {/* Render other user info as necessary */}
             </div>
           ) : (

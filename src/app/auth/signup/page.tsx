@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import '../../styles/userPage.css'
+import '../../styles/authPage.css'
 import { Poppins, Exo } from 'next/font/google';
 import connectDb from '@/app/api/signup';
 import Footer from '@/app/components/footer';
