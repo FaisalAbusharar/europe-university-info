@@ -1,0 +1,22 @@
+
+#background {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom, rgb(38, 38, 38), rgb(35, 35, 35));
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+  
+#titleContainer {
+    align-items: center;
+    align-self: center;
+}  
+  
+.container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the child */
+    align-items: center;    /* Vertically centers the child */
+    min-height: 20vh;      /* Full viewport height */
+  }

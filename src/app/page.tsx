@@ -51,7 +51,7 @@ const Home = () => {
             <Link href="/">
             <StyledButton backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Finanicals</p></StyledButton>
             </Link>
-            <Link href="/">
+            <Link href="/admission">
             <StyledButton backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Admissions</p></StyledButton>
             </Link>
             <Link href='/'>
