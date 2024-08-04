@@ -1,18 +1,20 @@
 
-#background {
+#admissionBackground {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom, rgb(38, 38, 38), rgb(35, 35, 35));
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(1, 18, 24));
 }
   
-#titleContainer {
-    align-items: center;
-    align-self: center;
-}  
+
+
+#informationContainer {
+    position: absolute;
+    top: 200px
+}
   
 .container {
     display: flex;
@@ -20,3 +22,14 @@
     align-items: center;    /* Vertically centers the child */
     min-height: 20vh;      /* Full viewport height */
   }
+
+
+
+#minCountryContainer {
+    position: absolute;
+    top: 300px
+}
+
+#minCountryContainer button {
+   margin: 25px;
+}
