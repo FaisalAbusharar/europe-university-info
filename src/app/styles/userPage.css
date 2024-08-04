@@ -1,0 +1,35 @@
+
+#background {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(to bottom, rgb(38, 38, 38), rgb(35, 35, 35));
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  
+  
+.container {
+    display: flex;
+    justify-content: center; /* Horizontally centers the child */
+    align-items: center;    /* Vertically centers the child */
+    min-height: 20vh;      /* Full viewport height */
+  }
+
+
+#userWelcome {
+ font-size: 40px;
+ background: linear-gradient(to left, #0800ff, #00e1ff);
+ -webkit-background-clip: text;
+ color: transparent;
+ background-clip: text;
+ font-weight: 450px;
+ align-self: start;
+ position: absolute;
+ top: 0px;
+ left: 0px
+}
+

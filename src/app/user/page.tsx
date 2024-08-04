@@ -4,12 +4,15 @@ import Cookies from 'js-cookie';
 import {jwtDecode} from 'jwt-decode';
 import '../styles/userPage.css';
 import { useRouter } from 'next/navigation';
+import { Exo } from 'next/font/google';
 
 interface JwtPayload {
   email?: string;
   username?: string;
   // Add other fields as necessary
 }
+
+const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 
 const ProfilePage = () => {
   const [token, setToken] = useState<string | null>(null);
@@ -34,8 +37,8 @@ const ProfilePage = () => {
   }, [router]);
 
   return (
-    <main id='background'>
-      <h1 id="Title">Welcome, {userInfo?.username}</h1>
+    <main id='background' className={exo.className}>
+      <h1 id="userWelcome">Welcome, {userInfo?.username}</h1>
       {token ? (
         <div>
           {/*<p>Logged in with token: {token}</p>*/}
