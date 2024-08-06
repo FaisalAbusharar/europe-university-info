@@ -5,6 +5,8 @@ import ScrollTo from '../../components/scrollFunction'
 
 
 
+const backgroundColorStyle = 'linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 26, 51))'
+const backgroundColorObjectStyle = [0, 50, 150]
 
 /* Information Area */
 
@@ -142,6 +144,8 @@ const Finland = () => {
         disadvantages: finlandDisadvantages,
         titleColor1: "#003580",
         titleColor2: "#ffffff",
+        backgroundColor: backgroundColorStyle,
+        backgroundColorObject: backgroundColorObjectStyle,
         optionalInformation: [
             {title: <><span id="gradientSub">Important Admission Information</span></>, description: admissionRequirements},
             {title:  <><span id="gradientSub">Regular University</span> OR <span id="gradientSubSub">University of Applied Sciences</span></>, description: RegularVSUasUni},
@@ -157,7 +161,9 @@ const Finland = () => {
             admissionInformation={CountryInformation.admissionInformation} internationalAdmissionInformation={CountryInformation.internationalAdmissionInformation}
             universityInformation={CountryInformation.universityInformation} internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
             internationalUniversityFees={CountryInformation.internationalTuitionFeesInformation}
-            footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
+            footerInformation={CountryInformation.footerInformation} 
+            titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
+            backgroundColor={CountryInformation.backgroundColor} backgroundColorObject={CountryInformation.backgroundColorObject}
             whyChooseCountry={CountryInformation.whyChooseCountry}
             advantages={CountryInformation.advantages} disadvantages={CountryInformation.disadvantages}
             optionalInformation={CountryInformation.optionalInformation} internationalOptionalInformation={CountryInformation.internationalOptionalInformation}

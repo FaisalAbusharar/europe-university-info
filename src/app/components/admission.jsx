@@ -14,7 +14,7 @@ const Admission = ({
   countryName, countryNameOptional,
   admissionInformation, internationalAdmissionInformation,
   universityInformation, internationalUniversityInformation,
-  footerInformation, titleColor1, titleColor2, backgroundColorObject = [], backgroundColor,
+  footerInformation, titleColor1, titleColor2, backgroundColorObject = [], backgroundColor = '',
   optionalInformation = [{}], internationalOptionalInformation = [{}]
 }) => {
   const titleStyle = {    
@@ -39,7 +39,6 @@ const Admission = ({
     setLoaded(true);
   }, []);
 
-  console.log(backgroundColor)
   const backgroundStyle = {background: backgroundColor}
 
   return (
