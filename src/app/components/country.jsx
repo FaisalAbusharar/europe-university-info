@@ -64,10 +64,10 @@ const Country = ({
         <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
         <h2 className={`${poppins.className}`} id="subtitleLeft">{isInternational ? <>{countryNameOptional} <p id="gradientGold">TUITIONS FEES</p></> : ""}</h2>
         <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalUniversityFees : ""}</p>
-        <h2 className={`${exo.className}`} id="subtitleLeft">{isInternational ? (<>{countryNameOptional} {<p id="gradientSubSub">STUDENT VISA</p>}</>) : ""}</h2>
+        <h2 className={`${exo.className}`} id="subtitleLeft">{isInternational ? (<>{countryNameOptional} {<p id="gradientSubSub">STUDENT PERMIT</p>}</>) : ""}</h2>
         <ul className={`${exo.className}`} id="infoBody">{isInternational ? (visaRequirements.map((item, index) => (
           <li key={index}>
-            <p className={`${exo.className}`} id="subSubTitleLeft">VISA <span id="gradientSubSub"><strong>{item.title}</strong></span></p>
+            <p className={`${exo.className}`} id="subSubTitleLeft">PERMIT <span id="gradientSubSub"><strong>{item.title}</strong></span></p>
             <small className={`${exo.className}`} id="infoBody">{item.description}</small>
           </li>
         ))) : ""}</ul>
