@@ -8,15 +8,11 @@ import ScrollTo from '../../components/scrollFunction'
 
 /* Information Area */
 
-const aiceInformation = (
+const permitInformation = (
     <>
-        If you are studying the British Education System, then you are in luck! Finland recognizes qualifications from the British Education System, such as boards like CIE & AQA. However, grades will need to be converted to a local grading system. It's important to note that not all Finnish universities accept these qualifications; many require UAS entrance exams or SAT scores for admission.
-
-        If you’ve studied “English as a Second Language” in your O Levels, some Finnish universities may exempt you from providing an IELTS exam for English proficiency. However, this varies by institution, so it's essential to check the specific requirements of each university. You will need to provide your O Level results along with your A Level results; while O Level results are important, A Level results carry more weight in the admission process. Strong performance in subjects related to your intended degree is highly recommended.
-
-        Having additional ways to prove your skills can also be beneficial for your admission. These include having a GitHub portfolio, professional certificates, and letters of endorsement. Typically, there is no requirement for proficiency in your mother tongue for admission in Finland.
-
-        For UK grade equivalency, please check <a href="https://www.grb.uk.com/recruiter-research/a-level-equivalents" target="_blank" rel="noopener noreferrer" id="hyperlink">this website</a>.
+        <span id="warning">Please check the <a id="hyperlink" href="https://migri.fi/en/residence-permit-application-for-studies" target="_blank">official Migri site</a> for detailed information.</span> Starting from 2023, the student residence permit in Finland is now a Type A residence permit, as opposed to the previous Type B. This new permit counts towards the four-year period required for eligibility for Permanent Residence in Finland. Additionally, since 2023, graduates are given two years (instead of one year) to find employment after graduation. This extension provides international students with a more flexible pathway to securing employment in Finland. 
+        For further details and requirements, please refer to the <a id="hyperlink" href="https://migri.fi/en/residence-permit-to-look-for-work" target="_blank">official Migri site</a>. 
+        You can also bring your family to Finland under the same Type A permit, provided that they can demonstrate they have sufficient financial resources for their stay. More information on this can be found on the <a id = 'hyperlink' href="https://migri.fi/en/students-family-members" target="_blank">official Migri site</a>.
     </>
 );
 
@@ -151,7 +147,7 @@ const Finland = () => {
             {title:  <><span id="gradientSub">Regular University</span> OR <span id="gradientSubSub">University of Applied Sciences</span></>, description: RegularVSUasUni},
         ],
         internationalOptionalInformation: [
-            {title: <>Studying under <span id="gradientSub">AICE</span></>, description: aiceInformation},
+            {title: <><span id="gradientSubSub">Student Permit Information</span></>, description: permitInformation},
         ],
 
     }
