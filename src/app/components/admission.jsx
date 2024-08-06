@@ -1,0 +1,80 @@
+"use client";
+
+import { Poppins, Exo } from 'next/font/google';
+import React, { useState, useEffect } from 'react';
+import BackgroundAnim from '../animation/backgroundAnimationFirst';
+import '../styles/animations.css';
+import Footer from './footer'
+import '../styles/transitions.css';
+
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
+const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
+
+const Admission = ({
+  countryName, countryNameOptional,
+  admissionInformation, internationalAdmissionInformation,
+  universityInformation, internationalUniversityInformation,
+  footerInformation, titleColor1, titleColor2,
+  optionalInformation = [{}], internationalOptionalInformation = [{}]
+}) => {
+  const titleStyle = {    
+    background: `linear-gradient(to bottom, ${titleColor1}, ${titleColor2})`,
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent'
+  };
+
+  const [isInternational, setInternational] = useState(false);
+  const [loaded, setLoaded] = useState(false);
+  const [animation, setAnimation] = useState(true);
+
+  const handleToggle = () => {
+    setInternational(!isInternational);      
+    setAnimation(false); // Set fade to true
+    
+    // Reset fade after the animation duration
+    setTimeout(() => setAnimation(true), 600);  
+  }
+
+  useEffect(() => {
+    setLoaded(true);
+  }, []);
+
+
+
+  return (
+    <main id="backgroundCountry" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in-top' : ''}`}>
+      <BackgroundAnim objectColor={[184, 5, 201]} className="absolute inset-0 z-0" />
+      <div className={`relative z-10 flex-grow flex-col items-center justify-center ${animation ? 'fade-enter-active' : 'fade-exit-active'}`}>
+        <h1 className={`${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
+        <button id="toggleButton" onClick={handleToggle}>
+          {isInternational ? "Switch to European" : "Switch to International"}
+        </button>
+        <hr id="line" />
+        <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
+        <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalAdmissionInformation : admissionInformation}</p>
+        <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">UNIVERSITIES</p></h2>
+        <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
+        <h2 className={`${poppins.className}`} id="subtitleLeft">{isInternational ? <>{countryNameOptional} <p id="gradientGold">TUITIONS FEES</p></> : ""}</h2>
+       
+        <ul className={`${exo.className}`} id="infoBody">{optionalInformation.map((item, index) => (
+          <li key={index}>
+            <p className={`${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>
+            <small className={`${exo.className}`} id="infoBody">{item.description}</small>
+          </li>
+        ))}</ul>      
+
+        <ul className={`${exo.className}`} id="infoBody">{isInternational ? (internationalOptionalInformation.map((item, index) => (
+          <li key={index}>
+            <p className={`${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>
+            <small className={`${exo.className}`} id="infoBody">{item.description}</small>
+          </li>
+        ))) : ""}</ul>   
+
+      </div>
+      <div id="buffer"></div>
+      <Footer returnPage='countries' footerInformation={footerInformation}></Footer>
+    </main>
+  );
+}
+
+export default Admission;
