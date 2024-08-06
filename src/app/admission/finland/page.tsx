@@ -20,7 +20,7 @@ const Finland = () => {
         internationalAdmissionInformation: internationalAdmissionInformationText,
         universityInformation: europeanStudentsUniversities,
         internationalUniversityInformation: internationalUniversityInformationText,
-        footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
+        footerInformation: "We always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         titleColor1: "#003580",
         titleColor2: "#ffffff",
         backgroundColor: backgroundColorStyle,

@@ -138,7 +138,7 @@ const Finland = () => {
         visaRequirementsRequirements: visaGeneralRequirements,
         visaRequirementsFinancials: <div id="financial-requirements">{visaFinancialRequirements}</div>,
         visaRequirementsInsurance: visaInsuranceRequirements,
-        footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
+        footerInformation: "We always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         whyChooseCountry: [{title: <>WHY <p id="gradientSub">FINLAND?</p></>, description: whyChooseFinland}],
         advantages: finlandAdvantages,
         disadvantages: finlandDisadvantages,
