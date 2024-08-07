@@ -5,6 +5,12 @@
   font-size: 17.5px;
 }
 
+#bold {
+  display: block;
+  margin-left: 15px;
+  font-size: 17.5px;
+}
+
 #backgroundCountry {
   background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(58, 2, 58));
 }
