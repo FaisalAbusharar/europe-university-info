@@ -22,6 +22,7 @@ const internationalAdmissionInformationText =
      <br/> <a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam/#identificationspring'>Identification</a> <a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam/#monitoringspring'>Monitoring</a>‎
      ‎<a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam/#privacypolicyspring'>Privacy Policy</a> <a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam/#hardwareandnetwork'>Hardware/Network Requirement</a>‎
      ‎<a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam/#participatingspring'>Participating</a> <a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam/#results'>Final Student Selection</a>  
+     -
      
 </>
 const europeanStudentsUniversities = ''
