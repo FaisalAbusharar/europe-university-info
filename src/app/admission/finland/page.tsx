@@ -12,6 +12,9 @@ const gradientStyleAutumn = {
     background: 'linear-gradient(to right, rgb(255, 133, 51), rgb(230, 92, 0))', WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent',color: 'transparent', display: 'inline-block',
 };
 
+const gradientStyleRed = {
+    background: 'linear-gradient(to right, rgb(255, 0, 0), rgb(200, 0, 0))',WebkitBackgroundClip: 'text',backgroundClip: 'text',WebkitTextFillColor: 'transparent',color: 'transparent',display: 'inline-block',
+};
 
 
 const europeanAdmissionInformation = ''
@@ -46,7 +49,17 @@ const internationalAdmissionInformationText =
      ‎<a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam-autumn-2024/#privacypolicy'>Privacy Policy</a> <a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam-autumn-2024/#hardwarerequirements'>Hardware/Network Requirement</a>‎
      ‎<a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam-autumn-2024/#participatingautumn'>Participating</a> <a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam-autumn-2024/#resultsautumn'>Final Student Selection</a>  
      
-     
+     <br/><br/><a style={gradientStyleRed} id='gradientSubSub'><span id='subsubSubtitle'>SAT Test</span></a><br/>
+     The SAT test contains following sections:
+
+    <br/><strong>Evidence-Based Reading:</strong> 
+    <strong> Writing
+    Reading Test, </strong>
+     <strong> Writing</strong> and <strong>Language Test </strong>
+    | <strong>Math</strong>
+    <br></br>
+    In their application instructions, universities of applied sciences announce the SAT sections they will use as an admission criterion in the study programme available for application, and the lowest score <strong>limit the applicant must reach in order to be qualified</strong> for the selection process. Only the new version of SAT test (completed after March 2016) is accepted. The SAT test selection only takes into account the sections performed during a single session.
+    <strong> An official SAT score report must be ordered directly from the test organiser</strong>. To collect SAT test scores, universities of applied sciences can also use an electronic service from which the score data is available. The applicants who have already completed an SAT test must request a test result from the test organiser to be delivered to universities of applied sciences. Applicants must submit the SAT test results to all universities of applied sciences that use said selection procedure and to which they are applying within the provided timetable. <strong>Reports printed or submitted by the applicants themselves cannot be taken into account</strong>.
 </>
 const europeanStudentsUniversities = ''
 const internationalUniversityInformationText = ''
