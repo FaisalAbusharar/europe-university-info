@@ -12,8 +12,8 @@ const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 
 const Admission = ({
   countryName, countryNameOptional,
-  admissionInformation, internationalAdmissionInformation,
-  universityInformation, internationalUniversityInformation,
+  internationalAdmissionInformation,
+  internationalUniversityInformation,
   footerInformation, titleColor1, titleColor2, backgroundColorObject = [], backgroundColor = '',
   optionalInformation = [{}], internationalOptionalInformation = [{}]
 }) => {
@@ -46,15 +46,12 @@ const Admission = ({
       <BackgroundAnim objectColor={backgroundColorObject} className="absolute inset-0 z-0" />
       <div className={`relative z-10 flex-grow flex-col items-center justify-center ${animation ? 'fade-enter-active' : 'fade-exit-active'}`}>
         <h1 className={`${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
-        <button id="toggleButton" onClick={handleToggle}>
-          {isInternational ? "Switch to European" : "Switch to International"}
-        </button>
         <hr id="line" />
         <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
-        <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalAdmissionInformation : admissionInformation}</p>
+        <p className={`${exo.className}`} id="infoBody">{internationalAdmissionInformation}</p>
         <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">UNIVERSITIES</p></h2>
-        <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{isInternational ? <>{countryNameOptional} <p id="gradientGold">TUITIONS FEES</p></> : ""}</h2>
+        <p className={`${exo.className}`} id="infoBody">{internationalUniversityInformation}</p>
+        <h2 className={`${poppins.className}`} id="subtitleLeft">{<>{countryNameOptional} <p id="gradientGold">TUITIONS FEES</p></>}</h2>
        
         <ul className={`${exo.className}`} id="infoBody">{optionalInformation.map((item, index) => (
           <li key={index}>

@@ -17,7 +17,7 @@ const gradientStyleRed = {
 };
 
 
-const europeanAdmissionInformation = ''
+
 const internationalAdmissionInformationText = 
 <>
     The admission in Finland can be quite complicated in Finland, especially for international students, we will try to break it down. <br/> Universities and Universities of applied sciences both have different admission requirements.
@@ -60,8 +60,15 @@ const internationalAdmissionInformationText =
     <br></br>
     In their application instructions, universities of applied sciences announce the SAT sections they will use as an admission criterion in the study programme available for application, and the lowest score <strong>limit the applicant must reach in order to be qualified</strong> for the selection process. Only the new version of SAT test (completed after March 2016) is accepted. The SAT test selection only takes into account the sections performed during a single session.
     <strong> An official SAT score report must be ordered directly from the test organiser</strong>. To collect SAT test scores, universities of applied sciences can also use an electronic service from which the score data is available. The applicants who have already completed an SAT test must request a test result from the test organiser to be delivered to universities of applied sciences. Applicants must submit the SAT test results to all universities of applied sciences that use said selection procedure and to which they are applying within the provided timetable. <strong>Reports printed or submitted by the applicants themselves cannot be taken into account</strong>.
+
+    <br/><br/><a id='gradientSubSub'><span id='subsubSubtitle'>Certificate-based Selection</span></a><br/>
+    Universities of applied sciences may admit students by means of certificate-based selection based on matriculation examination and vocational upper secondary qualification (completed after 1 August 2015). Those applying with a matriculation examination (Finnish or EB, IB and RP/DIA diploma) or vocational upper secondary qualification have a specific study place quota which varies between study programmes available for application.
+    All universities of applied sciences comply with the scoring models and principles of certificate-based selection. In certificate-based selection, the university of applied sciences may independently determine the lowest score limit or the threshold criteria.<br></br>
+    Get all detailed information <a href='https://www.uasinfo.fi/certificate-based-selection/' id='hyperlink' >here</a>.
+
+
 </>
-const europeanStudentsUniversities = ''
+
 const internationalUniversityInformationText = ''
 
 const backgroundColorStyle = 'linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 26, 51))'
@@ -73,9 +80,7 @@ const Finland = () => {
     const CountryInformation = {
         countryName: "FINLAND",
         countryNameOptional: "FINNISH",
-        admissionInformation: europeanAdmissionInformation,
         internationalAdmissionInformation: internationalAdmissionInformationText,
-        universityInformation: europeanStudentsUniversities,
         internationalUniversityInformation: internationalUniversityInformationText,
         footerInformation: "We always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         titleColor1: "#003580",
@@ -94,8 +99,8 @@ const Finland = () => {
     return (
         <div>
             <Admission countryName={CountryInformation.countryName} countryNameOptional={CountryInformation.countryNameOptional}
-            admissionInformation={CountryInformation.admissionInformation} internationalAdmissionInformation={CountryInformation.internationalAdmissionInformation}
-            universityInformation={CountryInformation.universityInformation} internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
+            internationalAdmissionInformation={CountryInformation.internationalAdmissionInformation}
+             internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
             footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
             optionalInformation={CountryInformation.optionalInformation} internationalOptionalInformation={CountryInformation.internationalOptionalInformation}
             backgroundColor={CountryInformation.backgroundColor} backgroundColorObject={CountryInformation.backgroundColorObject}
