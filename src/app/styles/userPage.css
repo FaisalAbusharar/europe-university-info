@@ -33,3 +33,28 @@
  left: 0px
 }
 
+
+#accountInfoContainer {
+  position: absolute;
+  top: 150px;
+  left: 5px
+}
+
+
+#buttonUser {
+  position: absolute;
+  font-size: 20px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to left, #011ffe, #0044ff);
+}
+
+#buttonUser:hover {
+  border: 2px solid black;
+  background: black;
+  color: #0d7aff;
+}

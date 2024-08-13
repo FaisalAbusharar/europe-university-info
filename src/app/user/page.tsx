@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 import {jwtDecode} from 'jwt-decode';
 import '../styles/userPage.css';
 import { useRouter } from 'next/navigation';
-import { Exo } from 'next/font/google';
+import { Exo, Poppins } from 'next/font/google';
 
 interface JwtPayload {
   email?: string;
@@ -13,11 +13,17 @@ interface JwtPayload {
 }
 
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
+const poppins = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 
 const ProfilePage = () => {
   const [token, setToken] = useState<string | null>(null);
   const [userInfo, setUserInfo] = useState<JwtPayload | null>(null);
+  const [showAccountInformation, setAccountInformation] = useState(false)
   const router = useRouter();
+
+  const showAccountInformationWindow = () => {
+
+  }
 
   useEffect(() => {
     const existingToken = Cookies.get('token');
@@ -43,8 +49,8 @@ const ProfilePage = () => {
         <div>
           {/*<p>Logged in with token: {token}</p>*/}
           {userInfo ? (
-            <div>
-              <p id='Subtitle'>Your Email: {userInfo.email}</p>
+            <div id='accountInfoContainer'>
+              <button className={poppins.className} onClick={showAccountInformationWindow} id='buttonUser'>Account Information</button>
               {/* Render other user info as necessary */}
             </div>
           ) : (
