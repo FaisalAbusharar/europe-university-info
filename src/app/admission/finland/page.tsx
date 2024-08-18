@@ -69,10 +69,13 @@ const internationalAdmissionInformationText =
 
 </>
 
-const internationalUniversityInformationText = ''
 
 const backgroundColorStyle = 'linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 26, 51))'
 const backgroundColorObjectStyle = [0, 50, 150]
+
+const optionalInformationImportantInfo = <>
+  Applicants who apply before obtaining their final diploma, such as A-level students applying with predicted grades, must <strong>provide the final diploma</strong> by <strong>July 10th</strong>. However, some students, like A-level students, may not receive their final diploma until August 13th. For such cases, Finnish universities offer a solution: you must provide a <strong>provisional certificate of graduation</strong> issued and stamped by your school, confirming that you have completed the required materials.
+</>;
 
 
 
@@ -81,14 +84,13 @@ const Finland = () => {
         countryName: "FINLAND",
         countryNameOptional: "FINNISH",
         internationalAdmissionInformation: internationalAdmissionInformationText,
-        internationalUniversityInformation: internationalUniversityInformationText,
         footerInformation: "We always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         titleColor1: "#003580",
         titleColor2: "#ffffff",
         backgroundColor: backgroundColorStyle,
         backgroundColorObject: backgroundColorObjectStyle,
         optionalInformation: [
-            //{title: <><span id="gradientSub"></span></>, description: },
+            {title: <><span id="gradientSub">Important Information</span></>, description: optionalInformationImportantInfo},
             //{title:  <><span id="gradientSub"></span> OR <span id="gradientSubSub">U</span></>, description: },
         ],
         internationalOptionalInformation: [
@@ -100,7 +102,6 @@ const Finland = () => {
         <div>
             <Admission countryName={CountryInformation.countryName} countryNameOptional={CountryInformation.countryNameOptional}
             internationalAdmissionInformation={CountryInformation.internationalAdmissionInformation}
-             internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
             footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
             optionalInformation={CountryInformation.optionalInformation} internationalOptionalInformation={CountryInformation.internationalOptionalInformation}
             backgroundColor={CountryInformation.backgroundColor} backgroundColorObject={CountryInformation.backgroundColorObject}

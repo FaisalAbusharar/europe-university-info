@@ -13,7 +13,6 @@ const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 const Admission = ({
   countryName, countryNameOptional,
   internationalAdmissionInformation,
-  internationalUniversityInformation,
   footerInformation, titleColor1, titleColor2, backgroundColorObject = [], backgroundColor = '',
   optionalInformation = [{}], internationalOptionalInformation = [{}]
 }) => {
@@ -49,9 +48,7 @@ const Admission = ({
         <hr id="line" />
         <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
         <p className={`${exo.className}`} id="infoBody">{internationalAdmissionInformation}</p>
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">UNIVERSITIES</p></h2>
-        <p className={`${exo.className}`} id="infoBody">{internationalUniversityInformation}</p>
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{<>{countryNameOptional} <p id="gradientGold">TUITIONS FEES</p></>}</h2>
+       
        
         <ul className={`${exo.className}`} id="infoBody">{optionalInformation.map((item, index) => (
           <li key={index}>
