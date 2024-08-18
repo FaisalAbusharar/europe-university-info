@@ -66,7 +66,7 @@ const Admission = ({
 
       </div>
       <div id="buffer"></div>
-      <Footer returnPage='countries' footerInformation={footerInformation}></Footer>
+      <Footer returnPage='admission' footerInformation={footerInformation}></Footer>
     </main>
   );
 }
