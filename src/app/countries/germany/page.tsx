@@ -6,7 +6,7 @@ import '../../styles/countrypage.css'
 
 const Germany = () => {
     const CountryInformation = {
-        countryName: "GERMANY",
+        countryName: "GERMANY -",
         countryNameOptional: "GERMAN",
         admissionInformation: "Admission Info Here.",
         internationalAdmissionInformation: "International Admission Info Here.",
