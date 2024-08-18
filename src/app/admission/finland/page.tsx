@@ -74,7 +74,7 @@ const backgroundColorStyle = 'linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 26
 const backgroundColorObjectStyle = [0, 50, 150]
 
 const optionalInformationImportantInfo = <>
-  Applicants who apply before obtaining their final diploma, such as A-level students applying with predicted grades, must <strong>provide the final diploma</strong> by <strong>July 10th</strong>. However, some students, like A-level students, may not receive their final diploma until August 13th. For such cases, Finnish universities offer a solution: you must provide a <strong>provisional certificate of graduation</strong> issued and stamped by your school, confirming that you have completed the required materials.
+  Applicants who apply before obtaining their final diploma, such as A-level students applying with predicted grades, must <strong>provide the final diploma</strong> by <strong>July 10th</strong> (<em>For Spring Joint Application</em>). However, some students, like A-level students, may not receive their final diploma until August 13th. For such cases, Finnish universities offer a solution: you must provide a <strong>provisional certificate of graduation</strong> issued and stamped by your school, confirming that you have completed the required materials.
 </>;
 
 
@@ -90,7 +90,7 @@ const Finland = () => {
         backgroundColor: backgroundColorStyle,
         backgroundColorObject: backgroundColorObjectStyle,
         optionalInformation: [
-            {title: <><span id="gradientSub">Important Information</span></>, description: optionalInformationImportantInfo},
+            {title: <><span id="gradientSub">Deadline Information</span></>, description: optionalInformationImportantInfo},
             //{title:  <><span id="gradientSub"></span> OR <span id="gradientSubSub">U</span></>, description: },
         ],
         internationalOptionalInformation: [
