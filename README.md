@@ -1,4 +1,4 @@
-# EUI
+# Europe University Information
 
 ## Getting Started
 
