@@ -75,6 +75,7 @@ const backgroundColorObjectStyle = [0, 50, 150]
 
 const optionalInformationImportantInfo = <>
   Applicants who apply before obtaining their final diploma, such as A-level students applying with predicted grades, must <strong>provide the final diploma</strong> by <strong>July 10th</strong> (<em>For Spring Joint Application</em>). However, some students, like A-level students, may not receive their final diploma until August 13th. For such cases, Finnish universities offer a solution: you must provide a <strong>provisional certificate of graduation</strong> issued and stamped by your school, confirming that you have completed the required materials.
+  You will most likely not find information about this online, this information was from the <strong>admission services</strong> for multiple UAS universities (<em>Tampere UAS, Oulu UAS, Jamk UAS</em>), you can contact them directly for further questions.
 </>;
 
 
