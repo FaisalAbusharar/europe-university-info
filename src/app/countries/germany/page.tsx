@@ -8,7 +8,7 @@ const europeanAdmissionInformation = (
 );
 
 
-const internationalAdmissionInformationText = (
+const europeanStudentsUniversities = (
     <>
         European students applying to German universities should explore programs offered through <a href="https://www.daad.de/de/" target="_blank" rel="noopener noreferrer" id="hyperlink">DAAD.de</a>. Each university in Germany sets its own admission criteria, which may include requirements for high school diplomas, bachelor’s degrees, and relevant work experience for master’s programs. Some programs may require entrance exams, interviews, or a portfolio review, especially for fields like arts and design. Non-native German speakers often need to demonstrate proficiency through exams like <a href="https://www.testdaf.de/de/" target="_blank" rel="noopener noreferrer" id="hyperlink">TestDaF</a>, <a href="https://en.dsh-germany.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">DSH</a>, or <a href="https://www.goethe.de/en/index.html" target="_blank" rel="noopener noreferrer" id="hyperlink">Goethe-Zertifikat</a>. For English-taught programs, proficiency in English is often required. Utilize <a href="https://www.uni-assist.de/en/" target="_blank" rel="noopener noreferrer" id="hyperlink">Uni-assist</a> to apply to multiple programs at once or apply directly to the universities. For specific details on application periods and requirements, visit <a href="https://www.daad.de/de/" target="_blank" rel="noopener noreferrer" id="hyperlink">DAAD.de</a> or the official websites of German universities.
     </>
@@ -21,6 +21,47 @@ const whyChooseGermany = (
 
     </>
 );
+
+
+const  TypesOfUnis = (
+    <>
+    Regular universities focus on theoretical and academic education, offering a broad range of programs, including Bachelor's, Master's, and Doctoral degrees. Universities emphasize research and academic knowledge, often requiring a longer period of study. They are ideal for students interested in pursuing careers in research or academia, as well as those seeking to engage in cutting-edge research projects.
+    
+    Universities of Applied Sciences (UAS) emphasize practical and professional skills, offering programs designed in close collaboration with industries. Programs typically include internships and are shorter in duration, often three to four years for a Bachelor's degree. Universities of Applied Sciences have strong connections with local businesses and industries, ensuring that graduates are well-prepared for the job market. They are particularly suited for students aiming for direct entry into the workforce after graduation.
+
+    Colleges of Art and Music focus on creative fields, offering degrees in areas such as music, fine arts, design, and performing arts. The education here is highly specialized and tailored to nurturing artistic talent. Admission often requires the submission of a portfolio or an audition, depending on the field of study.
+    </>
+);
+
+
+          
+const admissionRequirements = (
+    <>
+    Many German universities and universities of applied sciences (UAS) require specific entrance exams, such as the <a href="https://www.testas.de/en/index_en.htm" target="_blank" rel="noopener noreferrer" id="hyperlink">TestAS</a> or <a href="https://satsuite.collegeboard.org/sat" target="_blank" rel="noopener noreferrer" id="hyperlink">SAT</a>, for admission. It's essential to check the specific requirements for your intended degree by visiting <a href="https://www.daad.de/de/" target="_blank" rel="noopener noreferrer" id="hyperlink">DAAD.de</a> or the respective university's website. Most universities with English-taught programs require a recognized English proficiency test, like <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a> or <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, and often have minimum score requirements. Additionally, for programs taught in German, proficiency in German is mandatory, with exams like <a href="https://www.testdaf.de/de/" target="_blank" rel="noopener noreferrer" id="hyperlink">TestDaF</a> or <a href="https://en.dsh-germany.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">DSH</a> being necessary. Be sure to review the admission criteria for your specific program well in advance to ensure you meet all necessary requirements.
+    </>
+);
+
+
+const internationalAdmissionInformationText = (
+    <>
+    International students applying to German universities will need to meet specific admission criteria. For Bachelor’s programs, a high school diploma that qualifies for higher education in your home country is required. For Master’s programs, a relevant Bachelor’s degree is necessary, with some requiring work experience or additional exams. Non-native speakers must often prove their proficiency in German through <a href="https://www.testdaf.de/de/" target="_blank" rel="noopener noreferrer" id="hyperlink">TestDaF</a> or <a href="https://en.dsh-germany.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">DSH</a>. For English-taught programs, proficiency exams like <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>, <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, or <a href="https://www.cambridgeenglish.org/test-your-english/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cambridge</a> are usually required. Applications can be submitted directly to universities or through <a href="https://www.uni-assist.de/en/" target="_blank" rel="noopener noreferrer" id="hyperlink">Uni-assist</a>. Always check <a href="https://www.daad.de/de/" target="_blank" rel="noopener noreferrer" id="hyperlink">DAAD.de</a> or university websites for specific requirements and deadlines.
+    </>
+);
+
+
+const internationalUniversityInformationText = (
+    <>
+    Germany is home to many prestigious institutions, including <a href="https://www.lmu.de/en/" target="_blank" rel="noopener noreferrer" id="hyperlink">LMU Munich</a>, <a href="https://www.tum.de/en/" target="_blank" rel="noopener noreferrer" id="hyperlink">TUM</a>, <a href="https://www.uni-heidelberg.de/en" target="_blank" rel="noopener noreferrer" id="hyperlink">Heidelberg University</a>, <a href="https://www.hu-berlin.de/en?set_language=en" target="_blank" rel="noopener noreferrer" id="hyperlink">Humboldt University of Berlin</a>, and <a href="https://www.fu-berlin.de/en/index.html" target="_blank" rel="noopener noreferrer" id="hyperlink">Free University of Berlin</a>. When choosing a university, consider factors like location, cost of living, and student services. The <a href="https://www.daad.de/de/" target="_blank" rel="noopener noreferrer" id="hyperlink">DAAD.de</a> Website is a valuable resource for researching universities and understanding these aspects to ensure the best fit for your academic and personal needs.
+    </>
+);
+
+
+const internationalTuitionFees = (
+    <>
+    Information about specific universities' tuition fees will be available to download here soon. The page should redirect. For international students, most public universities in Germany do not charge tuition fees for Bachelor’s and Master’s programs. However, a semester contribution fee of approximately<p id="warning">€150 to €350 per year</p> is required. Which covers administrative costs and student services. Some states may charge tuition fees for non-EU/EEA students, and private universities typically have tuition fees ranging from  <p id="warning">€10,000 to €20,000 per year</p> for both Bachelor’s and Master’s programs.
+    </>
+)
+
 
 
 const germanyAdvantages = [
@@ -57,20 +98,15 @@ const germanyDisadvantages = [
 
 
 
-
-
-
-
-
-
 const Germany = () => {
     const CountryInformation = {
-        countryName: "GERMANY -",
+        countryName: "GERMANY ",
         countryNameOptional: "GERMAN",
         admissionInformation: europeanAdmissionInformation,
-        internationalAdmissionInformation: "University Info here" ,
-        universityInformation: internationalAdmissionInformationText,
-        internationalUniversityInformation: "International University Info Here.",
+        internationalAdmissionInformation: internationalAdmissionInformationText ,
+        universityInformation: europeanStudentsUniversities,
+        internationalUniversityInformation: internationalUniversityInformationText,
+        internationalTuitionFeesInformation: internationalTuitionFees,
         visaRequirementsRequirements: "General Visa Requirements Here.",
         visaRequirementsFinancials: "Details about Financial Requirements Here.",
         visaRequirementsInsurance: "Health and Travel Insurance Information Here.",
@@ -80,6 +116,12 @@ const Germany = () => {
         disadvantages: germanyDisadvantages,
         titleColor1: "#fe0101",
         titleColor2: "#ffe600",
+        optionalInformation: [
+            {title: <><span id="gradientSub">Important Admission Information</span></>, description: admissionRequirements},
+            {title:  <><span id="gradientSub">Regular University</span> , <span id="gradientSubSub">University of Applied Sciences</span> OR <span id="gradientSubSub">Colleges of Art and Music </span></>, description: TypesOfUnis},
+        ],
+
+        
 
     
     }
@@ -87,11 +129,14 @@ const Germany = () => {
         <div>
             <Country countryName={CountryInformation.countryName} countryNameOptional={CountryInformation.countryNameOptional}
             admissionInformation={CountryInformation.admissionInformation} internationalAdmissionInformation={CountryInformation.internationalAdmissionInformation}
+            internationalUniversityFees={CountryInformation.internationalTuitionFeesInformation}
             universityInformation={CountryInformation.universityInformation} internationalUniversityInformation={CountryInformation.internationalUniversityInformation}
             footerInformation={CountryInformation.footerInformation} titleColor1={CountryInformation.titleColor1} titleColor2={CountryInformation.titleColor2}
             visaRequirementsRequirements={CountryInformation.visaRequirementsRequirements} visaRequirementsFinancials={CountryInformation.visaRequirementsFinancials}
             visaRequirementsInsurance={CountryInformation.visaRequirementsInsurance} whyChooseCountry={CountryInformation.whyChooseCountry}
             advantages={CountryInformation.advantages} disadvantages={CountryInformation.disadvantages}
+            optionalInformation={CountryInformation.optionalInformation} 
+            
             ></Country>
         </div>
     )
