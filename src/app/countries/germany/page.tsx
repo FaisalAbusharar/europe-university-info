@@ -100,7 +100,7 @@ const germanyDisadvantages = [
 
 const Germany = () => {
     const CountryInformation = {
-        countryName: "GERMANY ",
+        countryName: "GERMANY",
         countryNameOptional: "GERMAN",
         admissionInformation: europeanAdmissionInformation,
         internationalAdmissionInformation: internationalAdmissionInformationText ,
