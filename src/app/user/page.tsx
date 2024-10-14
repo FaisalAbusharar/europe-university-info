@@ -9,6 +9,7 @@ import { Exo, Poppins } from 'next/font/google';
 interface JwtPayload {
   email?: string;
   username?: string;
+  password?: string;
   // Add other fields as necessary
 }
 
@@ -49,10 +50,20 @@ const ProfilePage = () => {
         <div>
           {/*<p>Logged in with token: {token}</p>*/}
           {userInfo ? (
-            <div id='accountInfoContainer'>
-              <button className={poppins.className} onClick={showAccountInformationWindow} id='buttonUser'>Account Information</button>
-              {/* Render other user info as necessary */}
+            <div id="accountInfoContainer">
+            {/* <button className={poppins.className} onClick={showAccountInformationWindow} id="buttonUser">Manage Account</button> */}
+            <div id="sensitiveField" className="space-y-10">
+              <div className="field">
+                <label id='label' className="block text-white-700 font-medium">EMAIL</label>
+                <span className='mt-1' id="emailField">{userInfo.email}</span>
+              </div>
+              <div className="field">
+                <label id='label' className="block text-red-700 font-medium">TOKEN</label>
+                <span className='mt-15' id="passwordField">{userInfo.password}</span>
+              </div>
             </div>
+            {/* Render other user info as necessary */}
+          </div>
           ) : (
             <p>Failed to decode token or token has no user info.</p>
           )}

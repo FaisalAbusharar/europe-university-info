@@ -37,7 +37,60 @@
 #accountInfoContainer {
   position: absolute;
   top: 150px;
-  left: 5px
+  left: 10px;
+  width: 150px;
+}
+
+#sensitiveField {
+  position: relative;
+  align-items: center;
+  left: 20px
+}
+
+#emailField {
+  text-align: center;
+  background-color: rgb(74, 73, 73);
+  border: solid 2px lightblue;
+  color: transparent;
+  background: linear-gradient(to right, #0067f7, rgb(3, 179, 255), rgb(0, 8, 255));
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-decoration: none;
+  transition: transform 0.3s ease, text-decoration 0.3s ease;
+  box-shadow: rgba(7, 160, 255, 0.35) 0px 3px 15px;
+  margin-right: 15px;
+  width: 250px;
+  padding: 10px;
+}
+
+#label {
+  position: relative;
+  font-size: large;
+  bottom:20px
+}
+
+.field { 
+  transition: transform 0.3s ease, text-decoration 0.3s ease;
+}
+
+.field:hover {
+  transform: scale(1.1);
+}
+
+#passwordField {
+  text-align: center;
+  background-color: rgb(74, 73, 73);
+  border: solid 2px lightblue;
+  color: transparent;
+  background: linear-gradient(to right, #0067f7, rgb(3, 179, 255), rgb(0, 8, 255));
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-decoration: none;
+  transition: transform 0.3s ease, text-decoration 0.3s ease;
+  box-shadow: rgba(7, 160, 255, 0.35) 0px 3px 15px;
+  margin-right: 15px;
+  width: 250px;
+  padding: 10px;
 }
 
 
@@ -51,6 +104,8 @@
   transition-duration: 0.5s;
   color: rgb(255, 255, 255);
   background: linear-gradient(to left, #011ffe, #0044ff);
+  border-radius: 25px;
+  border: 2.5px solid #ffffff;
 }
 
 #buttonUser:hover {
