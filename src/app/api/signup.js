@@ -37,8 +37,8 @@ const collection = db.collection(collectionName)
     if (isExistUser) {
       throw new Error("UserAlreadyExistsUser")
     }
-
-    const result = await collection.insertOne({"_id": user, "email": email, "password": await hashPassword(password)})
+    
+    const result = await collection.insertOne({"_id": user, "email": email, "password": await hashPassword(password), "location": "European"})
     
   } finally {
 

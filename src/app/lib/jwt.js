@@ -4,7 +4,8 @@ export const generateToken = (user, time) => {
   const payload = {
     username: user._id,
     email: user.email,
-    password: user.password
+    password: user.password,
+    location: user.location
   };
 
   const token = jwt.sign(payload, process.env.JWT_SECRET, {

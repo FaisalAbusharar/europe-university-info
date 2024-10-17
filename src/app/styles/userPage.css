@@ -9,7 +9,8 @@
     justify-content: center;
     min-height: 100vh;
   }
-  
+
+
   
   
 .container {
@@ -69,6 +70,20 @@
   bottom:20px
 }
 
+#optionsField {
+  position: relative;
+  left: 20px;
+  top: 100px;
+  width: 300px;
+}
+
+#superLabel {
+  position: relative;
+  font-size: large;
+  font-size: 20px;
+}
+  
+
 .field { 
   transition: transform 0.3s ease, text-decoration 0.3s ease;
 }
@@ -112,4 +127,26 @@
   border: 2px solid black;
   background: black;
   color: #0d7aff;
+}
+
+#toggleButton {
+  position: absolute;
+  font-size: 10px;
+  padding: 5px 5px;
+  bottom:-95px;
+  right: -190px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background: none;
+  cursor: pointer;
+  transition-duration: 0.5s;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to left, #019dfe, #001aff);
+  font-weight: 900;
+}
+
+#toggleButton:hover {
+  border: 2px solid black;
+  background: black;
+  color: #0190fe;
 }
