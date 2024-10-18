@@ -99,6 +99,13 @@
   transform: scale(1.1);
 }
 
+#forceFooterAtBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 #passwordField {
   text-align: center;
   background-color: rgb(74, 73, 73);

@@ -6,6 +6,8 @@ import '../styles/userPage.css';
 import { useRouter } from 'next/navigation';
 import { Exo, Poppins } from 'next/font/google';
 import updateDatabase from '../api/updateData';
+import Footer from '../components/footer';
+import BackgroundAnim from '../animation/backgroundAnimationFirst';
 
 interface JwtPayload {
   email?: string;
@@ -72,6 +74,7 @@ const ProfilePage = () => {
 
   return (
     <main id='background' className={exo.className}>
+      <BackgroundAnim objectColor={[255, 225, 225]} className="absolute inset-0 z-0">
       <h1 id="userWelcome"><span id='gradientSub'>Welcome, {userInfo?.username}</span></h1>
       
       {token ? (
@@ -102,9 +105,14 @@ const ProfilePage = () => {
             <p>Failed to decode token or token has no user info.</p>
           )}
         </div>
+        
       ) : (
         <p>Redirecting to login...</p>
       )}
+    </BackgroundAnim>
+    <div id='forceFooterAtBottom'>
+    <Footer returnPage='countries' footerInformation={"Did you know data in websites is stored as Cookies? It is here too!"}></Footer>
+    </div>
     </main>
   );
 };
