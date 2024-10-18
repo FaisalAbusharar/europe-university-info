@@ -87,11 +87,12 @@ const ProfilePage = () => {
                   <label id='label' className="block text-red-700 font-medium">TOKEN</label>
                   <span className='mt-15' id="passwordField">{userInfo.password}</span>
                 </div>
+                <label id='warningLabel' className='block text-white-500 font-small'>The token cannot be used to login, if you forgot your password or want to change it, you can here.</label>
               </div>
               <div id="optionsField">
                 <label id='superLabel' className="text-white-700 font-medium"><span className={exo.className}>Your Location is set to:</span> <span id="gradientSubSub"><span id="subSubtitle">{userInfo.location}</span></span></label>
               </div>
-              <button id='toggleButton'
+              <button id='toggleButtonUser'
                   onClick={updateLocation}
                 >
                   {isInternational ? "Switch to European" : "Switch to International"}

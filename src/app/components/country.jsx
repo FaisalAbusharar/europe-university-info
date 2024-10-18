@@ -6,6 +6,11 @@ import BackgroundAnim from '../animation/backgroundAnimationFirst';
 import '../styles/animations.css';
 import Footer from './footer'
 import '../styles/transitions.css';
+import Cookies from 'js-cookie';
+import {jwtDecode} from 'jwt-decode';
+
+const JwtPayload = ({location }) => (<></>);
+
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
@@ -30,6 +35,7 @@ const Country = ({
   const [isInternational, setInternational] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [animation, setAnimation] = useState(true);
+  // const [userLocation, setUserLocation] = useState(null); Might use this later
 
   const handleToggle = () => {
     setInternational(!isInternational);      
@@ -41,8 +47,25 @@ const Country = ({
 
   useEffect(() => {
     setLoaded(true);
+
+    // Decode the token stored in the cookies
+    const token = Cookies.get('token');
+    if (token) {
+      try {
+        const decodedToken = jwtDecode(token);
+        // setUserLocation(decodedToken.location) Might use this later
+        if (decodedToken.location == "International") {
+          setInternational(true)
+        } else if (decodedToken.location == "European") {
+          setInternational(false)
+        }
+      } catch (error) {
+        console.error('Failed to decode token', error);
+      }
+    }
   }, []);
 
+  
   const visaRequirements = [
     { title: "General Requirements", description: visaRequirementsRequirements },
     { title: "Financial Requirements", description: visaRequirementsFinancials },

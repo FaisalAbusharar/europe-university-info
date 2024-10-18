@@ -70,6 +70,13 @@
   bottom:20px
 }
 
+
+#warningLabel {
+  position: relative;
+  font-size: small;
+  width: 1000px;
+}
+
 #optionsField {
   position: relative;
   left: 20px;
@@ -129,7 +136,7 @@
   color: #0d7aff;
 }
 
-#toggleButton {
+#toggleButtonUser {
   position: absolute;
   font-size: 10px;
   padding: 5px 5px;
@@ -145,7 +152,7 @@
   font-weight: 900;
 }
 
-#toggleButton:hover {
+#toggleButtonUser:hover {
   border: 2px solid black;
   background: black;
   color: #0190fe;
