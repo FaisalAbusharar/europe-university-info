@@ -111,7 +111,7 @@ const ProfilePage = () => {
       )}
     </BackgroundAnim>
     <div id='forceFooterAtBottom'>
-    <Footer returnPage='countries' footerInformation={"Did you know data in websites is stored as Cookies? It is here too!"}></Footer>
+    <Footer returnPage='/' footerInformation={"Did you know data in websites is stored as Cookies? It is here too!"}></Footer>
     </div>
     </main>
   );
