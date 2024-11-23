@@ -1,7 +1,7 @@
 "use client"
-import Country from '../../components/country';
-import '../../styles/countrypage.css'
-import ScrollTo from '../../components/scrollFunction'
+import Country from '../../../components/country';
+import '../../../styles/countrypage.css'
+import ScrollTo from '../../../components/scrollFunction'
 
 
 

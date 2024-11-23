@@ -1,5 +1,5 @@
-import Country from '../../components/country';
-import '../../styles/countrypage.css'
+import Country from '../../../components/country';
+import '../../../styles/countrypage.css'
 
 const europeanAdmissionInformation = (
     <>

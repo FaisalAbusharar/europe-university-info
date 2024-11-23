@@ -45,19 +45,19 @@ const Home = () => {
         </div>
         <div className="flex-grow flex flex-col" id="buttonContainer">
           <div className="flex space-x-4 mb-8">
-            <Link href="/countries">
+            <Link href="/pages/countries">
               <StyledButton backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Countries</p></StyledButton>
             </Link>
-            <Link href="/">
+            <Link href="/pages/finance">
             <StyledButton backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Finanicals</p></StyledButton>
             </Link>
-            <Link href="/admission">
+            <Link href="/pages/admission">
             <StyledButton backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Admissions</p></StyledButton>
             </Link>
-            <Link href='/'>
+            <Link href='/pages/scholarship'>
             <StyledButton backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Scholarships</p></StyledButton>
             </Link>
-            <Link href='/language'>
+            <Link href='/pages/language'>
               <StyledButton backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Language</p></StyledButton>
             </Link>
           </div>

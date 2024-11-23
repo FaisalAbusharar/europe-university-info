@@ -115,6 +115,17 @@ main {
   display: inline-block; 
 }
 
+#gradientRed {
+  font-weight: bold; 
+  background: linear-gradient(to right,#ff0000, #ff6f6f, #ff0000);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  animation: gradientAnimation 6s linear infinite; 
+  display: inline-block; 
+}
+
 #gradientSubSub {
   font-weight: bold; 
   background: linear-gradient(to right,#004af8, rgb(3, 217, 255), rgb(0, 21, 255));

@@ -141,7 +141,7 @@ const Country = ({
 
       </div>
       <div id="buffer"></div>
-      <Footer returnPage='countries' footerInformation={footerInformation}></Footer>
+      <Footer returnPage='./pages/countries' footerInformation={footerInformation}></Footer>
     </main>
   );
 }

@@ -1,7 +1,7 @@
 
-import Admission from '../../components/admission';
-import '../../styles/countrypage.css'
-import ScrollTo from '../../components/scrollFunction'
+import Admission from '../../../components/admission';
+import '../../../styles/countrypage.css'
+import ScrollTo from '../../../components/scrollFunction'
 
 
 const gradientStyleSpring = {
