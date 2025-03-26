@@ -1,5 +1,7 @@
+"use client"
 import Country from '../../../components/country';
 import '../../../styles/countrypage.css'
+import ScrollTo from '../../../components/scrollFunction'
 
 const europeanAdmissionInformation = (
     <>
@@ -62,6 +64,28 @@ const internationalTuitionFees = (
     </>
 )
 
+const visaGeneralRequirements = (
+    <>
+    <p id="warning"><strong>It's recommended to check official government websites for this information and do not rely on the information here.</strong></p> Assuming you are intending to stay for over 90 days in Germany for the duration of your studies, you will have to apply for a Residence Permit, and must fulfill some basic requirements to apply. You must have a passport that exceeds the duration of the residence permit you are applying for by at least 3 months. You must provide the official letter of acceptance issued by your hosting German University. You must have a copy of your completed and signed application form. You must provide proof of your financial ability to support yourself (
+        <ScrollTo yOffset={-260} elementId="financial-requirements">
+            <a href="#financial-requirements" id="hyperlink-insite">more information in the next section</a>
+        </ScrollTo>
+     ) You must provide proof of having obtained valid health and medical insurance that covers your entire duration of stay in Germany.
+    </>
+)
+
+const visaFinancialRequirements = (
+    <>
+    <p id="warning"><strong>It's recommended to check official government websites for this information and do not rely on the information here.</strong></p> At present, a student must have a minimum of EUR 934 per month for staying in Germany. This means the student must have a minimum of EUR 11,208 per year for their expenses in Germany. You must provide a recent statement of your financial situation from your bank that shows you have at least EUR 11,208 in your bank account. Note that students undertaking degree courses in Germany must have funds for one year at a time, and that the bank statements of an applicant’s parents or a shared or joint account will not be accepted for Germany student visa or residence permit.
+    </>
+)
+
+const visaInsuranceRequirements = (
+    <>
+        <p id="warning"><strong>It's recommended to check official government websites for this information and do not rely on the information here.</strong></p> To obtain a residence permit for studying in Germany, international students must have health insurance covering medical expenses, hospitalization, and treatment with a minimum coverage of EUR 30,000. Private insurance meeting German standards typically costs EUR 500 to EUR 1,200 annually. Documentation proving coverage is required for the application process; initial visa requires private insurance, and public health insurance through <a href="https://www.tk.de/en" id="hyperlink" target="_blank" rel="noopener noreferrer">Techniker Krankenkasse (TK)</a> or other providers may be accessible post-registration. Access health insurance through international student insurance providers like <a href="https://www.axa.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">AXA</a>, <a href="https://www.allianzcare.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">Allianz Care</a>, and <a href="https://www.cignaglobal.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cigna Global</a>, university recommendations and student services, online insurance brokers such as <a href="https://www.insuremytrip.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">InsureMyTrip</a> and <a href="https://www.squaremouth.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">Squaremouth</a>, German insurance companies, government resources like the German Federal Foreign Office (<a href="https://www.auswaertiges-amt.de/en" target="_blank" rel="noopener noreferrer" id="hyperlink">Auswärtiges Amt</a>), and student union services for additional guidance.
+    </>
+);
+
 
 
 const germanyAdvantages = [
@@ -107,9 +131,9 @@ const Germany = () => {
         universityInformation: europeanStudentsUniversities,
         internationalUniversityInformation: internationalUniversityInformationText,
         internationalTuitionFeesInformation: internationalTuitionFees,
-        visaRequirementsRequirements: "General Visa Requirements Here.",
-        visaRequirementsFinancials: "Details about Financial Requirements Here.",
-        visaRequirementsInsurance: "Health and Travel Insurance Information Here.",
+        visaRequirementsRequirements: visaGeneralRequirements,
+        visaRequirementsFinancials: <div id="financial-requirements">{visaFinancialRequirements}</div>,
+        visaRequirementsInsurance: visaInsuranceRequirements,
         footerInformation: "I always recommend verifying this information on official Goverment or University Websites, Don't rely on this information.",
         whyChooseCountry: [{title: <>WHY <p id="gradientSub">GERMANY?</p></>, description: whyChooseGermany}],
         advantages: germanyAdvantages,
