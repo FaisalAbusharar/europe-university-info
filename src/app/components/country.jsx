@@ -23,7 +23,7 @@ const Country = ({
   visaRequirementsRequirements, visaRequirementsFinancials, visaRequirementsInsurance,
   whyChooseCountry = [{}], advantages = ["PlaceHolder for Information here", "PlaceHolder 2"],
   disadvantages = ["PlaceHolder for Information here", "PlaceHolder 2"],
-  footerInformation, titleColor1, titleColor2, backgroundColorObject = [], backgroundColor = '',
+  footerInformation, titleColor1, titleColor2, backgroundColorObject = Number[0], backgroundColor = '',
   optionalInformation = [{}], internationalOptionalInformation = [{}]
 }) => {
   const titleStyle = {    

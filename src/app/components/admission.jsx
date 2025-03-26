@@ -13,7 +13,7 @@ const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 const Admission = ({
   countryName, countryNameOptional,
   internationalAdmissionInformation,
-  footerInformation, titleColor1, titleColor2, backgroundColorObject = [], backgroundColor = '',
+  footerInformation, titleColor1, titleColor2, backgroundColorObject = Number[0], backgroundColor = '',
   optionalInformation = [{}], internationalOptionalInformation = [{}]
 }) => {
   const titleStyle = {    

@@ -6,7 +6,7 @@ import ScrollTo from '../../../components/scrollFunction'
 
 
 const backgroundColorStyle = 'linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 26, 51))'
-const backgroundColorObjectStyle = [0, 50, 150]
+const backgroundColorObjectStyle: number[] = [0, 50, 150]
 
 /* Information Area */
 

@@ -43,7 +43,7 @@ const internationalAdmissionInformationText =
 
 
 const backgroundColorStyle = 'linear-gradient(to bottom, rgb(0, 0, 0), rgb(51, 26, 1))'
-const backgroundColorObjectStyle = [150, 50, 0]
+const backgroundColorObjectStyle: number[] = [150, 50, 0]
 
 
 
