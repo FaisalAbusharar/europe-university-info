@@ -18,9 +18,11 @@ const gradientStyleRed = {
 
 const internationalAdmissionInformationText = 
 <>
+    <span id='warning'>This information is not complete.</span><br></br>
+
     Admission in Germany is straightforward, but international students must navigate some specific requirements. Universities and Universities of Applied Sciences (UAS) have different admission processes.
     <br/> <span id="subSubtitle"> <span id="gradientSubSub">University of Applied Sciences (UAS)</span></span> <br/>
-    <span id='warning'>Information here might change from year to year, this information is up-to-date for 2024.</span> UAS admission for international students is relatively straightforward, with several application methods:
+    <span id='warning'>Information here might change from year to year, this information is up-to-date for 2025.</span> UAS admission for international students is relatively straightforward, with several application methods:
     The <a href='https://www.uni-assist.de/en/' id='hyperlink'>Uni-Assist Portal</a>, <a href='https://www.daad.de/en/' id='hyperlink'>DAAD (German Academic Exchange Service)</a>, or through <a href='https://www.study-in-germany.de/en/' id='hyperlink'>direct university applications</a>.
     <br/><br/><a style={gradientStyleSpring} id='gradientSubSub'><span id='subsubSubtitle'>Uni-Assist Portal</span></a><br/>
     <strong>Many universities and UAS use Uni-Assist</strong> to process applications from international students. You can check which universities accept applications through Uni-Assist <a href='https://www.uni-assist.de/en/what-we-do/uni-assist-online/' id='hyperlink'>here</a>.
