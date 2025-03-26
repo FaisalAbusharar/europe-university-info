@@ -3,6 +3,10 @@ import Country from '../../../components/country';
 import '../../../styles/countrypage.css'
 import ScrollTo from '../../../components/scrollFunction'
 
+
+const backgroundColorStyle = 'linear-gradient(to bottom, rgb(0, 0, 0), rgb(51, 26, 1))'
+const backgroundColorObjectStyle = [150, 50, 0]
+
 const europeanAdmissionInformation = (
     <>
         European students applying to German universities benefit from no tuition fees for bachelor’s and master’s programs, with courses primarily conducted in German. Bachelor’s programs require a high school diploma qualifying for higher education in their home country (e.g., Abitur or equivalent). Master’s programs typically require a bachelor’s degree in a related field, and some may require work experience. Some programs may include entrance exams, interviews, or a portfolio review. Non-native German speakers generally need to demonstrate language proficiency through exams like <a href="https://www.testdaf.de/de/" target="_blank" rel="noopener noreferrer" id="hyperlink">TestDaF</a>, <a href="https://en.dsh-germany.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">DSH</a>, or <a href="https://www.goethe.de/en/index.html" target="_blank" rel="noopener noreferrer" id="hyperlink">Goethe-Zertifikat</a>. For English-taught programs, proficiency in English is often required, with exams like <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>, <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, or <a href="https://www.cambridgeenglish.org/test-your-english/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cambridge</a> being accepted. Applications are often submitted through <a href="https://www.uni-assist.de/en/" target="_blank" rel="noopener noreferrer" id="hyperlink">Uni-assist</a> or directly to the universities. Some programs have different application periods, so check<a href="https://www.daad.de/de/" target="_blank" rel="noopener noreferrer" id="hyperlink">DAAD.de</a> or the university websites for specific requirements.
@@ -140,6 +144,8 @@ const Germany = () => {
         disadvantages: germanyDisadvantages,
         titleColor1: "#fe0101",
         titleColor2: "#ffe600",
+        backgroundColor: backgroundColorStyle,
+        backgroundColorObject: backgroundColorObjectStyle,
         optionalInformation: [
             {title: <><span id="gradientSub">Important Admission Information</span></>, description: admissionRequirements},
             {title:  <><span id="gradientSub">Regular University</span> , <span id="gradientSubSub">University of Applied Sciences</span> OR <span id="gradientSubSub">Colleges of Art and Music </span></>, description: TypesOfUnis},
@@ -159,7 +165,7 @@ const Germany = () => {
             visaRequirementsRequirements={CountryInformation.visaRequirementsRequirements} visaRequirementsFinancials={CountryInformation.visaRequirementsFinancials}
             visaRequirementsInsurance={CountryInformation.visaRequirementsInsurance} whyChooseCountry={CountryInformation.whyChooseCountry}
             advantages={CountryInformation.advantages} disadvantages={CountryInformation.disadvantages}
-            optionalInformation={CountryInformation.optionalInformation} 
+            optionalInformation={CountryInformation.optionalInformation} backgroundColor={CountryInformation.backgroundColor} backgroundColorObject={CountryInformation.backgroundColorObject}
             
             ></Country>
         </div>
