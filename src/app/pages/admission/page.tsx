@@ -15,7 +15,7 @@ const Admission = () => {
         <h1 id="titlePageCountry">ADMISSION</h1>
         <h2 id="Subtitle">How to apply to your <p id="gradientSub">European Country</p></h2>
           <div id="countryContainer" className="flex space-x-4 mb-8">
-            <Link href="/pages/countries/germany">
+            <Link href="/pages/admission/germany">
             <button className='button' id="gradientButtonTextGermany">Germany</button>
             </Link>
             <Link href="/pages/admission/finland">
