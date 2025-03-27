@@ -9,8 +9,7 @@ const loginDatabase = async (
     mongoAuthUser, mongoAuthPass,
     user, password,
     databaseName, collectionName) => {
-      console.log(mongoAuthPass)
-      console.log(mongoAuthUser)
+
 
 const uri = `mongodb+srv://${mongoAuthUser}:${mongoAuthPass}@eui.w3an34n.mongodb.net/?retryWrites=true&w=majority&appName=EUI`;
 
