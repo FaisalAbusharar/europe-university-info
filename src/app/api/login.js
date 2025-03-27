@@ -9,7 +9,10 @@ const loginDatabase = async (
     mongoAuthUser, mongoAuthPass,
     user, password,
     databaseName, collectionName) => {
-const uri = `mongodb+srv://${mongoAuthUser}:${mongoAuthPass}@vault.wsqakcv.mongodb.net/?retryWrites=true&w=majority&appName=Vault`;
+      console.log(mongoAuthPass)
+      console.log(mongoAuthUser)
+
+const uri = `mongodb+srv://${mongoAuthUser}:${mongoAuthPass}@eui.w3an34n.mongodb.net/?retryWrites=true&w=majority&appName=EUI`;
 
 const client = new MongoClient(uri, {
   serverApi: {
