@@ -25,6 +25,18 @@ const ProfilePage = () => {
   const [userInfo, setUserInfo] = useState<JwtPayload | null>(null);
   const router = useRouter();
   const isInternational = userInfo?.location === "International";
+  //const [newName, setNewName] = useState(userInfo?.username);
+
+
+   {/* Logic for changing username should be here.*/}
+  //  const changeName = () => {
+  //   console.log("New Name:", newName); // Pass this to your update function
+  //   updateName(newName); // Call your function with the new name
+  // };
+
+  // const updateName = async (nameUpdate: any) => {
+  //     console.log(nameUpdate)
+  // }
 
   const updateLocation = async () => {
     if (userInfo && token) {
@@ -92,6 +104,44 @@ const ProfilePage = () => {
                 </div>
                 <label id='warningLabel' className='block text-white-500 font-small'>The token cannot be used to login, if you forgot your password or want to change it, you can here.</label>
               </div>
+
+
+              {/* Display for changing username should be here.*/}
+
+
+              {/* <div id="optionsField" style={{ display: "flex", alignItems: "flex-end", gap: "10px" }}>
+      <label id="superLabel" className="text-white-700 font-medium">
+        <span className={exo.className}>Change your Name:</span>
+        <br />
+        <span id="gradientSubSub">
+          <input
+            type="text"
+            id="subSubtitle"
+            value={newName} // Controlled input
+            onChange={(e) => setNewName(e.target.value)} // Update state on input change
+            style={{
+              background: "transparent",
+              borderBottom: "1px solid gray",
+              outline: "none",
+              fontSize: "1.5rem",
+              fontWeight: "bold",
+            }}
+          />
+        </span>
+      </label>
+
+      <button
+        id="toggleButtonUser"
+        onClick={changeName} // Call function with new value
+        style={{ position: "relative", bottom: "5px" }}
+      >
+        Update Name
+      </button>
+    </div>
+
+              <br></br>
+              <br></br>  */}
+
               <div id="optionsField">
                 <label id='superLabel' className="text-white-700 font-medium"><span className={exo.className}>Your Location is set to:</span> <span id="gradientSubSub"><span id="subSubtitle">{userInfo.location}</span></span></label>
               </div>
@@ -111,7 +161,7 @@ const ProfilePage = () => {
       )}
     </BackgroundAnim>
     <div id='forceFooterAtBottom'>
-    <Footer returnPage='/' footerInformation={"Did you know data in websites is stored as Cookies? It is here too!"}></Footer>
+    <Footer returnPage='/' footerTheme='linear-gradient(to right,rgb(68, 67, 73),rgb(135, 133, 139))' footerInformation={"Did you know data in websites is stored as Cookies? It is here too!"}></Footer>
     </div>
     </main>
   );

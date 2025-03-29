@@ -151,7 +151,6 @@ main {
 
 /* Footer */
 .footerContainer {
-  background: linear-gradient(to right, #3801fe, #6625fc);
   padding: 15px;
   display: flex;
   flex-direction: column;
