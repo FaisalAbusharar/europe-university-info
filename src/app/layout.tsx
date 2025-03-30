@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/*<ThemeProvider>*/}
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>{children} <Analytics /></body>
       {/* </ThemeProvider> */}
     </html>
   );
