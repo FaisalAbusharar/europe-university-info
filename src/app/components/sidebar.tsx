@@ -14,7 +14,7 @@ const DarkSidebar = () => {
         {/* Sidebar Content */}
         <div className="flex flex-col flex-grow bg-side-bar-color">
           {/* Sidebar Links */}
-          <a href="/countries" className="sidebar-link" id="sidebarText">
+          <a href="/pages/countries" className="sidebar-link" id="sidebarText">
             <img src="./Globe_icon.svg" alt="Globe Icon" className="w-6 h-6 mr-2" />
             Countries
           </a>

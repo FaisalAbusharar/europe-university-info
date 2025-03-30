@@ -8,12 +8,13 @@ const Footer = ({
     returnText = <>Go Back</>,
     optionalCredit = 'Developed by Faisal Abusharar',
     returnButton = true,
+    footerTheme = 'linear-gradient(to right, #3801fe, #6625fc)'
 
 }) => {
 
 
 return(
-    <div className="footerContainer">
+    <div style={{background: footerTheme}} className="footerContainer">
         <p id="footer">{footerInformation}
           <br />{footerInformationOptional}</p>
         <div className="credit-container">
