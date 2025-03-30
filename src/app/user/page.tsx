@@ -25,18 +25,36 @@ const ProfilePage = () => {
   const [userInfo, setUserInfo] = useState<JwtPayload | null>(null);
   const router = useRouter();
   const isInternational = userInfo?.location === "International";
-  //const [newName, setNewName] = useState(userInfo?.username);
+  const [newName, setNewName] = useState(userInfo?.username);
 
 
    {/* Logic for changing username should be here.*/}
-  //  const changeName = () => {
-  //   console.log("New Name:", newName); // Pass this to your update function
-  //   updateName(newName); // Call your function with the new name
-  // };
+   
 
-  // const updateName = async (nameUpdate: any) => {
-  //     console.log(nameUpdate)
-  // }
+  const updateName = async () => {
+      if (userInfo && token) {
+          try {
+            const res = await updateDatabase(
+              process.env.mongoDatabaseUser, 
+              process.env.mongoDatabasePass,
+              userInfo.email,
+              "username",
+              newName,
+              process.env.mongoDatabaseName, 
+              process.env.mongoCollectionName
+          )
+
+          Cookies.set('token', res, { expires: 14 });
+          
+        setUserInfo({ ...userInfo, username: newName });
+
+        window.location.reload();
+
+        } catch (error) {
+          console.error('Error updating location:', error);
+        }
+      }
+  }
 
   const updateLocation = async () => {
     if (userInfo && token) {
@@ -109,38 +127,41 @@ const ProfilePage = () => {
               {/* Display for changing username should be here.*/}
 
 
-              {/* <div id="optionsField" style={{ display: "flex", alignItems: "flex-end", gap: "10px" }}>
-      <label id="superLabel" className="text-white-700 font-medium">
-        <span className={exo.className}>Change your Name:</span>
-        <br />
-        <span id="gradientSubSub">
-          <input
-            type="text"
-            id="subSubtitle"
-            value={newName} // Controlled input
-            onChange={(e) => setNewName(e.target.value)} // Update state on input change
-            style={{
-              background: "transparent",
-              borderBottom: "1px solid gray",
-              outline: "none",
-              fontSize: "1.5rem",
-              fontWeight: "bold",
-            }}
-          />
-        </span>
-      </label>
+              <div id="optionsField" style={{ display: "flex", alignItems: "flex-end", gap: "10px" }}>
+              <label id="superLabel" className="text-white-700 font-medium">
+                <span className={exo.className}>Change your Name:</span>
+                <br />
+                <span id="gradientSubSub">
+                  <input
+                    type="text"
+                    maxLength={14}
+                    minLength={4}
+                    defaultValue={userInfo.username}
+                    id="subSubtitle"
+                    value={newName} 
+                    onChange={(e) => setNewName(e.target.value)} 
+                    style={{
+                      background: "transparent",
+                      borderBottom: "1px solid gray",
+                      outline: "none",
+                      fontSize: "1.5rem",
+                      fontWeight: "bold",
+                    }}
+                  />
+                </span>
+              </label>
 
-      <button
-        id="toggleButtonUser"
-        onClick={changeName} // Call function with new value
-        style={{ position: "relative", bottom: "5px" }}
-      >
-        Update Name
-      </button>
-    </div>
+              <button
+                id="toggleButtonUser"
+                onClick={updateName} 
+                style={{ marginRight: '-100px',bottom: "5px", right: "1px" }}
+              >
+                Update Name
+              </button>
+            </div>
 
-              <br></br>
-              <br></br>  */}
+                  <br></br>
+                  <br></br>  
 
               <div id="optionsField">
                 <label id='superLabel' className="text-white-700 font-medium"><span className={exo.className}>Your Location is set to:</span> <span id="gradientSubSub"><span id="subSubtitle">{userInfo.location}</span></span></label>

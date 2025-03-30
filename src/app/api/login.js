@@ -31,7 +31,7 @@ const collection = db.collection(collectionName)
 
     await client.connect();
     try {
-        const result = await collection.findOne({"_id": user}) || await collection.findOne({"email": user})
+        const result = await collection.findOne({"username": user}) || await collection.findOne({"email": user})
         if (!result) {
             throw new Error("UserNotFound")
         }
@@ -40,7 +40,7 @@ const collection = db.collection(collectionName)
             throw new Error('InvalidCredentials');
         }
 
-       const token = generateToken(result, '5h');
+       const token = generateToken(result, '14d');
 
 
        return token

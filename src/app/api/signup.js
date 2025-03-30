@@ -39,7 +39,7 @@ const collection = db.collection(collectionName)
       throw new Error("UserAlreadyExistsUser")
     }
     
-    const result = await collection.insertOne({"_id": user, "email": email, "password": await hashPassword(password), "location": "European"})
+    const result = await collection.insertOne({"username": user, "email": email, "password": await hashPassword(password), "location": "European"})
     
   } finally {
 

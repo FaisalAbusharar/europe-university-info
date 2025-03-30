@@ -27,7 +27,7 @@ const uri = `mongodb+srv://${mongoAuthUser}:${mongoAuthPass}@eui.w3an34n.mongodb
     await client.connect();
     try {
       // Find the user by _id or email
-      const result = await collection.findOne({ $or: [{ "_id": user }, { "email": user }] });
+      const result = await collection.findOne({ $or: [{ "username": user }, { "email": user }] });
       if (!result) {
         throw new Error("UserNotFound");
       }
@@ -44,6 +44,15 @@ const uri = `mongodb+srv://${mongoAuthUser}:${mongoAuthPass}@eui.w3an34n.mongodb
       );
       
         result["location"] = updateValue;
+    }
+
+    if (whatToUpdate == 'username') {
+      await collection.updateOne(
+        {_id: result._id},
+        {$set: {username: updateValue}}
+      )
+
+      result["username"] = updateValue
     }
 
       // Generate a new token with the updated information
