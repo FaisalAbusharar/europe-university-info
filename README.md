@@ -5,7 +5,7 @@
 - Mobile site
 - Finish all the country and admission pages
 - Clean up code
-
+- Push Prod to Vercel 
 
 ## Getting Started
 
