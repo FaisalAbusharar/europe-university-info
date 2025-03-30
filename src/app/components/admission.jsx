@@ -45,7 +45,7 @@ const Admission = ({
     <main style={backgroundStyle} id="backgroundCountry" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in-top' : ''}`}>
       <BackgroundAnim objectColor={backgroundColorObject} className="absolute inset-0 z-0" />
       <div className={`relative z-10 flex-grow flex-col items-center justify-center ${animation ? 'fade-enter-active' : 'fade-exit-active'}`}>
-        {<Link href={'/pages/countries'}><button id="returnButtonHeader">Go back</button></Link>} 
+        {<Link href={'/pages/admission'}><button id="returnButtonHeader">Go back</button></Link>} 
         <h1 className={`${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
         <hr id="line" />
         <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
