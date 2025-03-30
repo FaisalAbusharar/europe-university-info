@@ -33,3 +33,4 @@
       "src/app/user/page.jsx"],
   "exclude": ["node_modules"]
 }
+

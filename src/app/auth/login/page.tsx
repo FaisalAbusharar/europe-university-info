@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import '../../styles/userPage.css'
+import '../../styles/authPage.css'
 import { Poppins, Exo } from 'next/font/google';
 import loginDatabase from '@/app/api/login';
 import Cookies from 'js-cookie'
@@ -53,7 +53,6 @@ const Signup: React.FC = () => {
       }
 
   };
-  const tempSolutionFooterPosition= {top: '98.9px'}
   useEffect(() => {
     if (submitted) {
       // Redirect to login page after 2 seconds
@@ -66,6 +65,7 @@ const Signup: React.FC = () => {
 
   return (
     <main id="background" className={`${exo.className}`}>
+
       {submitted ? <></> : <h1 className='contextTitle'>Europe University Information</h1>}
       {submitted ? <></> : <p className='context'>Login to save important information, choose a country, learn more, and interact with others!</p>}
       <div className='container'>
@@ -102,12 +102,13 @@ const Signup: React.FC = () => {
           </div>
         )}
       </div>
-      <div style={tempSolutionFooterPosition} className='containerFooter'>
-      {/*submitted ? <></>: <Footer footerInformation={"EUI offers a community of people willing to help each other!"}></Footer> */}
+      <div style={{position: 'fixed', bottom: '0%', width: '100%'}} className='containerFooter'>
+      {submitted ? <></>: <Footer returnPage='/' footerTheme='linear-gradient(to right,rgb(12, 152, 207),rgb(12, 16, 233))' footerInformation={"EUI offers a community of people willing to help each other!"}></Footer>}
       </div>
     </main>
   );
 };
+
 
 export default Signup;
 
