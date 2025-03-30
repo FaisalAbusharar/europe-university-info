@@ -1,5 +1,12 @@
 # Europe University Information
 
+## TODO
+
+- Mobile site
+- Finish all the country and admission pages
+- Clean up code
+
+
 ## Getting Started
 
 First, run the development server:
