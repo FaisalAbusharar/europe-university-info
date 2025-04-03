@@ -4,6 +4,8 @@ import Link from 'next/link';
 import '../../styles/countrypage.css'
 import '../../styles/gradientButtonStyles.css'
 import Footer from '../../components/footer';
+import { ArrowLeft } from 'lucide-react';
+
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 const footerInformation = 'Figuring out where you want to study is pretty simple, see the costs, culture, enviorment, careers and decide!'
@@ -12,6 +14,8 @@ const Countries = () => {
   return (
     <main className={`${poppins.className} flex flex-col min-h-screen`}>
       <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900">
+      
+      {<Link href={'/'}><button id="returnButtonHeader"><ArrowLeft size={20}/></button></Link>} 
         <h1 id="titlePageCountry">COUNTRIES</h1>
         <h2 id="Subtitle">Find your <p id="gradientSub">European Country</p></h2>
           <div id="countryContainer" className="flex space-x-4 mb-8">

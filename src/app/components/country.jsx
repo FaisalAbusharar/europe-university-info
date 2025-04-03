@@ -4,6 +4,7 @@ import { Poppins, Exo } from 'next/font/google';
 import React, { useState, useEffect } from 'react';
 import BackgroundAnim from '../animation/backgroundAnimationFirst';
 import '../styles/animations.css';
+import { ArrowLeft } from "lucide-react";
 import Footer from './footer'
 import '../styles/transitions.css';
 import Cookies from 'js-cookie';
@@ -80,7 +81,7 @@ const Country = ({
     <main style= {backgroundStyle} id="backgroundCountry" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in-top' : ''}`}>
       <BackgroundAnim objectColor={backgroundColorObject} className="absolute inset-0 z-0" />
       <div className={`relative z-10 flex-grow flex-col items-center justify-center ${animation ? 'fade-enter-active' : 'fade-exit-active'}`}>
-          {<Link href={'/pages/countries'}><button id="returnButtonHeader">Go back</button></Link>} 
+          {<Link href={'/pages/countries'}><button id="returnButtonHeader"><ArrowLeft size={20}/></button></Link>} 
         <h1 className={`${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
         <button id="toggleButton" onClick={handleToggle}>
           {isInternational ? "Switch to European" : "Switch to International"}

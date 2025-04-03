@@ -7,6 +7,7 @@ import '../styles/animations.css';
 import Footer from './footer'
 import Link from "next/link"
 import '../styles/transitions.css';
+import { ArrowLeft } from 'lucide-react';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
@@ -27,13 +28,6 @@ const Admission = ({
   const [loaded, setLoaded] = useState(false);
   const [animation, setAnimation] = useState(true);
 
-  const handleToggle = () => {
-    setInternational(!isInternational);      
-    setAnimation(false); // Set fade to true
-    
-    // Reset fade after the animation duration
-    setTimeout(() => setAnimation(true), 600);  
-  }
 
   useEffect(() => {
     setLoaded(true);
@@ -45,7 +39,7 @@ const Admission = ({
     <main style={backgroundStyle} id="backgroundCountry" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in-top' : ''}`}>
       <BackgroundAnim objectColor={backgroundColorObject} className="absolute inset-0 z-0" />
       <div className={`relative z-10 flex-grow flex-col items-center justify-center ${animation ? 'fade-enter-active' : 'fade-exit-active'}`}>
-        {<Link href={'/pages/admission'}><button id="returnButtonHeader">Go back</button></Link>} 
+      {<Link href={'/pages/admission'}><button id="returnButtonHeader"><ArrowLeft size={20}/></button></Link>} 
         <h1 className={`${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
         <hr id="line" />
         <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
