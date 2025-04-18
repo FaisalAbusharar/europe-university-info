@@ -18,7 +18,7 @@ interface JwtPayload {
 }
 
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
-const poppins = Exo({ subsets: ['latin'], weight: ['400', '700'] });
+const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 
 const ProfilePage = () => {
   const [token, setToken] = useState<string | null>(null);
@@ -72,7 +72,7 @@ const ProfilePage = () => {
         );
 
         // Update the token with the new location
-        Cookies.set('token', res, { expires: 2 });
+        Cookies.set('token', res, { expires: 3 });
 
         // Update the state with the new location
         setUserInfo({ ...userInfo, location: newLocation });
@@ -98,7 +98,7 @@ const ProfilePage = () => {
       }
     } else {
       console.log('No token cookie found');
-      router.push('/auth/login'); // Redirect if no token is found
+      router.push('/auth/login'); // Redirect if no token is found, should maybe change to signup?
     }
   }, [router]);
 
@@ -124,7 +124,7 @@ const ProfilePage = () => {
               </div>
 
 
-              {/* Display for changing username should be here.*/}
+              {/* Change Username Section .*/}
 
 
               <div id="optionsField" style={{ display: "flex", alignItems: "flex-end", gap: "10px" }}>
@@ -162,7 +162,7 @@ const ProfilePage = () => {
 
                   <br></br>
                   <br></br>  
-
+                {/*Change location section*/}
               <div id="optionsField">
                 <label id='superLabel' className="text-white-700 font-medium"><span className={exo.className}>Your Location is set to:</span> <span id="gradientSubSub"><span id="subSubtitle">{userInfo.location}</span></span></label>
               </div>
