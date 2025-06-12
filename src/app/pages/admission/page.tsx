@@ -24,14 +24,17 @@ const Admission = () => {
             <Link href="/pages/admission/finland">
             <button className='button' id="gradientButtonTextFinland">Finland</button>
             </Link>
-            <Link href="/pages/countries/sweden">
+            <Link href="/pages/admission/sweden">
             <button className='button' id="gradientButtonTextSweden">Sweden</button>
             </Link>
-            <Link href="/pages/countries/unitedkingdom">
+            <Link href="/pages/admission/unitedkingdom">
             <button className='button' id="gradientButtonTextUK">United Kingdom</button>
             </Link>
-            <Link href="/pages/countries/norway">
+            <Link href="/pages/admission/norway">
             <button className='button' id="gradientButtonTextNorway">Norway</button>
+            </Link>
+             <Link href="/pages/admission/austria">
+            <button className='button' id="gradientButtonTextAustria">Austria</button>
             </Link>
           </div>
           <h1> <span id='fadedText'>This section is for students outside of said country.</span></h1>

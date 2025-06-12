@@ -34,6 +34,9 @@ const Countries = () => {
             <Link href="/pages/countries/norway">
             <button className='button' id="gradientButtonTextNorway">Norway</button>
             </Link>
+            <Link href="/pages/countries/austria">
+            <button className='button' id="gradientButtonTextAustria">Austria</button>
+            </Link>
           </div>
       </div>
       <Footer returnPage='' footerInformation={footerInformation}></Footer>
