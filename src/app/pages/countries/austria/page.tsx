@@ -11,10 +11,20 @@ const backgroundColorObjectStyle: number[] = [118, 50, 0]
 /* Information Area */
 
 const permitInformation = (
-    <>
-        <span id="warning"></span> 
-    </>
+  <>
+    <span id="warning">
+      Please check the official Austrian government portal for detailed information.
+    </span>
+    To study in Austria, non‑EU/EEA students must apply for a “Student” residence permit before arrival, typically valid for 12 months and renewable annually. You’ll need to show proof of admission, sufficient funds (currently €703.58/month if under 24, and €1,273.99/month if older), accommodation, and comprehensive health insurance
+
+    During studies, you can work up to 20 hours/week with an employment permit from the Public Employment Service (AMS); work must not interfere with your studies.
+
+    After graduation, you can extend your permit for up to 12 months to look for a job or start a business. If you secure a job offer, you may apply for the Red‑White‑Red Card for Graduates, allowing you to work for up to two years with your qualifying employer.
+
+    Family members (spouse and minor children) can join you under the “family unity” residence permit, provided financial support, accommodation, and basic German (A1) for adults are demonstrated.
+  </>
 );
+
 
 
 const admissionRequirements = (
@@ -25,14 +35,30 @@ const admissionRequirements = (
 
 
 
+
 const internationalAdmissionInformationText = (
   <>
-    Bachelor & Master Degrees: For Bachelor programs, you’ll need a high-school diploma that qualifies you for higher education in your home country. For Master programs, a relevant Bachelor’s degree is required. Some universities of applied sciences (UAS) may also require relevant work experience for Master’s programs. Admission procedures often include entrance exams, interviews, or portfolio submissions depending on the program. 
+    Bachelor & Master Degrees: For Bachelor programs, you’ll need a high-school diploma that qualifies you for higher education in your home country. Commonly accepted diplomas include:
+    <ul className="list-disc list-inside mt-2 mb-2">
+      <li>International A Levels (Cambridge or Edexcel)</li>
+      <li>International Baccalaureate (IB)</li>
+      <li>High School Diploma (with SAT/ACT or APs, depending on the country)</li>
+      <li>European Baccalaureate</li>
+      <li>French Baccalauréat</li>
+      <li>Abitur (Germany)</li>
+      <li>Diploma di Maturità (Italy)</li>
+      <li>Ylioppilastutkinto / Studentexamen (Finland)</li>
+    </ul>
+    For Master programs, a relevant Bachelor’s degree is required. Some universities of applied sciences (UAS) may also require relevant work experience for Master’s programs. Admission procedures often include entrance exams, interviews, or portfolio submissions depending on the program.
 
-    Non-native English speakers applying to English-taught programs usually need to demonstrate language proficiency through exams like 
-    <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>,  <a href="https://www.pearsonpte.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">PTE</a>,  <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, or  <a href="https://www.cambridgeenglish.org/test-your-english/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cambridge</a> tests.
+    Non-native English speakers applying to English-taught programs usually need to demonstrate language proficiency through exams like  
+    <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>,  
+    <a href="https://www.pearsonpte.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">PTE</a>,  
+    <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, or  
+    <a href="https://www.cambridgeenglish.org/test-your-english/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cambridge</a> tests.
 
-    Applications are usually submitted directly to each university, as Austria does not have a joint application system. Deadlines and requirements vary by institution, so it’s recommended to search for your program and check details through official university websites or  <a href="https://studyinaustria.at" target="_blank" rel="noopener noreferrer" id="hyperlink">studyinaustria.at</a>.
+    Applications are usually submitted directly to each university, as Austria does not have a joint application system. Deadlines and requirements vary by institution, so it’s recommended to search for your program and check details through official university websites or  
+    <a href="https://studyinaustria.at" target="_blank" rel="noopener noreferrer" id="hyperlink">studyinaustria.at</a>.
   </>
 );
 
@@ -85,12 +111,12 @@ const visaInsuranceRequirements = (
   </>
 );
 
-
 const europeanAdmissionInformation = (
-    <>
-        {/* European students applying to Finnish universities benefit from no tuition fees for bachelor's and master's programs conducted in Finnish or Swedish, similar to Finnish students. Bachelor's programs require a high school diploma qualifying for higher education in their home country. Master's programs require a Bachelor’s degree, and UAS Master’s programs may require two years of relevant work experience. Some programs may include entrance exams, SAT tests, or interviews. Non-native English speakers typically demonstrate proficiency through exams like <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>, <a href="https://www.pearsonpte.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">PTE</a>, <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, or <a href="https://www.cambridgeenglish.org/test-your-english/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cambridge</a> tests. Apply through the Joint Application system for up to six programs in January for autumn (September) studies. Some programs have different application periods; details vary, so check <a href="https://studyinfo.fi" target="_blank" rel="noopener noreferrer" id="hyperlink">Studyinfo.fi</a> or university websites for specific requirements. */}
-    </>
+  <>
+    To apply for a Bachelor's program at an Austrian university, EU students need to submit proof of nationality (e.g., passport copy), a secondary school leaving certificate that qualifies them for university studies in their home country, and German language proficiency—typically demonstrated by a secondary school certificate confirming at least four years of German lessons or a recognized German language diploma. For Master's programs, a relevant Bachelor's degree (minimum 180 ECTS) is required. Some programs may have additional requirements, such as entrance examinations or specific language proficiency levels. It is essential to check the specific requirements of the program you are interested in on the university's website.
+  </>
 );
+
 
 const internationalTuitionFees = (
   <>
@@ -105,24 +131,28 @@ const internationalTuitionFees = (
 
 
 const europeanStudentsUniversities = (
-    <>
-        {/* European students applying to Finnish universities should explore programs offered through <a href="https://studyinfo.fi" target="_blank" rel="noopener noreferrer" id="hyperlink">Studyinfo.fi</a>. Each university in Austria sets its own admission criteria, including requirements for high school diplomas, bachelor's degrees, and relevant work experience for master's programs. Some programs may require entrance exams, SAT tests, or interviews. Non-native English speakers often need to demonstrate proficiency through exams like <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>, <a href="https://www.pearsonpte.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">PTE</a>, <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, or <a href="https://www.cambridgeenglish.org/test-your-english/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cambridge</a> tests. Utilize the Joint Application system to apply for up to six programs in January for autumn (September) studies. For specific details on application periods and requirements, visit <a href="https://studyinfo.fi" target="_blank" rel="noopener noreferrer" id="hyperlink">Studyinfo.fi</a> or the official websites of Finnish universities. */}
-    </>
+  <>
+    European students applying to Austrian universities should check each university’s specific admission criteria, which typically require a recognized secondary school leaving certificate, proof of language proficiency in German or English depending on the program, and sometimes entrance exams or interviews; applications are usually submitted directly to universities, with deadlines varying by institution—visit the official university websites or <a href="https://studyinaustria.at" target="_blank" rel="noopener noreferrer" id="hyperlink">studyinaustria.at</a> for detailed information.
+  </>
 );
 
+
 const whyChooseAustria = (
-    <>
-    {/* Austria is known for it’s World-Class education, and it’s universities are consistently ranked among the top in the global university rankings, with free tuition fees for EU/EEA Students who can massively benefit from the zero tuition fees, and Austria is affordable for International students compared to other countries in Europe with many scholarships and financial aid to help cover costs. Austria has a wide range of degree programs that are available in English, especially in IT. International students are allowed to work part-time during their studies. Austria is known for it’s innovative and student-centered teaching methods, encouraging critical thinking, creativity, and independence. After graduation, students have opportunities to stay and work in Austria. */}
-    </>
-)
+  <>
+    Austria offers high-quality education at top-ranked universities with low or no tuition fees for EU/EEA students and affordable costs for international students. Many degree programs, especially in fields like IT and business, are available in English. International students are allowed to work part-time during their studies, and living costs are moderate, typically ranging from €900 to €1,300 per month. Scholarships from OeAD, Erasmus+, and individual universities help ease financial pressure. After graduation, students can apply for a Red-White-Red Card to stay in Austria and seek employment. The country is known for its safety, central location in Europe, and excellent quality of life.
+  </>
+);
+
 
 const RegularVSUasUni = (
-    <>
-      {/* Universities of Applied Sciences (UAS) focus on practical and professional skills, offering programs designed in collaboration with industries. These institutions emphasize hands-on training and internships, typically providing Bachelor's and Master's degrees with shorter programs, often three to four years for a Bachelor's degree. UAS have strong connections with local businesses and industries, ensuring graduates are well-prepared for the job market. */}
+  <>
+    In Austria, Universities of Applied Sciences (Fachhochschulen or UAS) provide professionally oriented degree programs in areas like engineering, business, health, media, and design. These institutions feature structured schedules, smaller classes, mandatory internship placements, and entrance procedures such as tests or interviews. Bachelor’s programs typically span six semesters, followed by four-semester Master’s programs, both of which are recognized as equivalent to university degrees.
+
+    Regular universities (Universitäten), on the other hand, emphasize theoretical and research-based education across a broad range of academic disciplines, including doctoral studies. Their schedules are more flexible, lectures larger, and some programs—especially in oversubscribed fields like medicine and law—require entrance exams. University Bachelor’s programs generally take six to eight semesters, with Master’s programs lasting around four semesters.
+  </>
+);
+
   
-      {/* Regular universities, on the other hand, focus on theoretical and academic education, offering a broader range of programs including Bachelor's, Master's, and Doctoral degrees. These institutions emphasize research and academic knowledge, often requiring a longer period of study for degrees. Regular universities are research-intensive and offer opportunities for students to engage in cutting-edge research projects. Graduates from regular universities are well-equipped for both professional careers and further academic pursuits. */}
-    </>
-  )
   
 
 const AustriaAdvantages = [
@@ -177,7 +207,7 @@ const Austria = () => {
         backgroundColor: backgroundColorStyle,
         backgroundColorObject: backgroundColorObjectStyle,
         optionalInformation: [
-            {title: <><span id="gradientSub">Important Admission Information</span></>, description: admissionRequirements},
+            // {title: <><span id="gradientSub">Important Admission Information</span></>, description: admissionRequirements},
             {title:  <><span id="gradientSub">Regular University</span> OR <span id="gradientSubSub">University of Applied Sciences</span></>, description: RegularVSUasUni},
         ],
         internationalOptionalInformation: [
