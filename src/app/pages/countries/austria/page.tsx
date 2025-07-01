@@ -113,7 +113,7 @@ const visaInsuranceRequirements = (
 
 const europeanAdmissionInformation = (
   <>
-    If you are not an EEA citizen or Swiss, and do not already have a right of residence or a residence title in Austria, a residence permit is required to study. Registration deadlines are September 5th for the winter semester and February 5th for the summer semester (for bachelor or diploma programmes). Registration opens April 15th, but deadlines may vary by programme—check the university's website.
+    Registration deadlines are September 5th for the winter semester and February 5th for the summer semester (for bachelor or diploma programmes). Registration opens April 15th, but deadlines may vary by programme—check the university's website.
 
     Contact the university beforehand for detailed application instructions. Some universities offer online "registration of data" and follow up via email.
 
@@ -123,9 +123,17 @@ const europeanAdmissionInformation = (
     <br></br><strong>PhD programmes:</strong> Master’s degree in the same field as your research proposal.
     <br></br><strong>Programmes with entrance exams</strong> (e.g., medical, arts, UAS): enquire early, as application deadlines may be up to 6 months before the semester.
 
-    <br></br>Most programmes are taught in German, though some are in English (see www.studienwahl.at/en). German proficiency must be B2 or C1 depending on the university. Accepted diplomas include the "Österreichisches Sprachdiplom Deutsch" (www.osd.at).
+    <br></br>Most programmes are taught in German, though some are in English (
+    <a href="https://www.studienwahl.at/en" id="hyperlink" target="_blank" rel="noopener noreferrer">
+      see official study site
+    </a>
+    ). German proficiency must be B2 or C1 depending on the university. Accepted diplomas include the   <a href="https://www.osd.at" id="hyperlink" target="_blank" rel="noopener noreferrer">
+       Österreichisches Sprachdiplom Deutsch
+    </a>
+    .
 
-    Always confirm with the university if your language certificate is accepted. If you don’t yet meet the German requirement, you may take University Preparation Programmes ("Vorstudienlehrgänge") in Vienna, Graz, or Leoben. These also prepare students for supplementary exams in German, mathematics, etc. A minimum of A2 German is needed to join.
+    <br></br>Always confirm with the university if your language certificate is accepted. If you don’t yet meet the German requirement, you may take University Preparation Programmes ("Vorstudienlehrgänge") in Vienna, Graz, or Leoben. These also prepare students for supplementary exams in German, mathematics, etc. A minimum of A2 German is needed to join.
+    <a id="creditTitle">  Credit to Captain Garlica for writing this.</a>
   </>
 );
 

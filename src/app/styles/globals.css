@@ -79,7 +79,10 @@ main {
 
 
 
-
+#creditTitle {
+  font-size: 12px;
+  color: gray;
+}
 
 
 /* Gradient Texts */
