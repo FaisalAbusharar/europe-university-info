@@ -168,6 +168,10 @@ main {
   flex-grow: 1;
 }
 
+#Aiwarning {
+  font-size: 12px;
+}
+
 #leftCredit {
   text-align: left;
   font-weight: 500;

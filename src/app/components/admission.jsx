@@ -62,7 +62,7 @@ const Admission = ({
 
       </div>
       <div id="buffer"></div>
-      <Footer returnPage='./pages/admission' footerInformation={footerInformation}></Footer>
+      <Footer showAIwarning={true} returnPage='./pages/admission' footerInformation={footerInformation}></Footer>
     </main>
   );
 }
