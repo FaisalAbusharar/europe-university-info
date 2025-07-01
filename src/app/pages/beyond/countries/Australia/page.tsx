@@ -6,22 +6,12 @@ import ScrollTo from '../../../../components/scrollFunction'
 import Wipscreen from '../../../../components/wipscreen'
 import "../../../../styles/support.css"
 
-const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 
 const Australia = () => {
-    const CountryInformation = {
-        footerInformation: "Coming soon!",
-        returnPage: "./pages/beyond/countries"
-    }
 
 
-  return (
-    <div>
-
-        <Wipscreen footerInformation={CountryInformation.footerInformation} returnPage={CountryInformation.returnPage}></Wipscreen>
-    </div>
-
-  )
+    const CountryInformation = { footerInformation: "Coming soon!",returnPage: "./pages/beyond/countries"}
+    return (<div> <Wipscreen footerInformation={CountryInformation.footerInformation} returnPage={CountryInformation.returnPage}></Wipscreen></div>)
 
 
 }

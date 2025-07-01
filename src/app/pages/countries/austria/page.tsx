@@ -113,7 +113,19 @@ const visaInsuranceRequirements = (
 
 const europeanAdmissionInformation = (
   <>
-    To apply for a Bachelor's program at an Austrian university, EU students need to submit proof of nationality (e.g., passport copy), a secondary school leaving certificate that qualifies them for university studies in their home country, and German language proficiency—typically demonstrated by a secondary school certificate confirming at least four years of German lessons or a recognized German language diploma. For Master's programs, a relevant Bachelor's degree (minimum 180 ECTS) is required. Some programs may have additional requirements, such as entrance examinations or specific language proficiency levels. It is essential to check the specific requirements of the program you are interested in on the university's website.
+    If you are not an EEA citizen or Swiss, and do not already have a right of residence or a residence title in Austria, a residence permit is required to study. Registration deadlines are September 5th for the winter semester and February 5th for the summer semester (for bachelor or diploma programmes). Registration opens April 15th, but deadlines may vary by programme—check the university's website.
+
+    Contact the university beforehand for detailed application instructions. Some universities offer online "registration of data" and follow up via email.
+
+    Requirements include:
+    <br></br><strong>Bachelor’s programmes:</strong> passport copy, a secondary school leaving certificate qualifying you for university in your home country, and proof of German proficiency (4 years of school German or a diploma).
+    <br></br><strong>Master’s programmes:</strong> relevant Bachelor’s degree of at least 6 semesters (min. 180 ECTS).
+    <br></br><strong>PhD programmes:</strong> Master’s degree in the same field as your research proposal.
+    <br></br><strong>Programmes with entrance exams</strong> (e.g., medical, arts, UAS): enquire early, as application deadlines may be up to 6 months before the semester.
+
+    <br></br>Most programmes are taught in German, though some are in English (see www.studienwahl.at/en). German proficiency must be B2 or C1 depending on the university. Accepted diplomas include the "Österreichisches Sprachdiplom Deutsch" (www.osd.at).
+
+    Always confirm with the university if your language certificate is accepted. If you don’t yet meet the German requirement, you may take University Preparation Programmes ("Vorstudienlehrgänge") in Vienna, Graz, or Leoben. These also prepare students for supplementary exams in German, mathematics, etc. A minimum of A2 German is needed to join.
   </>
 );
 
