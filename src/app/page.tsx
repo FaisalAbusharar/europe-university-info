@@ -7,6 +7,7 @@ import Footer from './components/footer';
 import StyledButton from './components/buttonStyles';
 import BackgroundAnim from './animation/backgroundAnimationFirst';
 import Image from 'next/image'
+import "./styles/beyondAltStyles.css"
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 const footerInformation = 'The website provides information you need to be able to study in Europe, from costs to admissions and scholarships'
@@ -19,6 +20,8 @@ const Home = () => {
   }, []);
   
   const hoverButtonColor = 'linear-gradient(to right, rgb(3, 217, 255), rgb(0, 20, 255))'
+  const hoverButtonColorBeyond = 'linear-gradient(to right, rgb(255, 3, 3), rgb(134, 0, 0))'
+
 
   return (
     <main id='mainContainer' className={`${poppins.className} flex flex-col min-h-screen ${loaded ? 'fade-in' : ''}`}>
@@ -60,6 +63,9 @@ const Home = () => {
             {/* <Link href='/pages/language'> */}
               <StyledButton isDisabled={true} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Language</p></StyledButton>
             {/* </Link> */}
+            <Link href='/pages/beyond/countries'>
+              <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColorBeyond}><p id="gradientButtonTextALT">Beyond Europe</p></StyledButton>
+            </Link>
           </div>
         </div>
       </div>
