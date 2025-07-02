@@ -14,9 +14,9 @@ const footerInformation = 'Originally focused on European universities, EUI is e
 const CountriesBeyond = () => {
   return (
     <main className={`${poppins.className} flex flex-col min-h-screen`}>
-      <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900">
+      <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-l from-black to-gray-900">
       
-      {<Link href={'/'}><button id="returnButtonHeader"><ArrowLeft size={20}/></button></Link>} 
+      {<Link href={'/'}><button id="returnButtonHeader"><ArrowLeft className="transition-transform duration-200 hover:scale-125" size={20}/></button></Link>}
         <h1 id="titlePageCountryALT">COUNTRIES BEYOND</h1>
         <h2 id="Subtitle">Find your <p id="gradientSub">Country</p></h2>
           <div id="countryContainer" className="flex space-x-4 mb-8">

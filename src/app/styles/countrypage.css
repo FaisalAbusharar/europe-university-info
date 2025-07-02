@@ -102,10 +102,9 @@
 }
 
 #returnButtonHeader:hover {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   /* background: black; */
-  color: #c301fe;
-  size: 10px;
+  color: #01d8fe;
 }
 
 /* Footer Button */
