@@ -1,3 +1,4 @@
+"use client"
 import '../../styles/scholarshipPage.css'
 import { Poppins, Exo } from 'next/font/google';
 import Footer from '../../components/footer'

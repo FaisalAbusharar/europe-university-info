@@ -1,3 +1,4 @@
+"use client"
 import '../../styles/languagePage.css'
 import { Poppins, Exo } from 'next/font/google';
 import Footer from '../../components/footer'
