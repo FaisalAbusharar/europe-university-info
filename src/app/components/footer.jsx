@@ -22,7 +22,7 @@ return(
           <br />{footerInformationOptional}</p>
         <div className="credit-container">
           <p id="leftCredit">{optionalCredit}</p>
-          {returnButton ? <Link href={`/${returnPage}`}><button id="footerReturnButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded">{returnText}</button></Link> : <p id="rightCredit">{returnText}</p>} 
+          {returnButton ? <button id="footerReturnButton" className="bg-custom-gradient text-white font-bold py-2 px-4 rounded" onClick={() => window.history.back()}>{returnText}</button> : <p id="rightCredit">{returnText}</p>}
         </div>
       </div>
 )
