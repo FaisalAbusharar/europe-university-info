@@ -17,7 +17,7 @@ const Footer = ({
 return(
   
     <div style={{background: footerTheme}} className="footerContainer">
-       {showAIwarning ? <p id="Aiwarning"><a id="warning">Some of this information may be AI generated</a>. <a id="hyperlink" href="../support/AI">Learn more</a></p> : ""} 
+       {showAIwarning ? <p id="Aiwarning"><a id="warning">Some of this information may be AI generated</a>. <a id="hyperlink" href="/pages/support/AI">Learn more</a></p> : ""} 
         <p id="footer">{footerInformation}
           <br />{footerInformationOptional}</p>
         <div className="credit-container">

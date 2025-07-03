@@ -49,9 +49,7 @@ const CountryBeyond = ({
       <BackgroundAnim objectColor={backgroundColorObject} className="absolute inset-0 z-0" />
       <div className="relative z-10 flex-grow flex-col items-center justify-center">
         <Link href={'/pages/countries'}>
-          <button id="returnButtonHeader">
-            <ArrowLeft size={20} className="transition-transform duration-200 hover:scale-125" />
-          </button>
+          <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back"><ArrowLeft size={20} /></button>
         </Link>
         <h1 className={`${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
 

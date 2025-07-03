@@ -15,7 +15,7 @@ const Countries = () => {
     <main className={`${poppins.className} flex flex-col min-h-screen`}>
       <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900">
       
-      {<Link href={'/'}><button id="returnButtonHeader"><ArrowLeft className="transition-transform duration-400 hover:scale-125" size={20}/></button></Link>}
+      <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back"><ArrowLeft size={20} /></button>
         <h1 id="titlePageCountry">COUNTRIES</h1>
         <h2 id="Subtitle">Find your <p id="gradientSub">European Country</p></h2>
           <div id="countryContainer" className="flex space-x-4 mb-8">
