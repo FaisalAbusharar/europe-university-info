@@ -13,44 +13,38 @@ const backgroundColorObjectStyle: number[] = [255, 255, 255]
 /* Information Area */
 const AdmissionInformationText = (
   <>
-    Bachelor & Master Degrees:  
-    For undergraduate (Bachelor’s) programs in the U.S., you’ll need a secondary/high school diploma that qualifies you for higher education in your home country, translated and certified. Typical documents include:
-    <ul className="list-disc list-inside mt-2 mb-2">
-      <li>High School Diploma & full official transcripts (with certified English translation)</li>
-      <li>Standardized test scores (SAT or ACT) – many schools require one or the other</li>
-    </ul>
-    Also often required are: letters of recommendation, personal essays, and proof of financial ability to cover tuition and living expenses.  
-    Applications are typically submitted via the Common App, Coalition App, or individual university portals. Deadlines vary—Early Decision/Early Action by November/December, Regular Decision by January—for entry in the following September.  
+    
+      For undergraduate (Bachelor’s) programs in the U.S., you’ll need a secondary or high school diploma that qualifies you for university in your home country. This should be officially translated and certified. Most universities also require full academic transcripts, SAT or ACT scores, recommendation letters, personal essays, and proof of financial ability to support your studies and living costs. Applications are submitted through platforms like the Common App, Coalition App, or directly on the university’s own portal. Early Decision and Early Action deadlines are usually in November or December, while Regular Decision is often due by January for fall (September) intake.
+      <br></br>
 
-    For graduate (Master’s & PhD) programs, you’ll need:
-    <ul className="list-disc list-inside mt-2 mb-2">
-      <li>A relevant Bachelor’s degree (or Master’s for doctorate applicants)</li>
-      <li>Official academic transcripts (evaluated, translated)</li>
-      <li>GRE, GMAT, or other program-specific tests (if required)</li>
-      <li>Letters of recommendation, statement of purpose, and often a CV or writing sample</li>
-    </ul>
+   
+      For Master’s and PhD programs, you must hold a relevant Bachelor’s or Master’s degree depending on the level. You’ll be asked for your academic transcripts (translated and evaluated), test scores like the GRE or GMAT if required, letters of recommendation, a statement of purpose, and sometimes a CV or writing sample.
+      <br></br>
+    
 
-    Non-native English speakers must demonstrate proficiency through tests such as  <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>,  <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>,  <a href="https://www.pearsonpte.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">PTE</a>,  
-    or the Duolingo English Test—sent directly from the testing agency.  
+    
+      English proficiency is required for non-native speakers and can be proven through exams such as the <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>, <a href="https://www.pearsonpte.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">PTE</a>, or the Duolingo English Test. These scores must be sent directly from the testing organization. Minimum score requirements differ across institutions. For example, Clemson University suggests a TOEFL iBT score of 80 or above, IELTS of 6.5, and Duolingo of 110 or higher, while the University of Maryland may require additional English-language coursework if writing scores are weak.
+      <br></br>
+    
 
-    Minimum accepted scores vary by institution—for example:  
-    * Clemson Graduate School recommends TOEFL iBT ≥ 80, IELTS ≥ 6.5, Duolingo ≥ 110  
-    * University of Maryland Graduate School accepts TOEFL, IELTS, or PTE; may require English-language coursework if writing scores are marginal 
+    
+      Some universities grant waivers from English tests if your previous degree was earned in English or from an approved English-speaking institution.
+      <br></br>
+    
 
-    Some universities offer waivers or exemptions if you:  
-    * Earned a degree from a U.S. institution or another approved English-medium country  
-    * Completed a degree fully taught in English
+   
+      The application process for both undergraduate and graduate programs is direct—either through centralized platforms or individual university websites. The U.S. does not have a unified national application system.
+      <br></br>
+    
 
-    Application process is direct—either via a central system (Common App, Coalition) for undergraduates or individual university portals for graduate programs. There's no single national application system.
+   
+      Once admitted, international students receive a Form I-20 from the university. With that, they must pay the SEVIS I‑901 fee, complete the DS‑160 visa application, attend a consular interview for an F‑1 or M‑1 visa, and prepare for their arrival by securing housing, insurance, and travel.
+      <br></br>
+   
 
-    After acceptance, accepted international students receive a Form I‑20 from the university’s international student office. You then:  
-    <ul className="list-disc list-inside mt-2 mb-2">
-      <li>Pay the SEVIS I‑901 fee</li>
-      <li>Apply for your F‑1 (or M‑1) student visa via Form DS‑160 and consular interview</li>
-      <li>Arrange housing, health insurance, travel, etc. before arrival</li>
-    </ul>
-
-    Each university and program has its own deadlines and may set higher test scores or additional requirements—always check the official admissions section of your chosen schools or visit resources like   <a href="https://educationusa.state.gov/" target="_blank" rel="noopener noreferrer" id="hyperlink">EducationUSA</a>   or  <a href="https://www.usa.gov/international-student" target="_blank" rel="noopener noreferrer" id="hyperlink">USA.gov</a>.
+   
+      Each university sets its own deadlines and may have additional or higher requirements, so always check the official admissions page of your chosen school or refer to trusted sources like <a href="https://educationusa.state.gov/" target="_blank" rel="noopener noreferrer" id="hyperlink">EducationUSA</a> and <a href="https://www.usa.gov/international-student" target="_blank" rel="noopener noreferrer" id="hyperlink">USA.gov</a>.
+    
   </>
 );
 
