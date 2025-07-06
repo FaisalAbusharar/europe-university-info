@@ -1,21 +1,20 @@
-"use client";
-
 import { Poppins, Exo } from 'next/font/google';
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import BackgroundAnim from '../animation/backgroundAnimationFirst';
 import '../styles/animations.css';
 import { ArrowLeft } from "lucide-react";
-import Footer from './footer';
+import Footer from './footer'
 import '../styles/transitions.css';
-import Link from "next/link";
-
+import Cookies from 'js-cookie';
+import {jwtDecode} from 'jwt-decode';
+import Link from "next/link"
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 
 const CountryBeyond = ({
   countryName, countryNameOptional,
   admissionInformation, universityInformation,
-  universityFees = <>Information will be available to download here about specific universities soon. Page should redirect.</>,
+  universityFees = <>Information will be available to drhtru666u   eeh5y ownload here about specific universities soon. Page should redirect.</>,
   visaRequirementsRequirements, visaRequirementsFinancials, visaRequirementsInsurance,
   whyChooseCountry = [{}], advantages = ["PlaceHolder for Information here", "PlaceHolder 2"],
   disadvantages = ["PlaceHolder for Information here", "PlaceHolder 2"],
@@ -36,7 +35,7 @@ const CountryBeyond = ({
     setLoaded(true);
   }, []);
 
-  const visaRequirements = [
+  const visaRequirements = [ 
     { title: "General Requirements", description: visaRequirementsRequirements },
     { title: "Financial Requirements", description: visaRequirementsFinancials },
     { title: "Insurance Requirement", description: visaRequirementsInsurance }
@@ -48,9 +47,9 @@ const CountryBeyond = ({
     <main style={backgroundStyle} id="backgroundCountry" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in-top' : ''}`}>
       <BackgroundAnim objectColor={backgroundColorObject} className="absolute inset-0 z-0" />
       <div className="relative z-10 flex-grow flex-col items-center justify-center">
-        <Link href={'/pages/countries'}>
+      
           <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back"><ArrowLeft size={20} /></button>
-        </Link>
+
         <h1 className={`${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
 
         <hr id="line" />

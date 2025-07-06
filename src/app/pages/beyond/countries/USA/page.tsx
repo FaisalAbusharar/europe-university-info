@@ -1,10 +1,9 @@
 "use client"
 import CountryBeyond from '../../../../components/countrybeyond';
 import '../../../../styles/countrypage.css'
-import { Poppins } from 'next/font/google';
-import ScrollTo from '../../../../components/scrollFunction'
 // import Wipscreen from '../../../../components/wipscreen'
 import "../../../../styles/support.css"
+import { Poppins } from 'next/font/google';
 
 
 const backgroundColorStyle = 'linear-gradient(to bottom, rgb(0, 0, 0), rgb(78, 2, 2),  rgb(0, 31, 117))'
