@@ -9,23 +9,11 @@ const backgroundColorStyle = 'linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 26
 const backgroundColorObjectStyle: number[] = [0, 50, 150]
 
 /* Information Area */
-
-const permitInformation = (
-    <>
-        <span id="warning">Please check the <a id="hyperlink" href="https://migri.fi/en/residence-permit-application-for-studies" target="_blank">official Migri site</a> for detailed information.</span> Starting from 2023, the student residence permit in Finland is now a Type A residence permit, as opposed to the previous Type B. This new permit counts towards the four-year period required for eligibility for Permanent Residence in Finland. Additionally, since 2023, graduates are given two years (instead of one year) to find employment after graduation. This extension provides international students with a more flexible pathway to securing employment in Finland. 
-        For further details and requirements, please refer to the <a id="hyperlink" href="https://migri.fi/en/residence-permit-to-look-for-work" target="_blank">official Migri site</a>. 
-        You can also bring your family to Finland under the same Type A permit, provided that they can demonstrate they have sufficient financial resources for their stay. More information on this can be found on the <a id = 'hyperlink' href="https://migri.fi/en/students-family-members" target="_blank">official Migri site</a>.
-    </>
-);
-
-
 const admissionRequirements = (
     <>
         Many Finnish universities of applied sciences (UAS) require UAS entrance exams or SAT scores for admission. It's essential to check the specific requirements for your intended degree by visiting <a href="https://www.studyinfo.fi" target="_blank" rel="noopener noreferrer">studyinfo.fi</a>. This will help ensure you meet all necessary criteria for your application. Most universities with English-taught programs require a SAT test and typically have minimum score requirements, so it's advisable to prepare for these exams in advance. Additionally, universities often recommend taking the UAS test, which is generally easier. Proof of English proficiency is also required, usually through IELTS or other recognized tests. Be sure to review the admission criteria for your specific program.
     </>
 );
-
-
 
 const internationalAdmissionInformationText = (
     <>
@@ -35,11 +23,34 @@ const internationalAdmissionInformationText = (
     </>
 )
 
+
+const europeanAdmissionInformation = (
+    <>
+        European students applying to Finnish universities benefit from no tuition fees for bachelor's and master's programs conducted in Finnish or Swedish, similar to Finnish students. Bachelor's programs require a high school diploma qualifying for higher education in their home country. Master's programs require a Bachelor’s degree, and UAS Master’s programs may require two years of relevant work experience. Some programs may include entrance exams, SAT tests, or interviews. Non-native English speakers typically demonstrate proficiency through exams like <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>, <a href="https://www.pearsonpte.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">PTE</a>, <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, or <a href="https://www.cambridgeenglish.org/test-your-english/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cambridge</a> tests. Apply through the Joint Application system for up to six programs in January for autumn (September) studies. Some programs have different application periods; details vary, so check <a href="https://studyinfo.fi" target="_blank" rel="noopener noreferrer" id="hyperlink">Studyinfo.fi</a> or university websites for specific requirements.
+    </>
+);
+
+
 const internationalUniversityInformationText = (
     <>
         There are many reputable Finnish universities available for international students, with the most notable being <a href="https://www.tuni.fi/en" target="_blank" id="hyperlink" rel="noopener noreferrer">Tampere University</a>, <a href="https://www.aalto.fi/en" target="_blank" id="hyperlink" rel="noopener noreferrer">Aalto University</a>, <a href="https://www.lut.fi/web/en/" target="_blank" id="hyperlink" rel="noopener noreferrer">LUT University</a>, <a href="https://www.helsinki.fi/en" id="hyperlink" target="_blank" rel="noopener noreferrer">the University of Helsinki</a>, and <a href="https://www.uef.fi/en" id="hyperlink" target="_blank" rel="noopener noreferrer">the University of Eastern Finland</a>. To pick your university, it’s recommended to use the <a href="https://www.studyinfinland.fi/universities" id="hyperlink" target="_blank" rel="noopener noreferrer">Official Finnish University Website</a>, check out the universities and their locations! Knowing the location is very important; you will need to understand the living costs, environment, climate, and available student services. Consider all of these factors before choosing your university.
     </>
 )
+
+const whyChooseFinland = (
+    <>
+    Finland is known for it’s World-Class education, and it’s universities are consistently ranked among the top in the global university rankings, with free tuition fees for EU/EEA Students who can massively benefit from the zero tuition fees, and Finland is affordable for International students compared to other countries in Europe with many scholarships and financial aid to help cover costs. Finland has a wide range of degree programs that are available in English, especially in IT. International students are allowed to work part-time during their studies. Finland is known for it’s innovative and student-centered teaching methods, encouraging critical thinking, creativity, and independence. After graduation, students have opportunities to stay and work in Finland.
+    </>
+)
+
+const permitInformation = (
+    <>
+        <span id="warning">Please check the <a id="hyperlink" href="https://migri.fi/en/residence-permit-application-for-studies" target="_blank">official Migri site</a> for detailed information.</span> Starting from 2023, the student residence permit in Finland is now a Type A residence permit, as opposed to the previous Type B. This new permit counts towards the four-year period required for eligibility for Permanent Residence in Finland. Additionally, since 2023, graduates are given two years (instead of one year) to find employment after graduation. This extension provides international students with a more flexible pathway to securing employment in Finland. 
+        For further details and requirements, please refer to the <a id="hyperlink" href="https://migri.fi/en/residence-permit-to-look-for-work" target="_blank">official Migri site</a>. 
+        You can also bring your family to Finland under the same Type A permit, provided that they can demonstrate they have sufficient financial resources for their stay. More information on this can be found on the <a id = 'hyperlink' href="https://migri.fi/en/students-family-members" target="_blank">official Migri site</a>.
+    </>
+);
+
 
 const visaGeneralRequirements = (
     <>
@@ -63,11 +74,7 @@ const visaInsuranceRequirements = (
     </>
 );
 
-const europeanAdmissionInformation = (
-    <>
-        European students applying to Finnish universities benefit from no tuition fees for bachelor's and master's programs conducted in Finnish or Swedish, similar to Finnish students. Bachelor's programs require a high school diploma qualifying for higher education in their home country. Master's programs require a Bachelor’s degree, and UAS Master’s programs may require two years of relevant work experience. Some programs may include entrance exams, SAT tests, or interviews. Non-native English speakers typically demonstrate proficiency through exams like <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>, <a href="https://www.pearsonpte.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">PTE</a>, <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, or <a href="https://www.cambridgeenglish.org/test-your-english/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cambridge</a> tests. Apply through the Joint Application system for up to six programs in January for autumn (September) studies. Some programs have different application periods; details vary, so check <a href="https://studyinfo.fi" target="_blank" rel="noopener noreferrer" id="hyperlink">Studyinfo.fi</a> or university websites for specific requirements.
-    </>
-);
+
 
 const internationalTuitionFees = (
     <>
@@ -81,11 +88,7 @@ const europeanStudentsUniversities = (
     </>
 );
 
-const whyChooseFinland = (
-    <>
-    Finland is known for it’s World-Class education, and it’s universities are consistently ranked among the top in the global university rankings, with free tuition fees for EU/EEA Students who can massively benefit from the zero tuition fees, and Finland is affordable for International students compared to other countries in Europe with many scholarships and financial aid to help cover costs. Finland has a wide range of degree programs that are available in English, especially in IT. International students are allowed to work part-time during their studies. Finland is known for it’s innovative and student-centered teaching methods, encouraging critical thinking, creativity, and independence. After graduation, students have opportunities to stay and work in Finland.
-    </>
-)
+
 
 const RegularVSUasUni = (
     <>

@@ -17,7 +17,7 @@ const AdmissionInformationText = (
 
     Postgraduate programs (Master’s or PhD) require a relevant Bachelor’s degree. Additional requirements may include a CV, letters of recommendation, a personal statement, and possibly work experience. GRE or GMAT scores are rarely required but can be needed for business programs.
 
-    You’ll also need to demonstrate English proficiency through a recognized test unless exempt. Applications are submitted directly to the university or through centralized platforms like UAC (NSW), VTAC (Victoria), or QTAC (Queensland), depending on the institution and program. Intakes are usually in February and July.
+    You’ll also need to demonstrate English proficiency through a recognized test unless exempt. Applications are submitted directly to the university or through centralized platforms like <a href="https://www.uac.edu.au/" id="hyperlink">UAC (NSW)</a> , <a href="https://vtac.edu.au/" id="hyperlink">VTAC (Victoria)</a>, or <a href="https://www.qtac.edu.au/" id="hyperlink">QTAC (Queensland)</a>, depending on the institution and program. Intakes are usually in February and July.
     
     Once accepted, you'll receive a Confirmation of Enrolment (CoE), required for your student visa application.
   </>
@@ -25,7 +25,7 @@ const AdmissionInformationText = (
 
 const UniversityInformationText = (
   <>
-    Australia offers globally ranked universities with strong reputations in research, innovation, and practical learning. Universities provide Bachelor’s, Master’s, and Doctorate degrees, while vocational providers like TAFE (Technical and Further Education) offer diplomas and associate-level training, similar to universities of applied sciences.
+    Australia offers globally ranked universities with strong reputations in research, innovation, and practical learning. Universities provide Bachelor’s, Master’s, and Doctorate degrees, while vocational providers like <a href="https://www.tafensw.edu.au/" id='hyperlink'>TAFE</a> (Technical and Further Education) offer diplomas and associate-level training, similar to universities of applied sciences.
 
     Community colleges as known in the U.S. do not exist, but TAFEs fulfill a similar role for students seeking job-ready skills or pathways to university. All institutions must be CRICOS-registered to accept international students.
 
