@@ -24,3 +24,12 @@
   width: 100%;
   max-width: 800px; /* optional, for nice line length */
 }
+
+#gradientButtonTextSUPPORT  {
+  font-weight: bold; 
+  background: linear-gradient(to right,#f8e800, rgb(122, 74, 2), rgb(255, 217, 0));
+  background-size: 300% 100%;
+  background-clip: text;
+  animation: gradientAnimation 6s linear infinite; 
+  display: inline-block; 
+}

@@ -3,7 +3,7 @@ import CountryBeyond from '../../../../components/countrybeyond';
 import '../../../../styles/countrypage.css'
 // import Wipscreen from '../../../../components/wipscreen'
 import "../../../../styles/support.css"
-import { Poppins } from 'next/font/google';
+import { Poppins } from 'next/font/google'; // Literally won't work without this import im confused.
 
 
 const backgroundColorStyle = 'linear-gradient(to bottom, rgb(1, 1, 41),  rgb(0, 31, 117))'

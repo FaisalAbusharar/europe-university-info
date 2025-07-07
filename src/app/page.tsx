@@ -2,12 +2,14 @@
 import { Poppins } from 'next/font/google';
 import Link from 'next/link';
 import './styles/animations.css';
+import "./styles/support.css"
+import "./styles/beyondAltStyles.css"
 import { useState, useEffect } from 'react';
 import Footer from './components/footer';
 import StyledButton from './components/buttonStyles';
 import BackgroundAnim from './animation/backgroundAnimationFirst';
 import Image from 'next/image'
-import "./styles/beyondAltStyles.css"
+
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 const footerInformation = 'The website provides information you need to be able to study in Europe, from costs to admissions and scholarships'
@@ -21,6 +23,8 @@ const Home = () => {
   
   const hoverButtonColor = 'linear-gradient(to right, rgb(3, 217, 255), rgb(0, 20, 255))'
   const hoverButtonColorBeyond = 'linear-gradient(to right, rgb(255, 3, 3), rgb(134, 0, 0))'
+  const hoverButtonColorSupport = 'linear-gradient(to right, rgb(255, 196, 3), rgb(134, 76, 0))'
+
 
 
   return (
@@ -65,6 +69,9 @@ const Home = () => {
             {/* </Link> */}
             <Link href='/pages/beyond/countries'>
               <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColorBeyond}><p id="gradientButtonTextALT">Beyond Europe</p></StyledButton>
+            </Link>
+            <Link href='/pages/support'>
+              <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColorSupport}><p id="gradientButtonTextSUPPORT">Support</p></StyledButton>
             </Link>
           </div>
         </div>
