@@ -1,27 +1,28 @@
 "use client"
-import { Poppins } from 'next/font/google';
 import '../../../styles/countrypage.css'
 import '../../../styles/gradientButtonStyles.css'
-import Footer from '../../../components/footer';
 import '../../../styles/support.css';
-import { ArrowLeft } from "lucide-react";
+import Support from "../../../components/support"
 
-
-const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
-const footerInformation = 'Figuring out where you want to study is pretty simple, see the costs, culture, enviorment, careers and decide!'
+const titlesupport = (<>HAS AI BEEN INVOLVED WITH THE INFORMATION PROVIDED?</>)
+const descriptionsupport = (<>Some of the content was edited or assisted by AI, but all information was personally reviewed for accuracy. The AI was instructed to rely only on official, government-endorsed sources and to list all relevant references whenever possible. If you find any outdated or incorrect information, please feel free to contact <a id="hyperlink" href="mailto:f_anas@icloud.com">f_anas@icloud.com</a>.</>)
+const infofooter = (<>The EUI Support page to answer all your questions.</>)
 
 const AI = () => {
+
+  const Info = {
+    title: titlesupport,
+    footer: infofooter,
+    description: descriptionsupport,
+  }
+
   return (
-    <main className={`${poppins.className} flex flex-col min-h-screen`}>
-      <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900">
-      <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back"><ArrowLeft size={20} /></button>
-        <div id="container">
-            <h1 id="title">HAS AI BEEN INVOLVED WITH THE INFORMATION PROVIDED?</h1>
-            <p id="infoBodySS">Some of the content was edited or assisted by AI, but all information was personally reviewed for accuracy. The AI was instructed to rely only on official, government-endorsed sources and to list all relevant references whenever possible. If you find any outdated or incorrect information, please feel free to contact <a id="hyperlink" href="mailto:f_anas@icloud.com">f_anas@icloud.com</a>.</p>
-        </div>
-      </div>
-      <Footer returnPage='' footerInformation={footerInformation}></Footer>
-    </main>
+  <div>
+  <Support 
+    supportTitle={Info.title} 
+    supportDescription={Info.description}
+    footerInformation={Info.footer}></Support>
+  </div>
   );
 }
 
