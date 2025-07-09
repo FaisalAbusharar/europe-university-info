@@ -1,37 +1,45 @@
-"use client"
-import { Poppins } from 'next/font/google';
-import '../../styles/countrypage.css'
-import '../../styles/gradientButtonStyles.css'
-import Footer from '../../components/footer';
-import '../../styles/support.css';
+"use client";
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 import { ArrowLeft } from "lucide-react";
-
+import { Poppins } from 'next/font/google';
+import Footer from '../../components/footer';
+import '../../styles/countrypage.css';
+import '../../styles/gradientButtonStyles.css';
+import '../../styles/support.css';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
-const footerInformation = 'The EUI Support page to answer all your questions.'
+const footerInformation = 'The EUI Support page to answer all your questions.';
 
-const AI = () => {
+export default function Support() {
+  const [faqs, setFaqs] = useState<{ title: string; href: string }[]>([]);
+
+  useEffect(() => {
+    fetch('/faqList.json')
+      .then((res) => res.json())
+      .then((data) => setFaqs(data));
+  }, []);
+
   return (
     <main className={`${poppins.className} flex flex-col min-h-screen`}>
       <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900">
-      <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back"><ArrowLeft size={20} /></button>
+        <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back">
+          <ArrowLeft size={20} />
+        </button>
         <div id="containerBox">
-            <h1 id="subtitle">Frequently Asked Questions</h1>
-              <ul>
-                <li id="supportlist">
-                  <a href="/pages/support/AI" id="infoBodySS">HAS AI BEEN INVOLVED IN THE INFORMATION PROVIDED?</a>
-                </li>
-                <li id="supportlist">
-                   <a href="/pages/support/trust" id="infoBodySS">HOW CAN I TRUST THE INFORMATION PROVIDED TO ME?</a>
-                </li>
-              </ul>
+          <h1 id="subtitle">Frequently Asked Questions</h1>
+          <ul>
+            {faqs.map((item) => (
+              <li id="supportlist" key={item.href}>
+                <Link href={item.href} id="infoBodySS">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-      <Footer returnPage='' footerInformation={footerInformation}></Footer>
+      <Footer returnPage="" footerInformation={footerInformation} />
     </main>
   );
 }
-
-
-
-export default AI;

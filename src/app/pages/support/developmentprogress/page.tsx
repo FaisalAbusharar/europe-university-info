@@ -3,12 +3,12 @@ import '../../../styles/gradientButtonStyles.css'
 import '../../../styles/support.css';
 import Support from "../../../components/support"
 
-const titlesupport = (<>HAS AI BEEN INVOLVED WITH THE INFORMATION PROVIDED?</>)
-const descriptionsupport = (<>Some of the content was edited or assisted by AI, but all information was personally reviewed for accuracy. The AI was instructed to rely only on official, government-endorsed sources and to list all relevant references whenever possible. If you find any outdated or incorrect information, please feel free to contact <a id="hyperlink" href="mailto:f_anas@icloud.com">f_anas@icloud.com</a>.</>)
+const titlesupport = (<>WHEN WILL THE WEBSITE BE FULLY DEVELOPED?</>)
+const descriptionsupport = (<>Websites like this take a really long time to develop and actually may never be fully developed, the website will continue to be updated with new information and new useful content for students, but planning a deadline for a finished build is near impossible.</>)
 const infofooter = (<>The EUI Support page to answer all your questions.</>)
 
 export const metadata = {
-  title: "HAS AI BEEN INVOLVED WITH THE INFORMATION PROVIDED?"
+  title: "WHEN WILL THE WEBSITE BE FULLY DEVELOPED?"
 }
 
 

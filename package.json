@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
-    "dev": "next dev"
+    "generate-faq": "node src/app/scripts/generateFaqList.js",
+    "build": "npm run generate-faq && next build",
+    "dev": "npm run generate-faq && next dev"
   },
   "dependencies": {
     "@types/jwt-decode": "^3.1.0",
