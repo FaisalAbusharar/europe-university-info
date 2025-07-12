@@ -52,22 +52,33 @@ const Home = () => {
           <div className="flex-grow flex flex-col w-full items-center" id="buttonContainer">
             <div className="flex flex-wrap justify-center gap-4 mb-8 flex flex-wrap justify-center gap-4 w-full px-2">
               <Link href="/pages/countries">
+              
                 <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Countries</p></StyledButton>
               </Link>
-              <Link href="/pages/visapath">
-                <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Permit Path</p></StyledButton>
-              </Link>
+              {/* <Link href="/pages/visapath"> */}
+                <StyledButton isDisabled={true} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Permit Path</p></StyledButton>
+              {/* </Link> */}
+
+              {/* <Link href="/pages/finance"> */}
               <StyledButton isDisabled={true} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Finanicals</p></StyledButton>
+               {/* </Link> */}
+
               <Link href="/pages/admission">
                 <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Admissions</p></StyledButton>
               </Link>
+
+              {/* <Link href="/pages/scholarship"> */}
               <StyledButton isDisabled={true} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Scholarships</p></StyledButton>
+              {/* </Link> */}
+
               <Link href='/pages/beyond/countries'>
                 <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColorBeyond}><p id="gradientButtonTextALT">Beyond Europe</p></StyledButton>
               </Link>
+
               <Link href='/pages/support'>
                 <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColorSupport}><p id="gradientButtonTextSUPPORT">Support</p></StyledButton>
               </Link>
+
             </div>
           </div>
         </div>
