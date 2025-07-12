@@ -39,7 +39,7 @@ const Countries = () => {
             </Link>
           </div>
       </div>
-      <Footer returnPage='' footerInformation={footerInformation}></Footer>
+      <Footer footerInformation={footerInformation}></Footer>
     </main>
   );
 }

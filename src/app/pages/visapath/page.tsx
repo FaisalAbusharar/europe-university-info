@@ -23,7 +23,7 @@ export default function VisaPath() {
          <h1 id="title" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-center bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-transparent">Permit Paths</h1>
          
       </div>
-      <Footer returnPage="" footerInformation={footerInformation} />
+      <Footer  footerInformation={footerInformation} />
     </main>
   );
 }

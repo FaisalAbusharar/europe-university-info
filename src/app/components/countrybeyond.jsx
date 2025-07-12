@@ -112,7 +112,7 @@ const CountryBeyond = ({
       </div>
 
       <div id="buffer"></div>
-      <Footer showAIwarning={true} returnPage="./pages/countries" footerInformation={footerInformation} />
+      <Footer showAIwarning={true} footerInformation={footerInformation} />
     </main>
   );
 };

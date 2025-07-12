@@ -144,7 +144,7 @@ const Country = ({
 
       </div>
       <div id="buffer"></div>
-      <Footer showAIwarning={true} returnPage='./pages/countries' footerInformation={footerInformation}></Footer>
+      <Footer showAIwarning={true}  footerInformation={footerInformation}></Footer>
     </main>
   );
 }

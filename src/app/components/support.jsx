@@ -25,7 +25,7 @@ const Support = ({
           <p id="infoBodySS">{supportDescription}</p>
         </div>
       </div>
-      <Footer returnPage="" footerInformation={footerInformation} />
+      <Footer footerInformation={footerInformation} />
     </main>
   );
 };

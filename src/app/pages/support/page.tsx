@@ -39,7 +39,7 @@ export default function Support() {
           </ul>
         </div>
       </div>
-      <Footer footerTheme='linear-gradient(to right,rgb(224, 172, 0),rgb(255, 115, 0))' returnPage="" footerInformation={footerInformation} />
+      <Footer footerTheme='linear-gradient(to right,rgb(224, 172, 0),rgb(255, 115, 0))' footerInformation={footerInformation} />
     </main>
   );
 }

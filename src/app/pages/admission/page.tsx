@@ -39,7 +39,7 @@ const Admission = () => {
           </div>
           <h1> <span id='fadedText'>This section is for students outside of said country.</span></h1>
       </div>
-      <Footer returnPage='' footerInformation={footerInformation}></Footer>
+      <Footer footerInformation={footerInformation}></Footer>
     </main>
   );
 }

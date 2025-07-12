@@ -28,7 +28,7 @@ const CountriesBeyond = () => {
             </Link>
           </div>
       </div>
-      <Footer footerTheme='linear-gradient(to right,rgb(255, 0, 0),rgb(109, 0, 0))' returnPage='' footerInformation={footerInformation}></Footer>
+      <Footer footerTheme='linear-gradient(to right,rgb(255, 0, 0),rgb(109, 0, 0))' footerInformation={footerInformation}></Footer>
     </main>
   );
 }
