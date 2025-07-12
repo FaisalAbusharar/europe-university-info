@@ -16,10 +16,16 @@
   }
 }
 
+
+html {
+  overflow-x: hidden;
+}
+
 /* Main */
 body {
   color: rgb(var(--foreground-rgb));
   margin: 0;
+  overflow-x: hidden;
 }
 
 main {
@@ -40,6 +46,7 @@ main {
 #Title {
   font-size: 75px;
   color: rgb(0, 85, 255);
+  word-break: break-word;
   text-align: center;
   margin-top: 0px;
   background: linear-gradient(to right,#0134fe, #01b2fe);

@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "European Universities",
   description: "Created by Faisal Abusharar",
+  
 };
 
 export default function RootLayout({
