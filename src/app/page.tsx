@@ -55,6 +55,9 @@ const Home = () => {
             <Link href="/pages/countries">
               <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Countries</p></StyledButton>
             </Link>
+            <Link href="/pages/visapath">
+            <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Permit Path</p></StyledButton>
+            </Link>
             {/* <Link href="/pages/finance"> */}
             <StyledButton isDisabled={true} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Finanicals</p></StyledButton>
             {/* </Link> */}
@@ -64,9 +67,7 @@ const Home = () => {
             {/* <Link href='/pages/scholarship'> */}
             <StyledButton isDisabled={true} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Scholarships</p></StyledButton>
             {/* </Link> */}
-            {/* <Link href='/pages/language'> */}
-              <StyledButton isDisabled={true} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Language</p></StyledButton>
-            {/* </Link> */}
+  
             <Link href='/pages/beyond/countries'>
               <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColorBeyond}><p id="gradientButtonTextALT">Beyond Europe</p></StyledButton>
             </Link>
