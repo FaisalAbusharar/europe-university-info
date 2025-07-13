@@ -5,19 +5,24 @@ import '../../styles/countrypage.css'
 import '../../styles/gradientButtonStyles.css'
 import Footer from '../../components/footer';
 import { ArrowLeft } from 'lucide-react';
+import useIsMobile from '@/app/utils/useIsMobile';
 
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
-const footerInformation = 'Figuring out where you want to study is pretty simple, see the costs, culture, enviorment, careers and decide!'
 
 const Countries = () => {
+
+  const isMobile = useIsMobile();
+  const footerInformation = isMobile ? 'Choose your European country to study in!' :'Figuring out where you want to study is pretty simple, see the costs, culture, enviorment, careers and decide!'
+
+
   return (
     <main className={`${poppins.className} flex flex-col min-h-screen`}>
       <div className="flex-grow flex flex-col items-center justify-center bg-gradient-to-r from-black to-gray-900">
       
       <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back"><ArrowLeft size={20} /></button>
-        <h1 id="titlePageCountry">COUNTRIES</h1>
-        <h2 id="Subtitle">Find your <p id="gradientSub">European Country</p></h2>
+        <h1 className='text-custom-gradient text-5xl sm:text-5xl lg:text-[75px] text-center px-4 leading-tight' id="titlePageCountry">COUNTRIES</h1>
+        <h2 className='text-[18px] sm:text-[12px] lg:text-[40px] text-center font-extrabold px-4' id="Subtitle">Find your <p id="gradientSub">European Country</p></h2>
           <div id="countryContainer" className="flex space-x-4 mb-8">
             <Link href="/pages/countries/germany">
             <button className='button' id="gradientButtonTextGermany">Germany</button>

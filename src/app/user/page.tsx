@@ -17,7 +17,7 @@ interface JwtPayload {
 }
 
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
-const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
+// const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 
 const ProfilePage = () => {
   const [token, setToken] = useState<string | null>(null);
