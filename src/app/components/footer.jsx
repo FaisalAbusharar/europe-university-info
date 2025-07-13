@@ -1,5 +1,6 @@
 import Link from "next/link";
 import '../styles/countrypage.css';
+import useIsMobile from "../utils/useIsMobile";
 
 const Footer = ({
   footerInformation,
@@ -17,6 +18,13 @@ const Footer = ({
       window.history.back();
     }
   };
+
+  const isMobile = useIsMobile();
+  console.log(isMobile)
+  let defaultFooterInformationOptional = footerInformationOptional
+   
+   footerInformationOptional = isMobile ? 'The right place for knowledge about studying in Europe!' : defaultFooterInformationOptional
+  
 
   return (
     <div style={{ background: footerTheme }} className="footerContainer">

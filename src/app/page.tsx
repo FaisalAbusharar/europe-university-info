@@ -9,13 +9,16 @@ import Footer from './components/footer';
 import StyledButton from './components/buttonStyles';
 import BackgroundAnim from './animation/backgroundAnimationFirst';
 import Image from 'next/image'
+import useIsMobile from './utils/useIsMobile';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
-const footerInformation = 'The website provides information you need to be able to study in Europe, from costs to admissions and scholarships'
 const returnTextCredit = <>❤️Github <a id="Hyperlink" href="https://github.com/FaisalAbusharar/europe-uni-info">Open Source</a></>
 
 const Home = () => {
   const [loaded, setLoaded] = useState(false);
+  const isMobile = useIsMobile();
+
+ 
 
   useEffect(() => {
     setLoaded(true);
@@ -24,6 +27,10 @@ const Home = () => {
   const hoverButtonColor = 'linear-gradient(to right, rgb(3, 217, 255), rgb(0, 20, 255))'
   const hoverButtonColorBeyond = 'linear-gradient(to right, rgb(255, 3, 3), rgb(134, 0, 0))'
   const hoverButtonColorSupport = 'linear-gradient(to right, rgb(255, 196, 3), rgb(134, 76, 0))'
+  const footerInformation = isMobile
+  ? 'All the key info to study in Europe'
+  : 'The website provides information you need to be able to study in Europe, from costs to admissions and scholarships';
+
 
   return (
     <main id='mainContainer' className={`${poppins.className} flex flex-col min-h-screen overflow-x-hidden ${loaded ? 'fade-in' : ''}`}>
@@ -44,13 +51,13 @@ const Home = () => {
               </Link>
 
             <h1 id="Title" 
-            className="text-custom-gradient text-4xl sm:text-5xl lg:text-[75px] text-center px-4 leading-tight translate-x-[-40px] sm:translate-x-[-50px] lg:translate-x-[-70px]"
+            className="text-custom-gradient text-4xl sm:text-5xl lg:text-[75px] text-center px-4 leading-tight translate-x-[-60px] sm:translate-x-[-50px] lg:translate-x-[-70px]"
             >EUROPEAN UNIVERSITIES
             </h1>
 
             </div>
             <h2 id="Subtitle" 
-            className="text-[24px] sm:text-[32px] lg:text-[40px] text-center font-extrabold px-4 lg:mr-[70px]">
+            className="text-[14px] sm:text-[12px] lg:text-[40px] text-center font-extrabold px-4 lg:mr-[70px]">
               Find Your <p id="gradientSubSub">Dream European University</p></h2>
 
           </div>
