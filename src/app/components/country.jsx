@@ -10,6 +10,7 @@ import '../styles/transitions.css';
 import Cookies from 'js-cookie';
 import {jwtDecode} from 'jwt-decode';
 import Link from "next/link"
+import useIsMobile from '../utils/useIsMobile';
 
 const JwtPayload = ({location }) => (<></>);
 
@@ -37,6 +38,8 @@ const Country = ({
   const [isInternational, setInternational] = useState(false);
   const [loaded, setLoaded] = useState(false);
   const [animation, setAnimation] = useState(true);
+  const isMobile = useIsMobile();
+
   // const [userLocation, setUserLocation] = useState(null); Might use this later
 
   const handleToggle = () => {

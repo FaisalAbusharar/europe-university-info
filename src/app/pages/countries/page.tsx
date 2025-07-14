@@ -23,7 +23,7 @@ const Countries = () => {
       <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back"><ArrowLeft size={20} /></button>
         <h1 className='text-custom-gradient text-5xl sm:text-5xl lg:text-[75px] text-center px-4 leading-tight' id="titlePageCountry">COUNTRIES</h1>
         <h2 className='text-[18px] sm:text-[12px] lg:text-[40px] text-center font-extrabold px-4' id="Subtitle">Find your <p id="gradientSub">European Country</p></h2>
-          <div id="countryContainer" className="flex space-x-4 mb-8">
+          <div id="countryContainer" className="flex flex-wrap justify-center gap-4 w-full px-2 mb-8">
             <Link href="/pages/countries/germany">
             <button className='button' id="gradientButtonTextGermany">Germany</button>
             </Link>
