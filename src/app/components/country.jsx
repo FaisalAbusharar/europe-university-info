@@ -1,5 +1,3 @@
-"use client";
-
 import { Poppins, Exo } from 'next/font/google';
 import React, { useState, useEffect } from 'react';
 import BackgroundAnim from '../animation/backgroundAnimationFirst';
@@ -9,7 +7,6 @@ import Footer from './footer'
 import '../styles/transitions.css';
 import Cookies from 'js-cookie';
 import {jwtDecode} from 'jwt-decode';
-import Link from "next/link"
 import useIsMobile from '../utils/useIsMobile';
 
 const JwtPayload = ({location }) => (<></>);
@@ -40,7 +37,7 @@ const Country = ({
   const [animation, setAnimation] = useState(true);
   const isMobile = useIsMobile();
 
-  // const [userLocation, setUserLocation] = useState(null); Might use this later
+  //& const [userLocation, setUserLocation] = useState(null); Might use this later
 
   const handleToggle = () => {
     setInternational(!isInternational);      
@@ -84,13 +81,14 @@ const Country = ({
     <main style= {backgroundStyle} id="backgroundCountry" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in-top' : ''}`}>
       <BackgroundAnim objectColor={backgroundColorObject} className="absolute inset-0 z-0" />
       <div className={`relative z-10 flex-grow flex-col items-center justify-center ${animation ? 'fade-enter-active' : 'fade-exit-active'}`}>
-          <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back"><ArrowLeft size={20} /></button> 
-        <h1 className={`${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
-        <button id="toggleButton" onClick={handleToggle}>
-          {isInternational ? "Switch to European" : "Switch to International"}
-        </button>
+         <div className="w-full inline-flex items-center">
+            <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back" className="flex-shrink-0"><ArrowLeft size={20} /></button>
+            <h1 className={`text-custom-gradient text-[35px] lg:text-[75px] text-center font-extrabold grow ${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
+            <button id="toggleButton" onClick={handleToggle} className="text-xs bg-yellow-400 px-2 py-1 rounded-md flex-shrink-0 whitespace-nowrap lg:-translate-y-8">{isInternational ? "Switch to European" : "Switch to International"}</button>
+          </div>
         <hr id="line" />
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
+        <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <span id="gradientSub">ADMISSION</span></h2>
+
         <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalAdmissionInformation : admissionInformation}</p>
         <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">UNIVERSITIES</p></h2>
         <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
@@ -107,30 +105,36 @@ const Country = ({
         <h2 className={`${exo.className}`} id="infoBody">{whyChooseCountry[0].description}</h2>
 
         {/* Advantage & Disadvantage Section */}
-        <div className="flex justify-around w-full">
-          <div className="w-1/2 bg-opacity-60">
-            <h3 className={`${poppins.className}`} style={{ color: 'lightgreen' }} id="subtitleCenter">ADVANTAGES</h3>
-            <ul id="infoCenter">
-              {advantages.map((advantage, index) => (
-                <li className={`${exo.className}`} key={index}>{advantage}</li>
-              ))}
-            </ul>
-          </div>
+       
+        {/* This only shows when on PC for now.  */}
+        {!isMobile && (
+          <div className="flex justify-around w-full">
+            <div className="w-1/2 bg-opacity-60">
+              <h3 className={`${poppins.className}`} style={{ color: 'lightgreen' }} id="subtitleCenter">ADVANTAGES</h3>
+              <ul id="infoCenter">
+                {advantages.map((advantage, index) => (
+                  <li className={`${exo.className}`} key={index}>{advantage}</li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Vertical Line */}
-          <div className="vertical-line-container">
-            <hr className="vertical-line" />
-          </div>
+            {/* Vertical Line */}
+            <div className="vertical-line-container">
+              <hr className="vertical-line" />
+            </div>
 
-          <div className="w-1/2 bg-opacity-60">
-            <h3 className={`${poppins.className}`} style={{ color: 'red' }} id="subtitleCenter">DISADVANTAGES</h3>
-            <ul id="infoCenter">
-              {disadvantages.map((disadvantage, index) => (
-                <li className={`${exo.className}`} key={index}>{disadvantage}</li>
-              ))}
-            </ul>
+            <div className="w-1/2 bg-opacity-60">
+              <h3 className={`${poppins.className}`} style={{ color: 'red' }} id="subtitleCenter">DISADVANTAGES</h3>
+              <ul id="infoCenter">
+                {disadvantages.map((disadvantage, index) => (
+                  <li className={`${exo.className}`} key={index}>{disadvantage}</li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
+        )}
+
+
         <ul className={`${exo.className}`} id="infoBody">{optionalInformation.map((item, index) => (
           <li key={index}>
             <p className={`${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>

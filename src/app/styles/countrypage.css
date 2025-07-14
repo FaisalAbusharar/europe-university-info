@@ -28,8 +28,6 @@
 }
 
 #titleCountry {
-  font-size: 65px;
-  text-align: center;
   margin-top: 0px;
   -webkit-background-clip: text;
   background-clip: text;
@@ -127,9 +125,9 @@
 
 /* Toggle Buttons */
 #toggleButton {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  /* position: absolute; */
+  /* top: 20px; */
+  /* right: 20px; */
   padding: 10px 20px;
   font-size: 10px;
   border: 2px solid #ffffff;
@@ -140,6 +138,10 @@
   color: black;
   background: linear-gradient(to left, #fed401, #eeff00);
   font-weight: 900;
+
+  /* mobile */
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 #toggleButton:hover {
