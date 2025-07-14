@@ -47,12 +47,12 @@ const CountryBeyond = ({
     <main style={backgroundStyle} id="backgroundCountry" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in-top' : ''}`}>
       <BackgroundAnim objectColor={backgroundColorObject} className="absolute inset-0 z-0" />
       <div className="relative z-10 flex-grow flex-col items-center justify-center">
-      
-          <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back"><ArrowLeft size={20} /></button>
-
-        <h1 className={`${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
-
+         <div className="w-full inline-flex items-center">
+            <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back" className="flex-shrink-0"><ArrowLeft size={20} /></button>
+            <h1 className={`text-custom-gradient text-[35px] lg:text-[75px] text-center font-extrabold grow ${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
+          </div>
         <hr id="line" />
+        
         <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
         <p className={`${exo.className}`} id="infoBody">{admissionInformation}</p>
 
