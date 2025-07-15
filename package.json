@@ -5,7 +5,7 @@
   "scripts": {
     "generate-faq": "node src/app/scripts/generateFaqList.js",
     "build": "npm run generate-faq && next build",
-    "dev": "npm run generate-faq && next dev"
+    "dev": "npm run generate-faq && next dev --turbopack"
   },
   "dependencies": {
     "@types/jwt-decode": "^3.1.0",

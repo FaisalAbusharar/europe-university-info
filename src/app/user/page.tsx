@@ -4,7 +4,7 @@ import Cookies from 'js-cookie';
 import { jwtDecode } from 'jwt-decode';
 import '../styles/userPage.css';
 import { useRouter } from 'next/navigation';
-import { Exo, Poppins } from 'next/font/google';
+import { Exo } from 'next/font/google';
 import updateDatabase from '../api/updateData';
 import Footer from '../components/footer';
 import BackgroundAnim from '../animation/backgroundAnimationFirst';

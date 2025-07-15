@@ -1,7 +1,6 @@
 
 import Admission from '../../../components/admission';
 import '../../../styles/countrypage.css'
-import ScrollTo from '../../../components/scrollFunction'
 
 
 const gradientStyleSpring = {
@@ -21,7 +20,7 @@ const gradientStyleRed = {
 const internationalAdmissionInformationText = 
 <>
     The admission in Finland can be quite complicated in Finland, especially for international students, we will try to break it down. <br/> Universities and Universities of applied sciences both have different admission requirements.
-    <br/> <span id="subSubtitle"> <span id="gradientSubSub">University of Applied Sciences</span></span> <br/>
+    <br/> <span id="subSubtitle"> <span className='text-[24px] sm:text-[24px] lg:text-[40px] ' id="gradientSubSub">University of Applied Sciences</span></span> <br/>
     <span id='warning'>Information here might change from year to year, this information is up-to date for 2025</span>. UAS admission for International students is relatively straight-forward, you can apply in 4 main methods,
     The <a href='https://www.uasinfo.fi/international-uas-exam/' id='hyperlink'>International UAS Spring Exam</a> ‎  <a href='https://www.uasinfo.fi/international-uas-exam-autumn-2024/' id='hyperlink'>International UAS Autumn Exam</a>
     ‎ ‎ <a href='https://www.uasinfo.fi/sat-test/' id='hyperlink'>SAT Test</a> ‎ <a href='https://www.uasinfo.fi/certificate-based-selection/' id='hyperlink'>Certifcate Based Selection</a>.

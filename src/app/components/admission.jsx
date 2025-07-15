@@ -5,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 import BackgroundAnim from '../animation/backgroundAnimationFirst';
 import '../styles/animations.css';
 import Footer from './footer'
-import Link from "next/link"
 import '../styles/transitions.css';
 import { ArrowLeft } from 'lucide-react';
 
@@ -24,7 +23,7 @@ const Admission = ({
     WebkitTextFillColor: 'transparent'
   };
 
-  const [isInternational, setInternational] = useState(false);
+
   const [loaded, setLoaded] = useState(false);
   const [animation, setAnimation] = useState(true);
 
@@ -53,12 +52,12 @@ const Admission = ({
           </li>
         ))}</ul>      
 
-        <ul className={`${exo.className}`} id="infoBody">{isInternational ? (internationalOptionalInformation.map((item, index) => (
+        <ul className={`${exo.className}`} id="infoBody">{(internationalOptionalInformation.map((item, index) => (
           <li key={index}>
             <p className={`${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>
             <small className={`${exo.className}`} id="infoBody">{item.description}</small>
           </li>
-        ))) : ""}</ul>   
+        )))}</ul>   
 
       </div>
       <div id="buffer"></div>
