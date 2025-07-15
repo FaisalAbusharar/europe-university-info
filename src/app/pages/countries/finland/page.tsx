@@ -77,9 +77,9 @@ const visaInsuranceRequirements = (
 
 
 const internationalTuitionFees = (
-    <>
-    Information Will be avaliable to download here about specific universities soon, page should redirect. The average Tuition fees for a Bachelor's program in Finland for Non-EU/EEA Students is around <p id="warning">€10,000 per year</p>, and for Master's it's roughly <p id="warning">€12,000 per year</p>.
-    </>
+    <a>
+    Information Will be avaliable to download here about specific universities soon, page should redirect. The average Tuition fees for a Bachelor's program in Finland for Non-EU/EEA Students is around <span id="warning">€10,000 per year</span>, and for Master's it's roughly <span id="warning">€12,000 per year</span>.
+    </a>
 )
 
 const europeanStudentsUniversities = (
