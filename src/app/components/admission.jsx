@@ -42,7 +42,7 @@ const Admission = ({
      <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back"><ArrowLeft size={20} /></button>
         <h1 className={`text-custom-gradient text-[35px] lg:text-[75px] text-center font-extrabold grow ${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
         <hr id="line" />
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
         <p className={`${exo.className}`} id="infoBody">{internationalAdmissionInformation}</p>
        
        

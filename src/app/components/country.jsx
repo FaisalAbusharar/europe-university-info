@@ -87,21 +87,21 @@ const Country = ({
             <button id="toggleButton" onClick={handleToggle} className="text-xs bg-yellow-400 px-2 py-1 rounded-md flex-shrink-0 whitespace-nowrap lg:-translate-y-8">{isInternational ? "Switch to European" : "Switch to International"}</button>
           </div>
         <hr id="line" />
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <span id="gradientSub">ADMISSION</span></h2>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{countryNameOptional} <span id="gradientSub">ADMISSION</span></h2>
 
         <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalAdmissionInformation : admissionInformation}</p>
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <span id="gradientSub">UNIVERSITIES</span></h2>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px]  ${poppins.className}`} id="subtitleLeft">{countryNameOptional} <span id="gradientSub">UNIVERSITIES</span></h2>
         <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalUniversityInformation : universityInformation}</p>
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{isInternational ? <>{countryNameOptional} <span id="gradientGold">TUITIONS FEES</span></> : ""}</h2>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px]  ${poppins.className}`} id="subtitleLeft">{isInternational ? <>{countryNameOptional} <span id="gradientGold">TUITIONS FEES</span></> : ""}</h2>
         <p className={`${exo.className}`} id="infoBody">{isInternational ? internationalUniversityFees : ""}</p>
-        <h2 className={`${exo.className}`} id="subtitleLeft">{isInternational ? (<>{countryNameOptional} {<span id="gradientSubSub">STUDENT PERMIT</span>}</>) : ""}</h2>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px]  ${exo.className}`} id="subtitleLeft">{isInternational ? (<>{countryNameOptional} {<span id="gradientSubSub">STUDENT PERMIT</span>}</>) : ""}</h2>
         <ul className={`${exo.className}`} id="infoBody">{isInternational ? (visaRequirements.map((item, index) => (
           <li key={index}>
-            <span className={`${exo.className}`} id="subSubTitleLeft">PERMIT <span id="gradientSubSub"><strong>{item.title}</strong></span></span>
-            <small className={`${exo.className}`} id="infoBody">{item.description}</small>
+            <span className={`text-[24px] sm:text-[24px] lg:text-[28px] ${exo.className}`} id="subSubTitleLeft">PERMIT <span id="gradientSubSub"><strong>{item.title}</strong></span></span>
+            <small className={`mb-5 sm:mb-5 ${exo.className}`} id="infoBody">{item.description}</small>
           </li>
         ))) : ""}</ul>
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{whyChooseCountry[0].title}</h2>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{whyChooseCountry[0].title}</h2>
         <h2 className={`${exo.className}`} id="infoBody">{whyChooseCountry[0].description}</h2>
 
         {/* Advantage & Disadvantage Section */}
@@ -137,21 +137,21 @@ const Country = ({
 
         <ul className={`${exo.className}`} id="infoBody">{optionalInformation.map((item, index) => (
           <li key={index}>
-            <p className={`${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>
+            <p className={`text-[22px] sm:text-[22px] lg:text-[33px] ${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>
             <small className={`${exo.className}`} id="infoBody">{item.description}</small>
           </li>
         ))}</ul>      
 
         <ul className={`${exo.className}`} id="infoBody">{isInternational ? (internationalOptionalInformation.map((item, index) => (
           <li key={index}>
-            <p className={`${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>
+            <p className={`text-[22px] sm:text-[22px] lg:text-[33px] ${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>
             <small className={`${exo.className}`} id="infoBody">{item.description}</small>
           </li>
         ))) : ""}</ul>   
 
       </div>
       <div id="buffer"></div>
-      <Footer showAIwarning={true}  footerInformation={footerInformation}></Footer>
+      <Footer showAIwarning={true}  footerInformation={isMobile ? "It's reommended to verify the information on offcial government sites before taking action" : footerInformation}></Footer>
     </main>
   );
 }

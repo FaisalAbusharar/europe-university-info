@@ -20,7 +20,6 @@ const Footer = ({
   };
 
   const isMobile = useIsMobile();
-  console.log(isMobile)
   let defaultFooterInformationOptional = footerInformationOptional
    
    footerInformationOptional = isMobile ? 'The right place for knowledge about studying in Europe!' : defaultFooterInformationOptional

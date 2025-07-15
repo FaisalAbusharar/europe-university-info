@@ -5,9 +5,9 @@ import '../styles/animations.css';
 import { ArrowLeft } from "lucide-react";
 import Footer from './footer'
 import '../styles/transitions.css';
-import Cookies from 'js-cookie';
-import {jwtDecode} from 'jwt-decode';
-import Link from "next/link"
+import useIsMobile from '../utils/useIsMobile';
+
+
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -23,13 +23,14 @@ const CountryBeyond = ({
   titleStyleBackground,
 }) => {
 
-    const titleStyle = {    
+  const titleStyle = {    
     background: titleStyleBackground,
     WebkitBackgroundClip: 'text',
     WebkitTextFillColor: 'transparent'
   };
  
   const [loaded, setLoaded] = useState(false);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     setLoaded(true);
@@ -47,64 +48,66 @@ const CountryBeyond = ({
     <main style={backgroundStyle} id="backgroundCountry" className={`${exo.className} flex flex-col min-h-screen ${loaded ? 'slide-in-top' : ''}`}>
       <BackgroundAnim objectColor={backgroundColorObject} className="absolute inset-0 z-0" />
       <div className="relative z-10 flex-grow flex-col items-center justify-center">
-         <div className="w-full inline-flex items-center">
-            <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back" className="flex-shrink-0"><ArrowLeft size={20} /></button>
-            <h1 className={`text-custom-gradient text-[35px] lg:text-[75px] text-center font-extrabold grow ${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
-          </div>
+        <div className="w-full inline-flex items-center">
+          <button id="returnButtonHeader" onClick={() => window.history.back()} aria-label="Go back" className="flex-shrink-0"><ArrowLeft size={20} /></button>
+          <h1 className={`text-custom-gradient text-[35px] lg:text-[75px] text-center font-extrabold grow ${poppins.className}`} id="titleCountry" style={titleStyle}>{countryName}</h1>
+        </div>
         <hr id="line" />
-        
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
+
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
         <p className={`${exo.className}`} id="infoBody">{admissionInformation}</p>
 
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">UNIVERSITIES</p></h2>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">UNIVERSITIES</p></h2>
         <p className={`${exo.className}`} id="infoBody">{universityInformation}</p>
 
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientGold">TUITION FEES</p></h2>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientGold">TUITION FEES</p></h2>
         <p className={`${exo.className}`} id="infoBody">{universityFees}</p>
 
-        <h2 className={`${exo.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSubSub">STUDENT PERMIT</p></h2>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${exo.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSubSub">STUDENT PERMIT</p></h2>
         <ul className={`${exo.className}`} id="infoBody">
           {visaRequirements.map((item, index) => (
             <li key={index}>
-              <p className={`${exo.className}`} id="subSubTitleLeft">
+              <p className={`text-[24px] sm:text-[24px] lg:text-[28px] ${exo.className}`} id="subSubTitleLeft">
                 PERMIT <span id="gradientSubSub"><strong>{item.title}</strong></span>
               </p>
-              <small className={`${exo.className}`} id="infoBody">{item.description}</small>
+              <small className={`mb-5 sm:mb-5 ${exo.className}`} id="infoBody">{item.description}</small>
             </li>
           ))}
         </ul>
 
-        <h2 className={`${poppins.className}`} id="subtitleLeft">{whyChooseCountry[0].title}</h2>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{whyChooseCountry[0].title}</h2>
         <h2 className={`${exo.className}`} id="infoBody">{whyChooseCountry[0].description}</h2>
 
-        <div className="flex justify-around w-full">
-          <div className="w-1/2 bg-opacity-60">
-            <h3 className={`${poppins.className}`} style={{ color: 'lightgreen' }} id="subtitleCenter">ADVANTAGES</h3>
-            <ul id="infoCenter">
-              {advantages.map((advantage, index) => (
-                <li className={`${exo.className}`} key={index}>{advantage}</li>
-              ))}
-            </ul>
-          </div>
+        {!isMobile && (
+          <div className="flex justify-around w-full">
+            <div className="w-1/2 bg-opacity-60">
+              <h3 className={`text-[26px] sm:text-[24px] lg:text-[32px] ${poppins.className}`} style={{ color: 'lightgreen' }} id="subtitleCenter">ADVANTAGES</h3>
+              <ul id="infoCenter">
+                {advantages.map((advantage, index) => (
+                  <li className={`${exo.className}`} key={index}>{advantage}</li>
+                ))}
+              </ul>
+            </div>
 
-          <div className="vertical-line-container">
-            <hr className="vertical-line" />
-          </div>
+            <div className="vertical-line-container">
+              <hr className="vertical-line" />
+            </div>
 
-          <div className="w-1/2 bg-opacity-60">
-            <h3 className={`${poppins.className}`} style={{ color: 'red' }} id="subtitleCenter">DISADVANTAGES</h3>
-            <ul id="infoCenter">
-              {disadvantages.map((disadvantage, index) => (
-                <li className={`${exo.className}`} key={index}>{disadvantage}</li>
-              ))}
-            </ul>
+            <div className="w-1/2 bg-opacity-60">
+              <h3 className={`text-[26px] sm:text-[24px] lg:text-[32px] ${poppins.className}`} style={{ color: 'red' }} id="subtitleCenter">DISADVANTAGES</h3>
+              <ul id="infoCenter">
+                {disadvantages.map((disadvantage, index) => (
+                  <li className={`${exo.className}`} key={index}>{disadvantage}</li>
+                ))}
+              </ul>
+            </div>
           </div>
-        </div>
+        )}
 
         <ul className={`${exo.className}`} id="infoBody">
           {optionalInformation.map((item, index) => (
             <li key={index}>
-              <p className={`${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>
+              <p className={`text-[22px] sm:text-[22px] lg:text-[33px] ${exo.className}`} id="subSubTitleLeft"><span><strong>{item.title}</strong></span></p>
               <small className={`${exo.className}`} id="infoBody">{item.description}</small>
             </li>
           ))}
@@ -112,7 +115,7 @@ const CountryBeyond = ({
       </div>
 
       <div id="buffer"></div>
-      <Footer showAIwarning={true} footerInformation={footerInformation} />
+      <Footer showAIwarning={true} footerInformation={isMobile ? "It's reommended to verify the information on offcial government sites before taking action" : footerInformation} />
     </main>
   );
 };
