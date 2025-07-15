@@ -10,7 +10,7 @@ const backgroundColorObjectStyle: number[] = [255, 255, 255]
 
 /* Information Area */
 const AdmissionInformationText = (
-  <>
+  <span>
     Bachelor & Master Degrees:  
     For undergraduate (Bachelor’s) programs in the U.S., you’ll need a secondary/high school diploma that qualifies you for higher education in your home country, translated and certified. Typical documents include:
     <ul className="list-disc list-inside mt-2 mb-2">
@@ -49,7 +49,7 @@ const AdmissionInformationText = (
     </ul>
 
     Each university and program has its own deadlines and may set higher test scores or additional requirements—always check the official admissions section of your chosen schools or visit resources like   <a href="https://educationusa.state.gov/" target="_blank" rel="noopener noreferrer" id="hyperlink">EducationUSA</a>   or  <a href="https://www.usa.gov/international-student" target="_blank" rel="noopener noreferrer" id="hyperlink">USA.gov</a>.
-  </>
+  </span>
 );
 
 const UniversityInformationText = (

@@ -7,7 +7,6 @@ import Footer from './footer'
 import '../styles/transitions.css';
 import useIsMobile from '../utils/useIsMobile';
 
-
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -54,16 +53,16 @@ const CountryBeyond = ({
         </div>
         <hr id="line" />
 
-        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">ADMISSION</p></h2>
-        <p className={`${exo.className}`} id="infoBody">{admissionInformation}</p>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{countryNameOptional} <span id="gradientSub">ADMISSION</span></h2>
+        <span className={`${exo.className}`} id="infoBody">{admissionInformation}</span>
 
-        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSub">UNIVERSITIES</p></h2>
-        <p className={`${exo.className}`} id="infoBody">{universityInformation}</p>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{countryNameOptional} <span id="gradientSub">UNIVERSITIES</span></h2>
+        <span className={`${exo.className}`} id="infoBody">{universityInformation}</span>
 
-        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientGold">TUITION FEES</p></h2>
-        <p className={`${exo.className}`} id="infoBody">{universityFees}</p>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{countryNameOptional} <span id="gradientGold">TUITION FEES</span></h2>
+        <span className={`${exo.className}`} id="infoBody">{universityFees}</span>
 
-        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${exo.className}`} id="subtitleLeft">{countryNameOptional} <p id="gradientSubSub">STUDENT PERMIT</p></h2>
+        <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${exo.className}`} id="subtitleLeft">{countryNameOptional} <span id="gradientSubSub">STUDENT PERMIT</span></h2>
         <ul className={`${exo.className}`} id="infoBody">
           {visaRequirements.map((item, index) => (
             <li key={index}>
@@ -78,7 +77,7 @@ const CountryBeyond = ({
         <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px] ${poppins.className}`} id="subtitleLeft">{whyChooseCountry[0].title}</h2>
         <h2 className={`${exo.className}`} id="infoBody">{whyChooseCountry[0].description}</h2>
 
-        {!isMobile && (
+        {loaded && !isMobile && (
           <div className="flex justify-around w-full">
             <div className="w-1/2 bg-opacity-60">
               <h3 className={`text-[26px] sm:text-[24px] lg:text-[32px] ${poppins.className}`} style={{ color: 'lightgreen' }} id="subtitleCenter">ADVANTAGES</h3>
