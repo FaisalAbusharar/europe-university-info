@@ -80,9 +80,15 @@
 #optionsField {
   position: relative;
   left: 20px;
+
+}
+
+/* #optionsField {
+  position: relative;
+  left: 20px;
   top: 100px;
   width: 300px;
-}
+} */
 
 #superLabel {
   position: relative;
@@ -144,11 +150,7 @@
 }
 
 #toggleButtonUser {
-  position: absolute;
   font-size: 10px;
-  padding: 5px 5px;
-  bottom:-95px;
-  right: -190px;
   border: 2px solid #ffffff;
   color: #ffffff;
   background: none;

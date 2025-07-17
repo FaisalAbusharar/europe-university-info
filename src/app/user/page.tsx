@@ -8,6 +8,7 @@ import { Exo } from 'next/font/google';
 import updateDatabase from '../api/updateData';
 import Footer from '../components/footer';
 import BackgroundAnim from '../animation/backgroundAnimationFirst';
+import useIsMobile from '../utils/useIsMobile';
 
 interface JwtPayload {
   email?: string;
@@ -24,6 +25,7 @@ const ProfilePage = () => {
   const [userInfo, setUserInfo] = useState<JwtPayload | null>(null);
   const [newName, setNewName] = useState<string>(''); // Start with empty string
   const router = useRouter();
+  const isMoible = useIsMobile();
 
   const isInternational = userInfo?.location === "International";
 
@@ -106,17 +108,17 @@ const ProfilePage = () => {
                     <label id='label' className="block text-white-700 font-medium">EMAIL</label>
                     <span className='mt-1' id="emailField">{userInfo.email}</span>
                   </div>
-                  <div className="field">
+                  {!isMoible && <div className="field">
                     <label id='label' className="block text-red-700 font-medium">TOKEN</label>
                     <span className='mt-15' id="passwordField">{userInfo.password}</span>
-                  </div>
-                  <label id='warningLabel' className='block text-white-500 font-small'>
-                    The token cannot be used to login, if you forgot your password or want to change it, you can here.
+                  </div>}
+                   <label id='warningLabel' className='block text-white-500 font-small'>
+                    {isMoible ? "Password reset option will be added soon!" : 'The token cannot be used to login, if you forgot your password or want to change it, you can here (Update has not been added yet!).'}
                   </label>
                 </div>
 
                 {/* Change Username Section */}
-                <div id="optionsField" style={{ display: "flex", alignItems: "flex-end", gap: "10px" }}>
+                <div className="relative top-[100px] w-[200px] lg:relative lg:top-[100px] lg:w-[300px]" id="optionsField" style={{ display: "flex", alignItems: "flex-end", gap: "10px" }}>
                   <label id="superLabel" className="text-white-700 font-medium">
                     <span className={exo.className}>Change your Name:</span>
                     <br />
@@ -140,6 +142,7 @@ const ProfilePage = () => {
                   </label>
 
                   <button
+                    className='relative p-[5px] bottom-[-95px] right-[-180px] sm:relative sm:p-[5px] sm:bottom-[-95px] sm:right-[-180px] lg:absolute lg:p-[5px] lg:bottom-[-95px] lg:right-[-190px]'
                     id="toggleButtonUser"
                     onClick={updateName}
                     style={{ marginRight: '-100px', bottom: "5px", right: "1px" }}
@@ -151,7 +154,7 @@ const ProfilePage = () => {
                 <br /><br />
 
                 {/* Change Location Section */}
-                <div id="optionsField">
+                <div className='className="relative top-[100px] w-[300px] lg:relative lg:top-[100px] lg:w-[300px]"' id="optionsField">
                   <label id='superLabel' className="text-white-700 font-medium">
                     <span className={exo.className}>Your Location is set to:</span>
                     <span id="gradientSubSub">
@@ -159,7 +162,7 @@ const ProfilePage = () => {
                     </span>
                   </label>
                 </div>
-                <button id='toggleButtonUser' onClick={updateLocation}>
+                <button className='absolute p-[5px] bottom-[-95px] right-[-190px]' id='toggleButtonUser' onClick={updateLocation}>
                   {isInternational ? "Switch to European" : "Switch to International"}
                 </button>
               </div>
@@ -176,7 +179,7 @@ const ProfilePage = () => {
         <Footer
           returnPage='/'
           footerTheme='linear-gradient(to right,rgb(68, 67, 73),rgb(135, 133, 139))'
-          footerInformation={"Did you know data in websites is stored as Cookies? It is here too!"}
+          footerInformation={isMoible ? 'Did you know data in websites is stored as Cookies?' : "Did you know data in websites is stored as Cookies? It is here too!"}
         />
       </div>
     </main>
