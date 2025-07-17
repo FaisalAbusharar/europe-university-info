@@ -2,9 +2,11 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import '../../styles/authPage.css'
-import { Poppins, Exo } from 'next/font/google';
+import { Exo } from 'next/font/google';
 import connectDb from '@/app/api/signup';
 import Footer from '@/app/components/footer';
+import useIsMobile from '@/app/utils/useIsMobile';
+
 
 
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
@@ -16,6 +18,7 @@ const Signup: React.FC = () => {
   const [error, setError] = useState<string>('');
   const [submitted, setSubmitted] = useState<boolean>(false);
   const router = useRouter();
+  const isMobile = useIsMobile();
 
   const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -51,8 +54,6 @@ const Signup: React.FC = () => {
 
     
   };
-
-  const tempSolutionFooterPosition = {top: '74.9px'}
  
 
   useEffect(() => {
@@ -67,8 +68,8 @@ const Signup: React.FC = () => {
 
   return (
     <main id="background" className={`${exo.className}`}>
-       {submitted ? <></> : <h1 className='contextTitle'>Europe University Information</h1>}
-       {submitted ? <></> : <p className='context'>Login to save important information, choose a country, learn more, and interact with others!</p>}
+       {submitted ? <></> : <h1 className='contextTitle  text-[24px] sm:text-[24px] lg:text-[40px]'>Europe University Information</h1>}
+       {submitted ? <></> : <p className='context  text-[13px] sm:text-[10px] lg:text-[13px]'>Login to save important information, choose a country, learn more, and interact with others!</p>}
       <div className='container'>
         {submitted ? (
           <div className='successfulForm'>
@@ -76,7 +77,7 @@ const Signup: React.FC = () => {
             <p className='successfulContext'>Redirecting to login page...</p>
           </div>
         ) : (
-          <div className="containerForm">
+          <div className="containerForm w-[350px] h-[450px] sm:w-[350px] lg:w-[650px] lg:h-[320px]">
             <h1 className='titleForm'>SIGN UP</h1>
             <form className='form' onSubmit={handleSignup}>
             <input className='inputFormEmail'
@@ -86,7 +87,7 @@ const Signup: React.FC = () => {
                   onChange={(e) => setUsername(e.target.value)}
                   required
                 />
-              <div className='inputsContainer'>
+              <div className='inputsContainer flex-col sm:flex-col lg:flex-row'>
                 <input className='inputFormEmail'
                   type="email"
                   placeholder="Email"
@@ -112,7 +113,7 @@ const Signup: React.FC = () => {
         )}
       </div>
       <div style={{position: 'fixed', bottom: '0%', width: '100%'}} className='containerFooter'>
-      {submitted ? <></>: <Footer returnPage='/' footerTheme='linear-gradient(to right,rgb(12, 152, 207),rgb(12, 16, 233))' footerInformation={"EUI offers a community of people willing to help each other!"}></Footer>}
+      {submitted ? <></>: <Footer returnPage='/' footerTheme='linear-gradient(to right,rgb(12, 152, 207),rgb(12, 16, 233))' footerInformation={isMobile ? " " :"EUI offers a community of people willing to help each other!"}></Footer>}
       </div>
     </main>
   );

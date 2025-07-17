@@ -2,10 +2,11 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import '../../styles/authPage.css'
-import { Poppins, Exo } from 'next/font/google';
+import { Exo } from 'next/font/google';
 import loginDatabase from '@/app/api/login';
 import Cookies from 'js-cookie'
 import Footer from '@/app/components/footer';
+import useIsMobile from '@/app/utils/useIsMobile';
 
 
 const exo = Exo({ subsets: ['latin'], weight: ['400', '700'] });
@@ -16,6 +17,7 @@ const Signup: React.FC = () => {
   const [error, setError] = useState<string>('');
   const [submitted, setSubmitted] = useState<boolean>(false);
   const router = useRouter();
+  const isMobile = useIsMobile();
 
   const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -66,7 +68,7 @@ const Signup: React.FC = () => {
   return (
     <main id="background" className={`${exo.className}`}>
 
-      {submitted ? <></> : <h1 className='contextTitle'>Europe University Information</h1>}
+      {submitted ? <></> : <h1 className='contextTitle text-[24px] sm:text-[24px] lg:text-[40px]'>Europe University Information</h1>}
       {submitted ? <></> : <p className='context'>Login to save important information, choose a country, learn more, and interact with others!</p>}
       <div className='container'>
         {submitted ? (
@@ -74,10 +76,10 @@ const Signup: React.FC = () => {
             <h1 className='successfulTitle'>Login Successful!</h1>
           </div>
         ) : (
-          <div className="containerForm">
+          <div className="containerForm w-[350px] h-[400px] sm:w-[350px] lg:w-[650px] lg:h-[320px]">
             <h1 className='titleForm'>LOGIN</h1>
             <form className='form' onSubmit={handleSignup}>
-              <div className='inputsContainer'>
+              <div className='inputsContainer flex-col sm:flex-col lg:flex-row'>
                 <input className='inputFormEmail'
                   type="text"
                   placeholder="Email/Username"
@@ -103,11 +105,12 @@ const Signup: React.FC = () => {
         )}
       </div>
       <div style={{position: 'fixed', bottom: '0%', width: '100%'}} className='containerFooter'>
-      {submitted ? <></>: <Footer returnPage='/' footerTheme='linear-gradient(to right,rgb(12, 152, 207),rgb(12, 16, 233))' footerInformation={"EUI offers a community of people willing to help each other!"}></Footer>}
+      {submitted ? <></>: <Footer returnPage='/' footerTheme='linear-gradient(to right,rgb(12, 152, 207),rgb(12, 16, 233))' footerInformation={isMobile ? '' : "EUI offers a community of people willing to help each other!"}></Footer>}
       </div>
     </main>
   );
 };
+
 
 
 export default Signup;

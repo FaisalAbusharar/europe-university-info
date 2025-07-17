@@ -37,7 +37,6 @@
   align-items: center;
   box-shadow: rgb(0, 0, 0) 20px 20px 20px;
   background-color: rgb(22, 22, 22);
-  width: 650px;
   border: solid rgb(39, 38, 38) 5px;
   align-content: center;
   transition: transform 0.5s ease;
@@ -123,18 +122,17 @@
     background-image: linear-gradient(to right, #0062ff, #0062ff) 1; 
 }
 
+
 .contextTitle {
   font-weight: bold;
   background: linear-gradient(to right, #004af8, rgb(3, 217, 255), rgb(0, 21, 255));
   background-size: 300% 100%;
   -webkit-background-clip: text;
-  font-size: 40px;
   text-align: center;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradientAnimation 6s linear infinite;
   display: inline-block;
-  margin: 20px 0;
 }
 
 .context {
@@ -142,7 +140,6 @@
   background: linear-gradient(to right, #035f6f, rgb(16, 94, 211), rgb(15, 55, 135));
   background-size: 300% 100%;
   -webkit-background-clip: text;
-  font-size: 15px;
   text-align: center;
   background-clip: text;
   -webkit-text-fill-color: transparent;
