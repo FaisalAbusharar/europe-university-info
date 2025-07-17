@@ -39,12 +39,12 @@ const Home = () => {
           <div className="text-center mb-auto mt-8 w-full max-w-[95vw] mx-auto">
             <div id="title-container">
               <Link href='/user'>
-                <button id='profile-button'>
+                <button id={isMobile ? 'profile-button-mobile' :'profile-button'}>
                   <Image 
                     src="/profile.svg" 
                     alt="Profile" 
                     width={40} 
-                    height={40} 
+                    height={40}
                     className="profile-image" 
                   />
                 </button>
