@@ -22,7 +22,9 @@ const Footer = ({
   const isMobile = useIsMobile();
   let defaultFooterInformationOptional = footerInformationOptional
    
-   footerInformationOptional = isMobile ? 'The right place for knowledge about studying in Europe!' : defaultFooterInformationOptional
+    if (!footerInformationOptional == '') {
+      footerInformationOptional = isMobile ? 'The right place for knowledge about studying in Europe!' : defaultFooterInformationOptional
+    }
   
 
   return (

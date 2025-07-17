@@ -113,7 +113,7 @@ const Signup: React.FC = () => {
         )}
       </div>
       <div style={{position: 'fixed', bottom: '0%', width: '100%'}} className='containerFooter'>
-      {submitted ? <></>: <Footer returnPage='/' footerTheme='linear-gradient(to right,rgb(12, 152, 207),rgb(12, 16, 233))' footerInformation={isMobile ? " " :"EUI offers a community of people willing to help each other!"}></Footer>}
+      {submitted ? <></>: <Footer returnPage='/' footerInformationOptional={isMobile ? "" : 'Studying in Europe is always a good idea! But you have to know if you are able to do it'} footerTheme='linear-gradient(to right,rgb(12, 152, 207),rgb(12, 16, 233))' footerInformation={isMobile ? " " :"EUI offers a community of people willing to help each other!"}></Footer>}
       </div>
     </main>
   );

@@ -25,7 +25,7 @@ const ProfilePage = () => {
   const [userInfo, setUserInfo] = useState<JwtPayload | null>(null);
   const [newName, setNewName] = useState<string>(''); // Start with empty string
   const router = useRouter();
-  const isMoible = useIsMobile();
+  const isMobile = useIsMobile();
 
   const isInternational = userInfo?.location === "International";
 
@@ -108,12 +108,12 @@ const ProfilePage = () => {
                     <label id='label' className="block text-white-700 font-medium">EMAIL</label>
                     <span className='mt-1' id="emailField">{userInfo.email}</span>
                   </div>
-                  {!isMoible && <div className="field">
+                  {!isMobile && <div className="field">
                     <label id='label' className="block text-red-700 font-medium">TOKEN</label>
                     <span className='mt-15' id="passwordField">{userInfo.password}</span>
                   </div>}
                    <label id='warningLabel' className='block text-white-500 font-small'>
-                    {isMoible ? "Password reset option will be added soon!" : 'The token cannot be used to login, if you forgot your password or want to change it, you can here (Update has not been added yet!).'}
+                    {isMobile ? "Password reset option will be added soon!" : 'The token cannot be used to login, if you forgot your password or want to change it, you can here (Update has not been added yet!).'}
                   </label>
                 </div>
 
@@ -179,7 +179,8 @@ const ProfilePage = () => {
         <Footer
           returnPage='/'
           footerTheme='linear-gradient(to right,rgb(68, 67, 73),rgb(135, 133, 139))'
-          footerInformation={isMoible ? 'Did you know data in websites is stored as Cookies?' : "Did you know data in websites is stored as Cookies? It is here too!"}
+          footerInformation={isMobile ? 'Did you know data in websites is stored as Cookies?' : "Did you know data in websites is stored as Cookies? It is here too!"}
+          footerInformationOptional={isMobile ? "" : 'Studying in Europe is always a good idea! But you have to know if you are able to do it'} 
         />
       </div>
     </main>
