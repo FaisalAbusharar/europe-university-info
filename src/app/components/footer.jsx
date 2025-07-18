@@ -1,13 +1,14 @@
 import Link from "next/link";
 import '../styles/countrypage.css';
 import useIsMobile from "../utils/useIsMobile";
+import pkg from '../../../package.json'
 
 const Footer = ({
   footerInformation,
   footerInformationOptional = 'Studying in Europe is always a good idea! But you have to know if you are able to do it',
   returnPage = '', // will check if it's empty in logic
   returnText = <>Go Back</>,
-  optionalCredit = <a href="https://faisoolia.com/">Developed by Faisal Abusharar</a>,
+  optionalCredit = <a href="https://faisoolia.com/">Developed by Faisal Abusharar | v{pkg.version}</a>,
   returnButton = true,
   footerTheme = 'linear-gradient(to right, #3801fe, #6625fc)',
   showAIwarning = false
