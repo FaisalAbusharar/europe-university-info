@@ -113,11 +113,10 @@
   }
   
 
-  gradientButtonTextDutch {
+ #gradientButtonTextDutch {
     background-image: linear-gradient(to bottom, #a70202, #ffffff, #1900ff);
     border-image: linear-gradient(to bottom, #a70202, #ffffff, #2e01f8) 1;
   }
-
 
     
  #gradientButtonTextDutch:hover {
@@ -128,5 +127,5 @@
     background-clip: padding-box;
     margin-left: 15px;
     margin-right: 15px;
-    background-image: linear-gradient(to bottom, #a70202, #ffffff, #2e01f8); 
+    background-image: linear-gradient(to top, #a70202, #ffffff, #2e01f8); 
   }
