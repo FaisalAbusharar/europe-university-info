@@ -112,3 +112,21 @@
     background-image: linear-gradient(to top, #ffffff, #ffffff, #a70202); 
   }
   
+
+  gradientButtonTextDutch {
+    background-image: linear-gradient(to bottom, #a70202, #ffffff, #1900ff);
+    border-image: linear-gradient(to bottom, #a70202, #ffffff, #2e01f8) 1;
+  }
+
+
+    
+ #gradientButtonTextDutch:hover {
+    border-image: linear-gradient(to bottom, #a70202, #ffffff, #1900ff) 1; 
+    color: rgb(177, 1, 1);
+    transform: scale(1.3);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    margin-left: 15px;
+    margin-right: 15px;
+    background-image: linear-gradient(to bottom, #a70202, #ffffff, #2e01f8); 
+  }

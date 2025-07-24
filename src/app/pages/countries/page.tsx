@@ -30,6 +30,9 @@ const Countries = () => {
             <Link href="/pages/countries/finland">
             <button className='button' id="gradientButtonTextFinland">Finland</button>
             </Link>
+            <Link href="/pages/countries/netherlands">
+            <button className='button' id="gradientButtonTextDutch">Netherlands</button>
+            </Link>
             <Link href="/pages/countries/sweden">
             <button className='button' id="gradientButtonTextSweden">Sweden</button>
             </Link>
