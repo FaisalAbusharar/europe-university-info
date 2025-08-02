@@ -16,7 +16,7 @@ const admissionRequirements = (
 
 const internationalAdmissionInformationText = (
     <>
-        For international students, a high-school diploma (or equivalent) is required for bachelor’s studies, and a bachelor’s degree is required for master’s studies. Applications are made through Universityadmissions.se: bachelor’s applicants can apply to up to 8 programmes and master’s applicants up to 4 programmes per admission round. There are two main admission rounds for autumn intake (January and a second round in April); spring start programs are more limited. Non-native English speakers must document proficiency via recognized tests (such as IELTS, TOEFL, PTE or Cambridge) as specified for each program. Check UniversityAdmissions.se or each university’s site for exact requirements and application deadlines.
+        For international students, a high-school diploma (or equivalent) is required for bachelor’s studies, and a bachelor’s degree is required for master’s studies. Applications are made through <a href="https://www.universityadmissions.se/intl/start" target="_blank" rel="noopener noreferrer" id="hyperlink">Universityadmissions.se</a>: bachelor’s applicants can apply to up to 8 programmes and master’s applicants up to 4 programmes per admission round. There are two main admission rounds for autumn intake (<a href="https://www.universityadmissions.se/intl/start" target="_blank" rel="noopener noreferrer" id="hyperlink">January</a> and a second round in <a href="https://www.universityadmissions.se/intl/start" target="_blank" rel="noopener noreferrer" id="hyperlink">April</a>); spring start programs are more limited. Non-native English speakers must document proficiency via recognized tests (such as <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>, <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, <a href="https://www.pearsonpte.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">PTE</a> or <a href="https://www.cambridgeenglish.org/test-your-english/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cambridge</a>) as specified for each program. Check <a href="https://www.universityadmissions.se/intl/start" target="_blank" rel="noopener noreferrer" id="hyperlink">Universityadmissions.se</a> or each university’s site for exact requirements and application deadlines.
     </>
 );
 
@@ -28,7 +28,7 @@ const europeanAdmissionInformation = (
 
 const internationalUniversityInformationText = (
     <>
-        There are many reputable universities in Sweden for international students. Notable examples include Lund University, Uppsala University, Stockholm University, KTH Royal Institute of Technology, and Chalmers University of Technology. A good starting point is the official Study in Sweden website (studyinsweden.se) or Universityadmissions.se to browse programs and locations. When choosing, consider each university’s location and environment (living costs, climate, student services, etc.) in your decision.
+        There are many reputable universities in Sweden for international students. Notable examples include <a href="https://www.lu.se/lund-university" target="_blank" rel="noopener noreferrer" id="hyperlink">Lund University</a>, <a href="https://www.uu.se/en" target="_blank" rel="noopener noreferrer" id="hyperlink">Uppsala University</a>, <a href="https://www.su.se/english" target="_blank" rel="noopener noreferrer" id="hyperlink">Stockholm University</a>, <a href="https://www.kth.se/en" target="_blank" rel="noopener noreferrer" id="hyperlink">KTH Royal Institute of Technology</a>, and <a href="https://www.chalmers.se/en/" target="_blank" rel="noopener noreferrer" id="hyperlink">Chalmers University of Technology</a>. A good starting point is the official <a href="https://studyinsweden.se/" target="_blank" rel="noopener noreferrer" id="hyperlink">Study in Sweden</a> website or <a href="https://www.universityadmissions.se/intl/start" target="_blank" rel="noopener noreferrer" id="hyperlink">Universityadmissions.se</a> to browse programs and locations. When choosing, consider each university’s location and environment (living costs, climate, student services, etc.) in your decision.
     </>
 );
 
@@ -40,36 +40,46 @@ const whyChooseSweden = (
 
 const permitInformation = (
     <>
-        <span id="warning">Please check the <a id="hyperlink" href="https://www.migrationsverket.se/en/you-want-to-apply/study.html" target="_blank">official Swedish Migration Agency</a> site for detailed information.</span>  Non-EU/EEA students must obtain a Swedish student residence permit before arriving. The permit is typically granted for the duration of your studies (often 1–2 years, depending on the institution) and can be extended as needed. After graduating, you may apply for a residence permit to look for work or start a business in Sweden. You may bring your spouse/partner and children (under 18) if you can support them; they should apply at the same time as you. For full details, consult the Migration Agency.
+        <span id="warning">
+            Please check the <a id="hyperlink" href="https://www.migrationsverket.se/en/you-want-to-apply/study.html" target="_blank">official Swedish Migration Agency</a> site for detailed information.
+        </span>{" "}
+        Non-EU/EEA students must obtain a Swedish student residence permit before arriving. The permit is typically granted for the duration of your studies (often 1–2 years, depending on the institution) and can be extended as needed. The application fee for a student residence permit is usually around <strong>SEK 1,500 (approx. €130)</strong>. For each accompanying family member (spouse or child), the fee is also around <strong>SEK 1,500 (approx. €130)</strong>. 
+
+        After graduating, you may apply for a residence permit to look for work or start a business in Sweden. You may bring your spouse/partner and children (under 18) if you can support them; they should apply at the same time as you. For full details, consult the Migration Agency.
     </>
 );
 
 const visaGeneralRequirements = (
     <>
-        <p id="warning"><strong>It's recommended to not rely on this site for final guidance; always verify on the official government website.</strong></p>
-        To apply for a Swedish study permit you need: a passport valid beyond your planned stay; proof of final admission to full-time studies (including confirmation of paid tuition); the completed and signed permit application form; proof of sufficient financial means (see next section); and proof of comprehensive health/medical insurance.
+        <p id="warning">
+            <strong>It's recommended to not rely on this site for final guidance; always verify on the official government website.</strong>
+        </p> To apply for a Swedish study permit you need: a passport valid beyond your planned stay; proof of final admission to full-time studies (including confirmation of paid tuition); the completed and signed permit application form; proof of sufficient financial means (see next section); and proof of comprehensive health/medical insurance. The application fee is usually <strong>SEK 1,500 (approx. €130)</strong>.
     </>
 );
 
 const visaFinancialRequirements = (
     <>
-        <p id="warning"><strong>It's recommended to not rely on this site for final guidance; always verify on the official government website.</strong></p>
-        You must demonstrate you have enough funds to cover living costs. As of 2025, the maintenance requirement is at least SEK 10,584 per month (about SEK 126,000 per year) for a single student. Provide a recent bank statement showing at least this amount in your own account. (If you receive free housing and/or meals from the university, the required amount can be reduced.) If you have a spouse or partner, add about SEK 4,410 per month; add SEK 2,646 per child. Only your own or jointly accessible funds count; your parents’ accounts or blocked accounts are not accepted as sole proof.
+        <p id="warning">
+            <strong>It's recommended to not rely on this site for final guidance; always verify on the official government website.</strong>
+        </p> You must demonstrate you have enough funds to cover living costs. As of 2025, the maintenance requirement is at least <strong>SEK 10,584 per month (approx. €910)</strong>, or about <strong>SEK 126,000 per year (approx. €10,800)</strong> for a single student. Provide a recent bank statement showing at least this amount in your own account. (If you receive free housing and/or meals from the university, the required amount can be reduced.) If you have a spouse or partner, add about <strong>SEK 4,410/month (approx. €380)</strong>; add <strong>SEK 2,646/month (approx. €230)</strong> per child. Only your own or jointly accessible funds count; your parents’ accounts or blocked accounts are not accepted as sole proof.
     </>
 );
 
 const visaInsuranceRequirements = (
     <>
-        <p id="warning"><strong>It's recommended to not rely on this site for final guidance; always verify on the official government website.</strong></p>
-        International students must have health insurance covering medical emergencies and hospitalization. If your study program is shorter than one year, you need private insurance valid for all medical costs and repatriation. Such policies typically cost a few hundred euros per year. If your studies are one year or longer, you should register in Sweden’s population register to gain access to the national health care system. Be prepared to submit proof of valid coverage with your application.
+        <p id="warning">
+            <strong>It's recommended to not rely on this site for final guidance; always verify on the official government website.</strong>
+        </p> International students must have health insurance covering medical emergencies and hospitalization. If your study program is shorter than one year, you need private insurance valid for all medical costs and repatriation. Such policies typically cost <strong>SEK 1,000–3,000 (approx. €85–260)</strong> per year. If your studies are one year or longer, you should register in Sweden’s population register to gain access to the national health care system. Be prepared to submit proof of valid coverage with your application.
     </>
 );
 
+
 const internationalTuitionFees = (
     <>
-        Tuition fees for non-EU/EEA students vary by program. On average, bachelor’s degree programs cost about SEK 129,000 per year (roughly €11,000). Humanities and social sciences programs tend to be in the range SEK 80,000–110,000; technical and natural science programs range around SEK 120,000–145,000; specialized fields like architecture can be up to SEK 295,000 per year. Check each program page on UniversityAdmissions for exact figures. Many scholarships exist to help cover these costs.
+        Tuition fees for non-EU/EEA students vary by program. On average, bachelor’s degree programs cost about SEK 129,000 per year (roughly €11,000). Humanities and social sciences programs tend to be in the range SEK 80,000–110,000 (about €6,800–9,400); technical and natural science programs range around SEK 120,000–145,000 (approx. €10,300–12,400); specialized fields like architecture can be up to SEK 295,000 per year (around €25,200). Check each program page on <a id="hyperlink" href="https://www.universityadmissions.se/" target="_blank" rel="noopener noreferrer">University Admissions</a> for exact figures. Many scholarships exist to help cover these costs.
     </>
 );
+
 
 const europeanStudentsUniversities = (
     <>
