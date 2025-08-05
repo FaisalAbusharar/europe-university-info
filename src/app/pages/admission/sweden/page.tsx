@@ -58,7 +58,7 @@ const internationalAdmissionInformationText =
     - Always double-check the program’s official page for additional criteria.<br/>
 </>
 
-const backgroundColorStyle = 'linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 26, 51))'
+const backgroundColorStyle = 'linear-gradient(to bottom, rgba(3, 0, 46, 1), rgba(51, 29, 0, 1))'
 const backgroundColorObjectStyle: number[] = [0, 50, 150]
 
 // const optionalInformationImportantInfo = <>
