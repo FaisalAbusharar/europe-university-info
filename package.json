@@ -1,6 +1,6 @@
 {
   "name": "europesite",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "private": true,
   "scripts": {
     "generate-faq": "node src/app/scripts/generateFaqList.js",
@@ -16,7 +16,7 @@
     "jwt-decode": "^4.0.0",
     "lucide-react": "^0.487.0",
     "mongodb": "^6.8.0",
-    "next": "^15.3.4",
+    "next": "^15.4.5",
     "next-auth": "^4.24.7",
     "nodemon": "^3.1.4",
     "react": "^18",
