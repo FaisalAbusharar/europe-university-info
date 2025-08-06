@@ -14,8 +14,7 @@ const permitInformation = (
   <>
     <span id="warning">
       Please check the official Austrian government portal for detailed information.
-    </span>
-    To study in Austria, non‑EU/EEA students must apply for a “Student” residence permit before arrival, typically valid for 12 months and renewable annually. You’ll need to show proof of admission, sufficient funds (currently €703.58/month if under 24, and €1,273.99/month if older), accommodation, and comprehensive health insurance
+    </span> To study in Austria, non‑EU/EEA students must apply for a “Student” residence permit before arrival, typically valid for 12 months and renewable annually. You’ll need to show proof of admission, sufficient funds (currently €703.58/month if under 24, and €1,273.99/month if older), accommodation, and comprehensive health insurance
 
     During studies, you can work up to 20 hours/week with an employment permit from the Public Employment Service (AMS); work must not interfere with your studies.
 
@@ -23,14 +22,6 @@ const permitInformation = (
 
     Family members (spouse and minor children) can join you under the “family unity” residence permit, provided financial support, accommodation, and basic German (A1) for adults are demonstrated.
   </>
-);
-
-
-
-const admissionRequirements = (
-    <>
-      
-    </>
 );
 
 
@@ -51,14 +42,9 @@ const internationalAdmissionInformationText = (
     </ul>
     For Master programs, a relevant Bachelor’s degree is required. Some universities of applied sciences (UAS) may also require relevant work experience for Master’s programs. Admission procedures often include entrance exams, interviews, or portfolio submissions depending on the program.
 
-    Non-native English speakers applying to English-taught programs usually need to demonstrate language proficiency through exams like  
-    <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>,  
-    <a href="https://www.pearsonpte.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">PTE</a>,  
-    <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, or  
-    <a href="https://www.cambridgeenglish.org/test-your-english/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cambridge</a> tests.
+    Non-native English speakers applying to English-taught programs usually need to demonstrate language proficiency through exams like  <a href="https://ielts.org/" target="_blank" rel="noopener noreferrer" id="hyperlink">IELTS</a>,   <a href="https://www.pearsonpte.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">PTE</a>,   <a href="https://www.ets.org/toefl.html" target="_blank" rel="noopener noreferrer" id="hyperlink">TOEFL</a>, or   <a href="https://www.cambridgeenglish.org/test-your-english/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cambridge</a> tests.
 
-    Applications are usually submitted directly to each university, as Austria does not have a joint application system. Deadlines and requirements vary by institution, so it’s recommended to search for your program and check details through official university websites or  
-    <a href="https://studyinaustria.at" target="_blank" rel="noopener noreferrer" id="hyperlink">studyinaustria.at</a>.
+    Applications are usually submitted directly to each university, as Austria does not have a joint application system. Deadlines and requirements vary by institution, so it’s recommended to search for your program and check details through official university websites or   <a href="https://studyinaustria.at" target="_blank" rel="noopener noreferrer" id="hyperlink">studyinaustria.at</a>.
   </>
 );
 
@@ -73,9 +59,7 @@ const internationalUniversityInformationText = (
 const visaGeneralRequirements = (
   <>
     <p id="warning">
-      <strong>It's recommended not to rely solely on the information in this website. Government official websites are always more accurate.</strong>
-    </p>
-    Assuming you intend to stay in Austria for over 90 days for your studies, you will need to apply for a <strong>Residence Permit – Student</strong>, and must fulfill several basic requirements. 
+      <strong>It's recommended not to rely solely on the information in this website. Government official websites are always more accurate.</strong> </p> Assuming you intend to stay in Austria for over 90 days for your studies, you will need to apply for a <strong>Residence Permit – Student</strong>, and must fulfill several basic requirements. 
     You must have a passport that is valid for at least three months beyond the duration of the residence permit. 
     You must provide the official letter of acceptance issued by your Austrian university. 
     You must include a completed and signed application form. 
@@ -92,8 +76,7 @@ const visaFinancialRequirements = (
   <>
     <p id="warning">
       <strong>It's recommended not to rely solely on the information in this website. Government official websites are always more accurate.</strong>
-    </p>
-    As of now, students applying for a residence permit in Austria must demonstrate sufficient financial means. If you are under 24 years old, you must have at least <strong>€633.06 per month</strong> (approximately <strong>€7,596.72 per year</strong>). You must provide a recent bank statement showing this amount available in your personal bank account. 
+    </p> As of now, students applying for a residence permit in Austria must demonstrate sufficient financial means. If you are under 24 years old, you must have at least <strong>€633.06 per month</strong> (approximately <strong>€7,596.72 per year</strong>). You must provide a recent bank statement showing this amount available in your personal bank account. 
     Please note: funds must be in your own account—bank statements from parents or joint/shared accounts are <strong>not accepted</strong> for the Austrian residence permit.
   </>
 );
@@ -103,8 +86,7 @@ const visaInsuranceRequirements = (
   <>
     <p id="warning">
       <strong>It's recommended not to rely solely on the information in this website. Government official websites are always more accurate.</strong>
-    </p>
-    To obtain a residence permit for studying in Austria, international students must have valid health insurance covering medical expenses, hospitalization, and treatment. Coverage must meet Austrian standards, typically requiring a minimum of <strong>€30,000</strong>. 
+    </p> To obtain a residence permit for studying in Austria, international students must have valid health insurance covering medical expenses, hospitalization, and treatment. Coverage must meet Austrian standards, typically requiring a minimum of <strong>€30,000</strong>. 
     Private insurance that meets these criteria generally costs between <strong>€500 and €1,500 per year</strong>. Proof of insurance is required during the application process. 
     You can obtain coverage through international providers such as <a href="https://www.axa.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">AXA</a>, <a href="https://www.allianzcare.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">Allianz Care</a>, or <a href="https://www.cignaglobal.com/" target="_blank" rel="noopener noreferrer" id="hyperlink">Cigna Global</a>. 
     After registering in Austria, students may be eligible to switch to the Austrian public health insurance system (ÖGK).
