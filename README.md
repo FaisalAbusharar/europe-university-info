@@ -1,11 +1,5 @@
 # Europe University Information
 
-## TODO
-
-
-- Finish all the country and admission pages
-- Clean up code
-- Push Prod to Vercel 
 
 ## Getting Started
 

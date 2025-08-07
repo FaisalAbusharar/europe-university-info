@@ -1,5 +1,4 @@
 
-import { Italic } from 'lucide-react';
 import Admission from '../../../components/admission';
 import '../../../styles/countrypage.css'
 
