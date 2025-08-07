@@ -1,4 +1,5 @@
 
+import { Italic } from 'lucide-react';
 import Admission from '../../../components/admission';
 import '../../../styles/countrypage.css'
 
@@ -24,6 +25,8 @@ const internationalAdmissionInformationText =
     <span id='warning'>Information here might change from year to year, this information is up-to date for 2025</span>. UAS admission for International students is relatively straight-forward, you can apply in 4 main methods,
     The <a href='https://www.uasinfo.fi/international-uas-exam/' id='hyperlink'>International UAS Spring Exam</a> ‎  <a href='https://www.uasinfo.fi/international-uas-exam-autumn-2024/' id='hyperlink'>International UAS Autumn Exam</a>
     ‎ ‎ <a href='https://www.uasinfo.fi/sat-test/' id='hyperlink'>SAT Test</a> ‎ <a href='https://www.uasinfo.fi/certificate-based-selection/' id='hyperlink'>Certifcate Based Selection</a>.
+    <br></br><br></br>
+    Applications for Finnish universities typically open in January each year. For the 2025–2026 academic year, the main joint application period for English-taught Bachelor's and Master's degree programmes is scheduled from <strong><i>January 8 to January 22, 2025.</i></strong> 
     <br/><br/><a style={gradientStyleSpring} id='gradientSubSub'><span id='subsubSubtitle'>International UAS Spring Exam</span></a><br/>
     <strong>91 study programs</strong> use the International UAS Exam, you can view them <a href='https://www.uasinfo.fi/selection-methods-study-programmes-available-for-application/#table1spring' id='hyperlink'>here</a>
     , Regardless of how many study programs you’re applying for, you only need to participate in the International UAS Exam <strong>once</strong>
