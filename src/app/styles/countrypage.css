@@ -79,6 +79,15 @@
   font-weight: 800;
 }
 
+#disabled-button {
+  background-color: #555 !important; /* Gray background */
+  color: #aaa !important;           /* Light gray text */
+  cursor: not-allowed !important;   /* Show 'not allowed' cursor */
+  opacity: 0.6;
+  pointer-events: none; /* Prevent clicks on the Link */
+}
+
+
 
 /* Header Button */
 #returnButtonHeader {
