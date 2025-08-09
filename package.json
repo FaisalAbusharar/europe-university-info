@@ -1,6 +1,6 @@
 {
   "name": "europesite",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "generate-faq": "node src/app/scripts/generateFaqList.js",
