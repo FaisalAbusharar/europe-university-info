@@ -9,7 +9,7 @@ import useIsMobile from '@/app/utils/useIsMobile';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700'] });
 
-const Fiance = () => {
+const Finance = () => {
 
   const isMobile = useIsMobile();
   const footerInformation = isMobile ? 'The costs of studying aboard.' : 'Finances are a make it or break it for a lot of people, figure out all the information here!'
@@ -68,13 +68,7 @@ const Fiance = () => {
   </Link>
   
   <Link href="/pages/finance/austria">
-    <button 
-      className="button" 
-      id="disabled-button"
-      disabled
-    >
-      Austria
-    </button>
+      <button className="button" id="gradientButtonTextAustria">Austria</button>
   </Link>
 </div>
       </div>
@@ -85,4 +79,4 @@ const Fiance = () => {
 
 
 
-export default Fiance;
+export default Finance;
