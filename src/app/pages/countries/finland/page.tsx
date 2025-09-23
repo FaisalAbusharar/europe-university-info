@@ -45,9 +45,9 @@ const whyChooseFinland = (
 
 const permitInformation = (
     <>
-        <span id="warning">Please check the <a id="hyperlink" href="https://migri.fi/en/residence-permit-application-for-studies" target="_blank">official Migri site</a> for detailed information.</span> Starting from 2023, the student residence permit in Finland is now a Type A residence permit, as opposed to the previous Type B. This new permit counts towards the four-year period required for eligibility for Permanent Residence in Finland. Additionally, since 2023, graduates are given two years (instead of one year) to find employment after graduation. This extension provides international students with a more flexible pathway to securing employment in Finland. 
+        <span id="warning">Please check the <a id="hyperlink" href="https://migri.fi/en/residence-permit-application-for-studies" target="_blank">official Migri site</a> for detailed information.</span> Starting from 2023, the student residence permit in Finland is now a Type A residence permit, as opposed to the previous Type B. This new permit counts towards the four-year period required for eligibility for Permanent Residence in Finland, [However every year spent under this permit only accounts for 6 months] Additionally, since 2023, graduates are given two years (instead of one year) to find employment after graduation. This extension provides international students with a more flexible pathway to securing employment in Finland. 
         For further details and requirements, please refer to the <a id="hyperlink" href="https://migri.fi/en/residence-permit-to-look-for-work" target="_blank">official Migri site</a>. 
-        You can also bring your family to Finland under the same Type A permit, provided that they can demonstrate they have sufficient financial resources for their stay. More information on this can be found on the <a id = 'hyperlink' href="https://migri.fi/en/students-family-members" target="_blank">official Migri site</a>.
+        You can also bring your family (parents not included) to Finland under the same Type A permit, provided that they can demonstrate they have sufficient financial resources for their stay. More information on this can be found on the <a id = 'hyperlink' href="https://migri.fi/en/students-family-members" target="_blank">official Migri site</a>.
     </>
 );
 
