@@ -19,6 +19,7 @@ const gradientStyleRed = {
 
 const internationalAdmissionInformationText = 
 <>
+     
     The admission in Finland can be quite complicated in Finland, especially for international students, we will try to break it down. <br/> Universities and Universities of applied sciences both have different admission requirements.
     <br/> <span id="subSubtitle"> <span className='text-[24px] sm:text-[24px] lg:text-[40px] ' id="gradientSubSub">University of Applied Sciences</span></span> <br/>
     <span id='warning'>Information here might change from year to year, this information is up-to date for 2025</span>. UAS admission for International students is relatively straight-forward, you can apply in 4 main methods,
@@ -49,7 +50,6 @@ const internationalAdmissionInformationText =
      <br/> <a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam-autumn-2024/#identificationautumn'>Identification</a> <a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam-autumn-2024/#monitoringautumn'>Monitoring</a>‎
      ‎<a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam-autumn-2024/#privacypolicy'>Privacy Policy</a> <a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam-autumn-2024/#hardwarerequirements'>Hardware/Network Requirement</a>‎
      ‎<a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam-autumn-2024/#participatingautumn'>Participating</a> <a id='hyperlink' href='https://www.uasinfo.fi/international-uas-exam-autumn-2024/#resultsautumn'>Final Student Selection</a>  
-     
      <br/><br/><a style={gradientStyleRed} id='gradientSubSub'><span id='subsubSubtitle'>SAT Test</span></a><br/>
      The SAT test contains following sections:
 
