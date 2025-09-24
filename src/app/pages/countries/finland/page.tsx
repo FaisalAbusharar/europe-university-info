@@ -52,6 +52,7 @@ const permitInformation = (
 );
 
 
+
 const visaGeneralRequirements = (
     <>
     <p id="warning"><strong>It's recommended to not rely on the information in this website. Government official websites are always more accurate.</strong></p> Assuming you are intending to stay for over 90 days in Finland for the duration of your studies, you will have to apply for a Residence Permit, and must fulfill some basic requirements to apply. You must have a passport that exceeds the duration of the residence permit you are applying for by at least 3 months. You must provide the official letter of acceptance issued by your hosting Finnish University. You must have a copy of your completed and signed application form. You must provide proof of your financial ability to support yourself ( 
