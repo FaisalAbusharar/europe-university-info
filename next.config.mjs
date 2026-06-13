@@ -7,7 +7,8 @@ const nextConfig = {
       mongoDatabaseName: process.env.NEXT_PUBLIC_MONGO_DATABASE_NAME,
       mongoCollectionName: process.env.NEXT_PUBLIC_MONGO_COLLECTION_NAME,
       saltRounds: process.env.NEXT_PUBLIC_MONGO_SALT_ROUNDS,
-      JWT_SECRET: process.env.NEXT_PUBLIC_JWT_SECRET
+      JWT_SECRET: process.env.NEXT_PUBLIC_JWT_SECRET,
+      GOOGLE_GENAI_API_KEY: process.env.NEXT_PUBLIC_GOOGLE_GENAI_API_KEY,
     }
   };
   
