@@ -4,40 +4,54 @@ import { ai } from "../../lib/gemini";
 type PermitRequest = {
   citizenship: string;
   destination: string;
-  level?: string;
-  duration?: string;
 };
-
-console.log(process.env.GOOGLE_GENAI_API_KEY)
-console.log(process.env.JWT_SECRET)
 
 export async function POST(req: NextRequest) {
   try {
     const {
       citizenship,
       destination,
-      level,
-      duration,
     }: PermitRequest = await req.json();
 
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
+
       contents: `
 Generate student permit guidance.
 
+Return ONLY valid JSON.
+ 
+DO NOT INCLUDE any text outside of the JSON object, nor the markdown fences.
+
+Format:
+{
+  "guidancePath": "",
+  "permitRequired": true,
+  "documents": [],
+  "financialRequirements": "",
+  "workRights": ""
+}
+
 Citizenship: ${citizenship}
 Destination: ${destination}
-Study level: ${level ?? "Not provided"}
-Duration: ${duration ?? "Not provided"}
-
-Return concise JSON.
-      `,
+`,
     });
+
+    const text = response.text ?? "";
+
+    const cleaned = text
+  .trim()
+  .replace(/```json|```/gi, "")
+  .trim();
+
+
+    const parsed = JSON.parse(cleaned);
 
     return Response.json({
       success: true,
-      text: response.text,
+      data: parsed,
     });
+
   } catch (err) {
     console.error(err);
 
