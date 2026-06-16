@@ -14,28 +14,54 @@ export async function POST(req: NextRequest) {
     }: PermitRequest = await req.json();
 
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-flash",
+  model: "gemini-2.5-flash",
 
-      contents: `
+  config: {
+    responseMimeType: "application/json",
+  },
+
+  contents: `
 Generate student permit guidance.
 
 Return ONLY valid JSON.
- 
-DO NOT INCLUDE any text outside of the JSON object, nor the markdown fences.
 
-Format:
-{
-  "guidancePath": "",
-  "permitRequired": true,
-  "documents": [],
-  "financialRequirements": "",
-  "workRights": ""
-}
-
+Generate information specifically for:
 Citizenship: ${citizenship}
 Destination: ${destination}
+
+Rules:
+- Be concise.
+- Explain for international students.
+- Mention when information varies.
+- Do not include markdown fences.
+- Return plain text fields.
+
+Format:
+
+{
+  "generalRequirements": "",
+  "permitRequired": true,
+
+  "documents": "",
+
+  "financialRequirements": "",
+
+  "insuranceRequirements": "",
+
+  "processingTime": "",
+
+  "workRights": "",
+
+  "stayRules": "",
+
+  "postStudyOptions": "",
+
+  "guidanceSite": "",
+
+  "notes": ""
+}
 `,
-    });
+});
 
     const text = response.text ?? "";
 
