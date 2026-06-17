@@ -153,7 +153,7 @@ export default function VisaPath() {
           linear-gradient(
             to top,
             black,
-            #565656
+            #353535
           )
         "
 
@@ -177,13 +177,9 @@ export default function VisaPath() {
           <ArrowLeft size={20} />
         </button>
 
-        <h1
-          id="title"
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-center bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-transparent"
-        >
-          Permit Paths
-        </h1>
-
+               <h1 className='text-custom-gradient text-5xl sm:text-5xl lg:text-[75px] text-center px-4 leading-tight' id="titlePageCountry">PERMITS</h1>
+        <h2 className='text-[18px] sm:text-[12px] lg:text-[40px] text-center font-extrabold px-4' id="Subtitle">All the information you need for <p id="gradientSub">European Permits</p></h2>
+        <br></br><br></br>
         <CountryDropdown
           value={citizenship}
           onChange={setCitizenship}
@@ -210,6 +206,7 @@ export default function VisaPath() {
             "NO",
             "US",
             "AU",
+            "BE"
           ]}
 
           id="dropDownSelect"
