@@ -67,7 +67,7 @@ const Home = () => {
               <Link href="/pages/countries">
                 <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Countries</p></StyledButton>
               </Link>
-              <Link href="/pages/visapath"> 
+              <Link href={isMobile ? "/pages/visapath" : ""}> 
               <StyledButton isDisabled={isMobile ? true : false} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Permit Information</p></StyledButton>
               </Link> 
 
