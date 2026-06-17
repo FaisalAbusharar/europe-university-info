@@ -68,7 +68,7 @@ const Home = () => {
                 <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Countries</p></StyledButton>
               </Link>
               <Link href="/pages/visapath"> 
-              <StyledButton isDisabled={false} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Permit Information</p></StyledButton>
+              <StyledButton isDisabled={isMobile ? true : false} backgroundHoverButtonColor={hoverButtonColor}><p id="gradientButtonText">Permit Information</p></StyledButton>
               </Link> 
 
               <Link href="/pages/finance">
