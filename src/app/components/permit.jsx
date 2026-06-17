@@ -47,7 +47,7 @@ const Permit = ({
           </div>
         <hr id="line" />
 
-        <h2 id="infoBody"><span id="warning">This information is generated dynamically by AI, please review carefully.</span> <span href="/pages/support/permitPathGeneration" id="hyperlink">Learn More</span></h2>
+        <h2 id="infoBody"><span id="warning">This information is generated dynamically by AI, please review carefully.</span> <a href="/pages/support/permitPathGeneration" id="hyperlink">Learn More</a></h2>
 
         <h2 className={`text-[30px] sm:text-[24px] lg:text-[40px]  ${exo.className}`} id="subtitleLeft">{(<>{countryNameOptional} {<span id="gradientSubSub">STUDENT PERMIT</span>}</>) }</h2>
         <ul className={`${exo.className}`} id="infoBody">{(visaRequirements.map((item, index) => (
